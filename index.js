@@ -13,8 +13,12 @@ client
     .then(function () { return console.log("It's alive!"); })
     .catch(function (err) { return console.error(err); });
 client.on("message", function (message) {
-    if (message.content.toLowerCase().includes("matt") || message.author.id === "541305895544422430") {
-        message.channel.send("We love <@!541305895544422430>!");
+    var _a;
+    if (message.author.id === ((_a = client.user) === null || _a === void 0 ? void 0 : _a.id))
+        return;
+    if (message.content.toLowerCase().includes("matt") ||
+        message.author.id === "541305895544422430") {
+        message.channel.send("We love Matt");
         message.react("💜");
     }
 });

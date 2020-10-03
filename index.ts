@@ -12,6 +12,7 @@ client
 
 client.on("message", (message: Message) => {
   if (message.author.id === client.user?.id) return;
+  if (message.channel.id !== "762002255327002654") return;
   if (
     message.content.toLowerCase().includes("matt") ||
     message.author.id === "541305895544422430"
