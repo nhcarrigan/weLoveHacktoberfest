@@ -11,8 +11,12 @@ client
   .catch((err) => console.error(err));
 
 client.on("message", (message: Message) => {
-    if (message.content.toLowerCase().includes("matt") || message.author.id === "541305895544422430") {
-        message.channel.send("We love Matt")
-        message.react("💜")
-    }
+  if (message.author.id === client.user?.id) return;
+  if (
+    message.content.toLowerCase().includes("matt") ||
+    message.author.id === "541305895544422430"
+  ) {
+    message.channel.send("We love Matt");
+    message.react("💜");
+  }
 });
