@@ -26,6 +26,8 @@ const phrases = [
   "Matt is Thrilling!",
   "Matt is Fantastic!",
   "Matt is Terrific!",
+  "Matt is Epic!",
+  "Matt is Pog!",
 ];
 
 let timer = 0;
