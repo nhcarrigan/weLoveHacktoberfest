@@ -38,9 +38,15 @@ client
   .catch((err) => console.error(err));
 
 client.on("message", (message: Message) => {
-  if (Date.now() - timer <= 10000) return;
-  if (message.author.id === client.user?.id) return;
-  if (message.channel.id !== "762002255327002654") return;
+  if (Date.now() - timer <= 10000) {
+    return;
+  }
+  if (message.author.id === client.user?.id) {
+    return;
+  }
+  if (message.channel.id !== "762002255327002654") {
+    return;
+  }
   if (
     message.content.toLowerCase().includes("matt") ||
     message.author.id === "541305895544422430"
