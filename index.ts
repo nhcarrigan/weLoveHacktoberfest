@@ -38,7 +38,7 @@ client
   .catch((err) => console.error(err));
 
 client.on("message", (message: Message) => {
-  if (Date.now() - timer <= 10000) {
+  if (Date.now() - timer <= 30000) {
     return;
   }
   if (message.author.id === client.user?.id) {
