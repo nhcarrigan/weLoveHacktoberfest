@@ -28,6 +28,21 @@ const phrases = [
   "Matt is Terrific!",
   "Matt is Epic!",
   "Matt is Pog!",
+  "Matt does everything so well!",
+  "We all aspire to be Matt!",
+  "Everything is Matt-tastic!",
+  "Matt (noun): An amazing person!",
+  "Matt (noun): An Astonishing person!",
+  "Matt (noun): A Remarkable person!",
+  "Matt (noun): A Spectacular person!",
+  "Matt (noun): An Incredible person!",
+  "Matt (noun): An Extraordinary person!",
+  "Matt (noun): A Sensational person!",
+  "Matt (noun): A Marvelous person!",
+  "Matt (noun): A Wonderful person!",
+  "Matt (noun): A Thrilling person!",
+  "Matt (noun): A Fantastic person!",
+  "Matt (noun): A Terrific person!",
 ];
 
 let timer = 0;
