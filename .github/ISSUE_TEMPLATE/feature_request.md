@@ -1,8 +1,8 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: "[REQUEST]"
-labels: "type: request, status: triage"
+title: "[FEAT]"
+labels: "🚦 status: awaiting triage"
 assignees: "nhcarrigan"
 ---
 

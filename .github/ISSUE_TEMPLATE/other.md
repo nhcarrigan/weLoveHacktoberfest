@@ -1,8 +1,8 @@
 ---
 name: Other
 about: Use this for any other issues. PLEASE do not create blank issues.
-title: "[UNKNOWN]"
-labels: "type: unknown, status: triage"
+title: "[OTHER]"
+labels: "🚦 status: awaiting triage"
 assignees: nhcarrigan
 ---
 
