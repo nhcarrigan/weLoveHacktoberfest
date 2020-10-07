@@ -66,7 +66,7 @@ client.on("message", (message: Message) => {
     return;
   }
   if (
-    message.content.toLowerCase().includes("matt") ||
+    message.content.replace(/\s/g, '').toLowerCase().includes("matt") ||
     message.author.id === "541305895544422430"
   ) {
     const random = Math.floor(Math.random() * phrases.length);
