@@ -70,10 +70,10 @@ client.on("message", (message: Message) => {
     message.author.id === "541305895544422430" ||
     message.content.includes(
       ":regional_indicator_m::regional_indicator_a::regional_indicator_t::regional_indicator_t:"
-     )||
+    ) ||
     message.content.includes(
       ":regional_indicator_m::a::regional_indicator_t::regional_indicator_t:"
-     )
+    )
   ) {
     const random = Math.floor(Math.random() * phrases.length);
     message.channel.send(phrases[random]);
