@@ -12,7 +12,9 @@ let timer = 0;
 const isMatt = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("matt") ||
-    message.author.id === "541305895544422430"
+    message.author.id === "541305895544422430" ||
+    message.content.includes("🇲 🇦 🇹 🇹") ||
+    message.content.includes("🇲 🅰️ 🇹 🇹")
   );
 };
 
