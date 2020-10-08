@@ -11,7 +11,7 @@ let timer = 0;
 // condition validation
 const isMatt = (message: Message): boolean => {
   return (
-    message.content.toLowerCase().includes("matt") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("matt") ||
     message.author.id === "541305895544422430"
   );
 };
