@@ -9,4 +9,4 @@
 - Matt is smart!
 - Matt is **AWESOME!!!**
 
-*This repository is not eligible for Hacktoberfest 2020 - BUT you should totally contribute anyway because Matt deserves the love!*
+*This repository is (potentially) eligible for Hacktoberfest 2020 - BUT you should totally contribute anyway because Matt deserves the love!*
