@@ -1,6 +1,6 @@
 import { Client, Message } from "discord.js";
 import dotenv from "dotenv";
-import { matt } from "./phrases";
+import { matt, raven, luke } from "./phrases";
 
 // initialise
 dotenv.config();
@@ -15,6 +15,22 @@ const isMatt = (message: Message): boolean => {
     message.author.id === "541305895544422430" ||
     message.content.includes("🇲 🇦 🇹 🇹") ||
     message.content.includes("🇲 🅰️ 🇹 🇹")
+  );
+};
+
+const isRaven = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("raven") ||
+    message.author.id === "228290260239515649" ||
+    message.content.includes("R A V E N")
+  );
+};
+
+const isLuke = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("luke") ||
+    message.author.id === "689411893156511769" ||
+    message.content.includes("L U K E")
   );
 };
 
@@ -45,6 +61,20 @@ client.on("message", (message: Message) => {
   if (isMatt(message)) {
     const random = Math.floor(Math.random() * matt.length);
     message.channel.send(matt[random]);
+    message.react("💜");
+    timer = Date.now();
+  }
+  //respond for Raven
+  if (isRaven(message)) {
+    const random = Math.floor(Math.random() * raven.length);
+    message.channel.send(raven[random]);
+    message.react("💜");
+    timer = Date.now();
+  }
+  //respond for Luke
+  if (isLuke(message)) {
+    const random = Math.floor(Math.random() * luke.length);
+    message.channel.send(luke[random]);
     message.react("💜");
     timer = Date.now();
   }
