@@ -38,9 +38,7 @@ const isNick = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("nick") ||
     message.content.replace(/\s/g, "").toLowerCase().includes("nicholas") ||
-    message.author.id === "465650873650118659" ||
-    message.content.includes("N I C K") ||
-    message.content.includes("N I C H O L A S")
+    message.author.id === "465650873650118659"
   );
 };
 
