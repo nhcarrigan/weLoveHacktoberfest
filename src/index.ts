@@ -38,7 +38,9 @@ const isNick = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("nick") ||
     message.content.replace(/\s/g, "").toLowerCase().includes("nicholas") ||
-    message.author.id === "465650873650118659"
+    message.author.id === "465650873650118659" ||
+    message.content.includes("🇳 🇮 🇨 🇰") ||
+    message.content.includes("🇳 🇮 🇨 🇭 🇴 🇱 🇦 🇸")
   );
 };
 
@@ -60,7 +62,7 @@ client.on("message", (message: Message) => {
     return;
   }
 
-  //lock to #we-love-matt channel
+  //lock to #share-the-love channel
   if (message.channel.id !== "762002255327002654") {
     return;
   }
