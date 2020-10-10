@@ -1,6 +1,6 @@
 import { Client, Message } from "discord.js";
 import dotenv from "dotenv";
-import { matt, raven, luke } from "./phrases";
+import { matt, raven, luke, nick } from "./phrases";
 
 // initialise
 dotenv.config();
@@ -31,6 +31,14 @@ const isLuke = (message: Message): boolean => {
     message.content.replace(/\s/g, "").toLowerCase().includes("luke") ||
     message.author.id === "689411893156511769" ||
     message.content.includes("L U K E")
+  );
+};
+
+const isNick = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("nick") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("nicholas") ||
+    message.author.id === "465650873650118659"
   );
 };
 
@@ -75,6 +83,13 @@ client.on("message", (message: Message) => {
   if (isLuke(message)) {
     const random = Math.floor(Math.random() * luke.length);
     message.channel.send(luke[random]);
+    message.react("💜");
+    timer = Date.now();
+  }
+  //respond for Nicholas
+  if (isNick(message)) {
+    const random = Math.floor(Math.random() * nick.length);
+    message.channel.send(nick[random]);
     message.react("💜");
     timer = Date.now();
   }
