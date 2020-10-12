@@ -1,6 +1,6 @@
 ## Reasons we love [@MattIPv4](https://github.com/MattIPv4)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - Multitalented Person ❤️
@@ -31,6 +31,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://portfolio.mananchawla2005.repl.co/"><img src="https://avatars3.githubusercontent.com/u/42414965?v=4" width="100px;" alt=""/><br /><sub><b>Manan Chawla</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-matt/commits?author=mananchawla2005" title="Documentation">📖</a></td>
     <td align="center"><a href="https://twitter.com/lukeocodes"><img src="https://avatars0.githubusercontent.com/u/956290?v=4" width="100px;" alt=""/><br /><sub><b>Luke Oliff</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-matt/commits?author=lukeocodes" title="Code">💻</a></td>
     <td align="center"><a href="https://sijmenhuizenga.nl"><img src="https://avatars1.githubusercontent.com/u/8008227?v=4" width="100px;" alt=""/><br /><sub><b>Sijmen</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-matt/commits?author=SijmenHuizenga" title="Code">💻</a></td>
+    <td align="center"><a href="https://ish-u.github.io/"><img src="https://avatars1.githubusercontent.com/u/51030453?v=4" width="100px;" alt=""/><br /><sub><b>Anmol Gupta</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-matt/commits?author=ish-u" title="Documentation">📖</a></td>
   </tr>
 </table>
 
