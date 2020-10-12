@@ -67,6 +67,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "alphaX86",
+      "name": "Aadhitya A",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/59508546?v=4",
+      "profile": "https://kryome.carrd.co",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
