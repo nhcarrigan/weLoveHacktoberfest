@@ -31,6 +31,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mananchawla2005",
+      "name": "Manan Chawla",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/42414965?v=4",
+      "profile": "https://portfolio.mananchawla2005.repl.co/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
