@@ -1,6 +1,6 @@
 ## Reasons we love [@MattIPv4](https://github.com/MattIPv4)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - Multitalented Person ❤️
@@ -26,6 +26,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.nhcarrigan.com"><img src="https://avatars1.githubusercontent.com/u/63889819?v=4" width="100px;" alt=""/><br /><sub><b>Nicholas Carrigan (he/him)</b></sub></a><br /><a href="#projectManagement-nhcarrigan" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/Atharv-Attri"><img src="https://avatars1.githubusercontent.com/u/48738128?v=4" width="100px;" alt=""/><br /><sub><b>Atharv Attri</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-matt/commits?author=Atharv-Attri" title="Code">💻</a></td>
   </tr>
 </table>
 
