@@ -58,6 +58,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ish-u",
+      "name": "Anmol Gupta",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/51030453?v=4",
+      "profile": "https://ish-u.github.io/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
