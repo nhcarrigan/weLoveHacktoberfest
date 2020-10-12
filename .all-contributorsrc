@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "nhcarrigan",
+      "name": "Nicholas Carrigan (he/him)",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/63889819?v=4",
+      "profile": "http://www.nhcarrigan.com",
+      "contributions": [
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "we-love-matt",
+  "projectOwner": "nhcarrigan",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
