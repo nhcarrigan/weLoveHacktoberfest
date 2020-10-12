@@ -47,6 +47,7 @@ export const matt = [
   "Matt (noun): A Thrilling person!",
   "Matt (noun): A Fantastic person!",
   "Matt (noun): A Terrific person!",
+  "M.A.T.T (acronym): Majestic Awesome Talented Trendy",
 ];
 export const raven = [
   "We Love Raven!",
