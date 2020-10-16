@@ -1,7 +1,14 @@
-## Reasons we love [@MattIPv4](https://github.com/MattIPv4)
+## Spreading Hacktoberfest Love!
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+This project started as a way to show Matt some love for Hacktoberfest, but has since evolved to encompass other folks involved as well.
+
+### Reasons we love [@MattIPv4](https://github.com/MattIPv4)
 
 - Multitalented Person ❤️
 - [Contributed in Rythm Project](https://rythmbot.co/) ❤️❤️
@@ -12,7 +19,11 @@
 - Matt is smart!
 - Matt is **AWESOME!!!**
 
-This project started as a way to show Matt some love for Hacktoberfest, but has since evolved to encompass other folks involved as well.
+### Reasons we love [@Luke From Vonage](https://github.com/lukeocodes)
+
+### Reasons we love [Raven @ Digital Ocean](https://github.com/AmNotADev)
+
+### Hacktoberfest 2020
 
 _This repository is (potentially) eligible for Hacktoberfest 2020 - BUT you should totally contribute anyway because Matt deserves the love!_
 
@@ -42,6 +53,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
