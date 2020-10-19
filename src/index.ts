@@ -66,33 +66,41 @@ client.on("message", (message: Message) => {
   if (message.channel.id !== "762002255327002654") {
     return;
   }
+  
+  let responses = [];
+  let toSay = false;
 
-  //respond for matt
+  //add response for matt
   if (isMatt(message)) {
     const random = Math.floor(Math.random() * matt.length);
-    message.channel.send(matt[random]);
-    message.react("💜");
+    responses.push(matt[random]);
+    toSay = true;
     timer = Date.now();
   }
-  //respond for Raven
+  //add response for Raven
   if (isRaven(message)) {
     const random = Math.floor(Math.random() * raven.length);
-    message.channel.send(raven[random]);
-    message.react("💜");
+    responses.push(raven[random]);
+    toSay = true;
     timer = Date.now();
   }
-  //respond for Luke
+  //add response for Luke
   if (isLuke(message)) {
     const random = Math.floor(Math.random() * luke.length);
-    message.channel.send(luke[random]);
-    message.react("💜");
+    responses.push(luke[random]);
+    toSay = true;
     timer = Date.now();
   }
-  //respond for Nicholas
+  // add response for Nicholas
   if (isNick(message)) {
     const random = Math.floor(Math.random() * nick.length);
-    message.channel.send(nick[random]);
-    message.react("💜");
+    responses.push(nick[random]);
+    toSay = true;
     timer = Date.now();
+  }
+  // If we should say something. add the reaction and join all the responses in one message
+  if (toSay) {
+      message.react("💜");
+      message.channel.send(responses.join("\n"));
   }
 });
