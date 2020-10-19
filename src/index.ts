@@ -1,6 +1,6 @@
 import { Client, Message } from "discord.js";
 import dotenv from "dotenv";
-import { matt, raven, luke, nick } from "./phrases";
+import { matt, raven, luke, nick, daniel } from "./phrases";
 
 // initialise
 dotenv.config();
@@ -41,6 +41,14 @@ const isNick = (message: Message): boolean => {
     message.author.id === "465650873650118659" ||
     message.content.includes("🇳 🇮 🇨 🇰") ||
     message.content.includes("🇳 🇮 🇨 🇭 🇴 🇱 🇦 🇸")
+  );
+};
+
+const isDaniel = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("daniel") ||
+    message.author.id === "731236961439973458" ||
+    message.content.includes("D A N I E L")
   );
 };
 
@@ -98,6 +106,14 @@ client.on("message", (message: Message) => {
     toSay = true;
     timer = Date.now();
   }
+  //respond for Daniel
+  if (isDaniel(message)) {
+    const random = Math.floor(Math.random() * daniel.length);
+    responses.push(daniel[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
   // If we should say something. add the reaction and join all the responses in one message
   if (toSay) {
     message.react("💜");
