@@ -66,7 +66,7 @@ client.on("message", (message: Message) => {
   if (message.channel.id !== "762002255327002654") {
     return;
   }
-  
+
   const responses = [];
   let toSay = false;
 
@@ -100,7 +100,7 @@ client.on("message", (message: Message) => {
   }
   // If we should say something. add the reaction and join all the responses in one message
   if (toSay) {
-      message.react("💜");
-      message.channel.send(responses.join("\n"));
+    message.react("💜");
+    message.channel.send(responses.join("\n"));
   }
 });
