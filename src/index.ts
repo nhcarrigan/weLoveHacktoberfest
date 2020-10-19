@@ -104,7 +104,7 @@ client.on("message", (message: Message) => {
     timer = Date.now();
   }
   //respond for Daniel
-    if (isDaniel(message)) {
+  if (isDaniel(message)) {
     const random = Math.floor(Math.random() * daniel.length);
     message.channel.send(daniel[random]);
     message.react("💜");
