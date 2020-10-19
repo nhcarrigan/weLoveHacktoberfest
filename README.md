@@ -21,6 +21,11 @@ This project started as a way to show Matt some love for Hacktoberfest, but has 
 
 ### Reasons we love [@Luke From Vonage](https://github.com/lukeocodes)
 
+- Luke is Humble
+- Helps out everyone in the community ❤️
+- Maybe his puns 😜
+- He's Santa 🎅
+
 ### Reasons we love [Raven @ Digital Ocean](https://github.com/AmNotADev)
 
 ### Hacktoberfest 2020
