@@ -94,10 +94,19 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "shreyas44",
+      "name": "Shreyas Sreenivas",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/46835608?v=4",
+      "profile": "http://bedav.org",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "we-love-matt",
+  "projectName": "we-love-hacktoberfest",
   "projectOwner": "nhcarrigan",
   "repoType": "github",
   "repoHost": "https://github.com",
