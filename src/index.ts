@@ -67,7 +67,7 @@ client.on("message", (message: Message) => {
     return;
   }
   
-  let responses = [];
+  const responses = [];
   let toSay = false;
 
   //add response for matt
