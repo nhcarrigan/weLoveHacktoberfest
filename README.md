@@ -1,7 +1,7 @@
 ## Spreading Hacktoberfest Love!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This project started as a way to show Matt some love for Hacktoberfest, but has since evolved to encompass other folks involved as well.
@@ -52,6 +52,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://landonlloyd.github.io"><img src="https://avatars0.githubusercontent.com/u/65516863?v=4" width="100px;" alt=""/><br /><sub><b>Landon Lloyd</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-hacktoberfest/commits?author=LandonLloyd" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/DeltaCoderr"><img src="https://avatars3.githubusercontent.com/u/51528076?v=4" width="100px;" alt=""/><br /><sub><b>DeltaCoderr</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-hacktoberfest/commits?author=DeltaCoderr" title="Code">💻</a></td>
     <td align="center"><a href="http://bedav.org"><img src="https://avatars2.githubusercontent.com/u/46835608?v=4" width="100px;" alt=""/><br /><sub><b>Shreyas Sreenivas</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-hacktoberfest/commits?author=shreyas44" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.stackoverflow.com"><img src="https://avatars0.githubusercontent.com/u/62864373?v=4" width="100px;" alt=""/><br /><sub><b>Vyom Jain</b></sub></a><br /><a href="https://github.com/nhcarrigan/we-love-hacktoberfest/commits?author=Vyvy-vi" title="Code">💻</a></td>
   </tr>
 </table>
 
