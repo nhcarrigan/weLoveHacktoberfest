@@ -47,7 +47,7 @@ const isNick = (message: Message): boolean => {
 const isDaniel = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("daniel") ||
-    message.author.id == "731236961439973458" ||
+    message.author.id === "731236961439973458" ||
     message.content.includes("D A N I E L")
   );
 };
