@@ -299,7 +299,7 @@ export const hactoberfest = [
   "Hacktoberfest team always makes us feel welcomed :heart:",
   "Hacktoberfest team is amazing",
   "When Hacktoberfest Team says they will do something, We trust them. :heart:",
-  "Hacktoberfes team does everything so well!",
+  "Hacktoberfest team does everything so well!",
   "We all aspire to be like Hacktoberfest team members!",
   "Hacktoberfest (noun): An amazing event!",
   "Hacktoberfest (noun): A Spectacular event!",
