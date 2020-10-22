@@ -59,7 +59,6 @@ const isHack = (message: Message): boolean => {
   );
 };
 
-
 //connect the bot
 client
   .login(token)
