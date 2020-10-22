@@ -250,7 +250,7 @@ export const daniel = [
   "Daniel (noun): A Fantastic person!",
   "Daniel (noun): A Terrific person!",
 ];
-export const hactoberfest = [
+export const hacktoberfest = [
   "We Love Hacktoberfest!",
   "Hacktoberfest is Awesome!",
   "Hacktoberfest is the Best!",
