@@ -270,7 +270,7 @@ export const hactoberfest = [
   "Legend has it that when you submit 150 PRs, you find the secret to be as epic as the HacktoberFest Team.",
   "Legend has it that when you participate in hacktoberfest, all troubles disappear.",
   "Hacktoberfest is Epic!",
-  "Hacktoberfest is soo Cool!,
+  "Hacktoberfest is soo Cool!",
   "Hacktoberfest is Legendary!",
   "Hacktoberfest is 3000/10!",
   "Hacktoberfest is Superb!",
@@ -306,7 +306,7 @@ export const hactoberfest = [
   "Hacktoberfest (noun): An amazing team",
   "Hacktoberfest Team (noun): An Incredible team!",
   "Hacktoberfest Team (noun): An Extraordinary Team!",
-  "Hacktoberfest Team (noun): A Marvelous Team!"
+  "Hacktoberfest Team (noun): A Marvelous Team!",
   "Hacktoberfest Team (noun): A team better than the Avengers",
-  "Hacktoberfest Team (noun): A bunch of very smart and very good people", 
+  "Hacktoberfest Team (noun): A bunch of very smart and very good people",
 ];

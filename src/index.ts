@@ -54,7 +54,10 @@ const isDaniel = (message: Message): boolean => {
 
 const isHack = (message: Message): boolean => {
   return (
-    message.content.replace(/\s/g, "").toLowerCase().includes("hacktoberfest") ||
+    message.content
+      .replace(/\s/g, "")
+      .toLowerCase()
+      .includes("hacktoberfest") ||
     message.content.includes("H A C K T O B E R F E S T")
   );
 };
@@ -120,7 +123,7 @@ client.on("message", (message: Message) => {
     toSay = true;
     timer = Date.now();
   }
-  // add respond for Hacktoberfest 
+  // add respond for Hacktoberfest
   if (isHack(message)) {
     const random = Math.floor(Math.random() * hacktoberfest.length);
     responses.push(hacktoberfest[random]);
