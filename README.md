@@ -26,6 +26,10 @@ This project started as a way to show Matt some love for Hacktoberfest, but has 
 
 ### Reasons we love [Raven @ Digital Ocean](https://github.com/AmNotADev)
 
+- Made a fantastic Discord banner
+- Raven is always very friendly!
+- They are also known as SandyLightSeaGreenJellyfish
+
 ### Hacktoberfest 2020
 
 _This repository is (potentially) eligible for Hacktoberfest 2020 - BUT you should totally contribute anyway because Matt deserves the love!_
