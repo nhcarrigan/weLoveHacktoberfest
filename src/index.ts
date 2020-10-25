@@ -148,7 +148,7 @@ const isVonage = (message: Message): boolean => {
 const isTee = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("tee") ||
-    message.content.replace(/\s/g, "").toLowerCase().includes("tshirt") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("shirt") ||
     message.content.includes("T E E") ||
     message.content.includes("T S H I R T ")
   );
@@ -283,7 +283,7 @@ client.on("message", (message: Message) => {
   // add response for tshirt
   if (isTee(message)) {
     message.channel.send("TREES > TEES");
-    toSay = false;
+    toSay = true;
     timer = Date.now();
   }
 
