@@ -75,7 +75,7 @@ const isBen = (message: Message): boolean => {
     message.content.replace(/\s/g, "").toLowerCase().includes("benjamin") ||
     message.author.id === "664240791861985320" ||
     message.content.includes("B E N J A M I N") ||
-    message.content.includes("BEN")
+    message.content.includes("B E N")
   );
 };
 
