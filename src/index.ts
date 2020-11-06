@@ -282,7 +282,7 @@ client.on("message", (message: Message) => {
 
   // add response for tshirt
   if (isTee(message)) {
-    message.channel.send("TREES > TEES");
+    responses.push("TREES > TEES");
     toSay = true;
     timer = Date.now();
   }
