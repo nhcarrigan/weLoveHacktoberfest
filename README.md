@@ -46,6 +46,10 @@ If you would like to contribute to the project, you may create a Pull Request co
 
 Before interacting with our community, please read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+## Questions
+
+If you have questions regarding contributing, using the project, or any related topic, you can reach us at our [Discord Server](https://discord.gg/yMBWgETTJu) where we would be happy to help!
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

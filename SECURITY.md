@@ -1,3 +1,3 @@
 # Security Policy
 
-Please DO not create GitHub issues for security issues. Instead, report responsibly by emailing `nhcarrigan@gmail.com`.
+Please DO not create GitHub issues for security issues. Instead, report responsibly by contacting @nhcarrigan on the [Discord Server](https://discord.gg/yMBWgETTJu).
