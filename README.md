@@ -1,8 +1,16 @@
-## Spreading Hacktoberfest Love!
+# We Love Hacktoberfest
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+A Discord bot to spread Hacktoberfest love.
+
+## Live Version
+
+This page is currently deployed. [View the live site](https://discord.gg/hacktoberfest)
+
+## Spreading Hacktoberfest Love!
 
 This project started as a way to show Matt some love for Hacktoberfest, but has since evolved to encompass other folks involved as well.
 
