@@ -56,7 +56,7 @@ Before interacting with our community, please read our [Code of Conduct](CODE_OF
 
 ## Questions
 
-If you have questions regarding contributing, using the project, or any related topic, you can reach us at our [Discord Server](https://discord.gg/yMBWgETTJu) where we would be happy to help!
+If you have questions regarding contributing, using the project, or any related topic, you can reach us at our [Discord Server](http://chat.nhcarrigan.com) where we would be happy to help!
 
 ## Contributors ✨
 
