@@ -156,7 +156,7 @@ const isAndy = (message: Message): boolean => {
     message.content.includes("A N D Y") ||
     message.content.includes("A N D Y H")
   );
-
+};
 // Cuz why not?
 const isRestarter = (message: Message): boolean => {
   return (
@@ -164,7 +164,6 @@ const isRestarter = (message: Message): boolean => {
     message.content.replace(/\s/g, "").toLowerCase().includes("restarterv3") ||
     message.content.includes("R E S T A R T E R")
   );
-
 };
 
 const isHack = (message: Message): boolean => {
@@ -336,7 +335,7 @@ client.on("message", (message: Message) => {
     timer = Date.now();
   }
 
-  // add response for Joe
+  // add response for Walshy
   if (isWalshy(message)) {
     const random = Math.floor(Math.random() * walshy.length);
     responses.push(walshy[random]);
@@ -344,7 +343,7 @@ client.on("message", (message: Message) => {
     timer = Date.now();
   }
 
-  // add response for Joe
+  // add response for CatBirby
   if (isCatBirby(message)) {
     const random = Math.floor(Math.random() * catbirby.length);
     responses.push(catbirby[random]);
@@ -352,7 +351,7 @@ client.on("message", (message: Message) => {
     timer = Date.now();
   }
 
-  // add response for Joe
+  // add response for Restarter
   if (isRestarter(message)) {
     const random = Math.floor(Math.random() * restarter.length);
     responses.push(restarter[random]);
@@ -360,6 +359,13 @@ client.on("message", (message: Message) => {
     timer = Date.now();
   }
 
+  // add response for Andy
+  if (isAndy(message)) {
+    const random = Math.floor(Math.random() * andy.length);
+    responses.push(andy[random]);
+    toSay = true;
+    timer = Date.now();
+  }
 
   // add response for tshirt
   if (isTee(message)) {

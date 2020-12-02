@@ -877,7 +877,7 @@ export const restarter = [
   "Restarter is the Best!",
   "All hail Restarter!",
   "All hail Overlord Restarter",
-  "Restarter is sooo Amazing!",,
+  "Restarter is sooo Amazing!",
   "Restarter is Remarkable!",
   "Restarter is Sensational!",
   "Restarter is a Genius!",
