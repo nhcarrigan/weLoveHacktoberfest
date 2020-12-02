@@ -15,6 +15,11 @@ import {
   diana,
   joe,
   kyle,
+  paul,
+  walshy,
+  catbirby,
+  andy,
+  restarter,
 } from "./phrases";
 
 // initialise
@@ -53,6 +58,7 @@ const isNick = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("nick") ||
     message.content.replace(/\s/g, "").toLowerCase().includes("nicholas") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("nhcarrigan") ||
     message.author.id === "465650873650118659" ||
     message.content.includes("🇳 🇮 🇨 🇰") ||
     message.content.includes("🇳 🇮 🇨 🇭 🇴 🇱 🇦 🇸")
@@ -117,6 +123,48 @@ const isLorna = (message: Message): boolean => {
     message.author.id === "531813647253504001" ||
     message.content.includes("L O R N A")
   );
+};
+
+const isPaul = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("paul") ||
+    message.content.includes("P A U L")
+  );
+};
+
+const isWalshy = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("walshy") ||
+    message.author.id === "453920106498621451" ||
+    message.content.includes("W A L S H Y")
+  );
+};
+
+const isCatBirby = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("catbirby") ||
+    message.author.id === "131953641371205632" ||
+    message.content.includes("C A T B I R B Y")
+  );
+};
+
+const isAndy = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("andy") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("andyh") ||
+    message.author.id === "745084025974161520" ||
+    message.content.includes("A N D Y") ||
+    message.content.includes("A N D Y H")
+  );
+
+// Cuz why not?
+const isRestarter = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("restarter") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("restarterv3") ||
+    message.content.includes("R E S T A R T E R")
+  );
+
 };
 
 const isHack = (message: Message): boolean => {
@@ -279,6 +327,39 @@ client.on("message", (message: Message) => {
     toSay = true;
     timer = Date.now();
   }
+
+  // add response for Paul
+  if (isPaul(message)) {
+    const random = Math.floor(Math.random() * paul.length);
+    responses.push(paul[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for Joe
+  if (isWalshy(message)) {
+    const random = Math.floor(Math.random() * walshy.length);
+    responses.push(walshy[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for Joe
+  if (isCatBirby(message)) {
+    const random = Math.floor(Math.random() * catbirby.length);
+    responses.push(catbirby[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for Joe
+  if (isRestarter(message)) {
+    const random = Math.floor(Math.random() * restarter.length);
+    responses.push(restarter[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
 
   // add response for tshirt
   if (isTee(message)) {
