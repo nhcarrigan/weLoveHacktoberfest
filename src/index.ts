@@ -1,4 +1,4 @@
-import { Client, Message } from "discord.js";
+import { Client, Message, User } from "discord.js";
 import dotenv from "dotenv";
 import {
   matt,
@@ -31,7 +31,7 @@ let timer = 0;
 // condition validation
 const checkMentions = (message: Message, checkId: string): boolean => {
   let match = false;
-  message.mentions.mentions.users.map(user => {
+  message.mentions.mentions.users.map((user: User) => {
     if (user.id === checkId) {
       match = true;
       break;
@@ -188,7 +188,7 @@ const isRestarter = (message: Message): boolean => {
     message.content.replace(/\s/g, "").toLowerCase().includes("restarter") ||
     message.content.replace(/\s/g, "").toLowerCase().includes("restarterv3") ||
     message.content.includes("R E S T A R T E R") ||
-    checkMessage(message, "438978127973318656")
+    checkMentions(message, "438978127973318656")
   );
 };
 
