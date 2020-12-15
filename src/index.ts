@@ -30,9 +30,8 @@ let timer = 0;
 
 // condition validation
 const checkMentions = (message: Message, checkId: string): boolean => {
-  return message.mentions.has(checkId);
+  return message.content.toString().includes(checkId);
 };
-
 const isMatt = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("matt") ||
