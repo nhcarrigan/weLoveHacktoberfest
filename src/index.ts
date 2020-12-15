@@ -29,7 +29,7 @@ const token = process.env.TOKEN;
 let timer = 0;
 
 // condition validation
-const checkMentions(message: Message, checkId: string): boolean => {
+const checkMentions = (message: Message, checkId: string): boolean => {
   let match = false;
   message.mentions.mentions.users.map(user => {
     if (user.id === checkId) {
