@@ -188,7 +188,7 @@ const isRestarter = (message: Message): boolean => {
     message.content.replace(/\s/g, "").toLowerCase().includes("restarter") ||
     message.content.replace(/\s/g, "").toLowerCase().includes("restarterv3") ||
     message.content.includes("R E S T A R T E R") ||
-    checkMessage(message, "438978127973318656");
+    checkMessage(message, "438978127973318656")
   );
 };
 
