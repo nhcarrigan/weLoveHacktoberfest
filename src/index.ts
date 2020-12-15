@@ -31,7 +31,7 @@ let timer = 0;
 // condition validation
 const checkMentions = (message: Message, checkId: string): boolean => {
   let match = false;
-  message.mentions.mentions.users.map((user: User) => {
+  message.mentions.users.map((user: User) => {
     if (user.id === checkId) {
       match = true;
       break;
