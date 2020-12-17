@@ -15,6 +15,11 @@ import {
   diana,
   joe,
   kyle,
+  paul,
+  walshy,
+  catbirby,
+  andy,
+  restarter,
 } from "./phrases";
 
 // initialise
@@ -24,12 +29,16 @@ const token = process.env.TOKEN;
 let timer = 0;
 
 // condition validation
+const checkMentions = (message: Message, checkId: string): boolean => {
+  return message.content.toString().includes(checkId);
+};
 const isMatt = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("matt") ||
     message.author.id === "541305895544422430" ||
     message.content.includes("🇲 🇦 🇹 🇹") ||
-    message.content.includes("🇲 🅰️ 🇹 🇹")
+    message.content.includes("🇲 🅰️ 🇹 🇹") ||
+    checkMentions(message, "541305895544422430")
   );
 };
 
@@ -37,7 +46,8 @@ const isRaven = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("raven") ||
     message.author.id === "228290260239515649" ||
-    message.content.includes("R A V E N")
+    message.content.includes("R A V E N") ||
+    checkMentions(message, "228290260239515649")
   );
 };
 
@@ -45,7 +55,8 @@ const isLuke = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("luke") ||
     message.author.id === "689411893156511769" ||
-    message.content.includes("L U K E")
+    message.content.includes("L U K E") ||
+    checkMentions(message, "689411893156511769")
   );
 };
 
@@ -53,9 +64,11 @@ const isNick = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("nick") ||
     message.content.replace(/\s/g, "").toLowerCase().includes("nicholas") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("nhcarrigan") ||
     message.author.id === "465650873650118659" ||
     message.content.includes("🇳 🇮 🇨 🇰") ||
-    message.content.includes("🇳 🇮 🇨 🇭 🇴 🇱 🇦 🇸")
+    message.content.includes("🇳 🇮 🇨 🇭 🇴 🇱 🇦 🇸") ||
+    checkMentions(message, "465650873650118659")
   );
 };
 
@@ -65,7 +78,8 @@ const isDaniel = (message: Message): boolean => {
     message.content.replace(/\s/g, "").toLowerCase().includes("dan") ||
     message.author.id === "731236961439973458" ||
     message.content.includes("D A N") ||
-    message.content.includes("D A N I E L")
+    message.content.includes("D A N I E L") ||
+    checkMentions(message, "731236961439973458")
   );
 };
 
@@ -75,7 +89,8 @@ const isBen = (message: Message): boolean => {
     message.content.replace(/\s/g, "").toLowerCase().includes("benjamin") ||
     message.author.id === "664240791861985320" ||
     message.content.includes("B E N J A M I N") ||
-    message.content.includes("B E N")
+    message.content.includes("B E N") ||
+    checkMentions(message, "664240791861985320")
   );
 };
 
@@ -83,7 +98,8 @@ const isDiana = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("diana") ||
     message.author.id === "458641967782428682" ||
-    message.content.includes("D I A N A")
+    message.content.includes("D I A N A") ||
+    checkMentions(message, "458641967782428682")
   );
 };
 
@@ -91,7 +107,8 @@ const isGabriel = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("gabriel") ||
     message.author.id === "136667863778983936" ||
-    message.content.includes("G A B R I E L")
+    message.content.includes("G A B R I E L") ||
+    checkMentions(message, "136667863778983936")
   );
 };
 
@@ -99,7 +116,8 @@ const isKyle = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("kyle") ||
     message.author.id === "135865279149375489" ||
-    message.content.includes("K Y L E")
+    message.content.includes("K Y L E") ||
+    checkMentions(message, "135865279149375489")
   );
 };
 
@@ -107,7 +125,8 @@ const isJoe = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("joe") ||
     message.author.id === "163355465793798145" ||
-    message.content.includes("J O E")
+    message.content.includes("J O E") ||
+    checkMentions(message, "163355465793798145")
   );
 };
 
@@ -115,7 +134,53 @@ const isLorna = (message: Message): boolean => {
   return (
     message.content.replace(/\s/g, "").toLowerCase().includes("lorna") ||
     message.author.id === "531813647253504001" ||
-    message.content.includes("L O R N A")
+    message.content.includes("L O R N A") ||
+    checkMentions(message, "531813647253504001")
+  );
+};
+
+const isPaul = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("paul") ||
+    message.content.includes("P A U L")
+  );
+};
+
+const isWalshy = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("walshy") ||
+    message.author.id === "453920106498621451" ||
+    message.content.includes("W A L S H Y") ||
+    checkMentions(message, "453920106498621451")
+  );
+};
+
+const isCatBirby = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("catbirby") ||
+    message.author.id === "131953641371205632" ||
+    message.content.includes("C A T B I R B Y") ||
+    checkMentions(message, "131953641371205632")
+  );
+};
+
+const isAndy = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("andy") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("andyh") ||
+    message.author.id === "745084025974161520" ||
+    message.content.includes("A N D Y") ||
+    message.content.includes("A N D Y H") ||
+    checkMentions(message, "745084025974161520")
+  );
+};
+// Cuz why not?
+const isRestarter = (message: Message): boolean => {
+  return (
+    message.content.replace(/\s/g, "").toLowerCase().includes("restarter") ||
+    message.content.replace(/\s/g, "").toLowerCase().includes("restarterv3") ||
+    message.content.includes("R E S T A R T E R") ||
+    checkMentions(message, "438978127973318656")
   );
 };
 
@@ -276,6 +341,46 @@ client.on("message", (message: Message) => {
   if (isJoe(message)) {
     const random = Math.floor(Math.random() * joe.length);
     responses.push(joe[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for Paul
+  if (isPaul(message)) {
+    const random = Math.floor(Math.random() * paul.length);
+    responses.push(paul[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for Walshy
+  if (isWalshy(message)) {
+    const random = Math.floor(Math.random() * walshy.length);
+    responses.push(walshy[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for CatBirby
+  if (isCatBirby(message)) {
+    const random = Math.floor(Math.random() * catbirby.length);
+    responses.push(catbirby[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for Restarter
+  if (isRestarter(message)) {
+    const random = Math.floor(Math.random() * restarter.length);
+    responses.push(restarter[random]);
+    toSay = true;
+    timer = Date.now();
+  }
+
+  // add response for Andy
+  if (isAndy(message)) {
+    const random = Math.floor(Math.random() * andy.length);
+    responses.push(andy[random]);
     toSay = true;
     timer = Date.now();
   }
