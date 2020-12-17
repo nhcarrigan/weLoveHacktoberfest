@@ -13,7 +13,7 @@
     "url": "git+https://github.com/nhcarrigan/we-love-matt.git"
   },
   "author": "Nicholas Carrigan",
-  "license": "Hippocratic-2.1",
+  "license": "AGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/nhcarrigan/we-love-matt/issues"
   },
