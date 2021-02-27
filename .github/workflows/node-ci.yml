@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [15.x]
 
     steps:
       - name: Checkout Source Files
@@ -33,3 +33,6 @@ jobs:
 
       - name: Run Build
         run: npm run build
+
+      - name: Verify Tests
+        run: npm run test
