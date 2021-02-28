@@ -31,8 +31,8 @@ jobs:
       - name: Lint Source Files
         run: npm run lint
 
-      - name: Run Build
+      - name: Verify Build
         run: npm run build
 
-      - name: Verify Tests
+      - name: Run Tests
         run: npm run test
