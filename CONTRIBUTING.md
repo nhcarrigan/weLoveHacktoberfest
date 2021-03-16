@@ -11,7 +11,7 @@ For running the project on your machine:
 - Execute the build command using `npm run build`
 - Set up your Discord Application. Follow this [guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html) if you need help.
 - Copy the contents of the file `sample.env` to `.env`
-- Add the retrieved values to `.env`
+- Add the retrieved values to `.env`. The value needed for this project will be `DISCORD_TOKEN` : The Discord page will provide you this value. Remember to put this value in quotes.
 - Run `npm run lint` to lint your code.
 
 ## Claiming an Issue
