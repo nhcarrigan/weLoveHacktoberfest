@@ -6,6 +6,14 @@ Please ensure all pull requests and contributions comply with the [Developer Cer
 
 First, fork this repository to your own account. Then use `git clone <url>` to bring your forked repository down to your local machine (remember to get the URL for *your* repository, not the original). Optionally, use `git remote add upstream <url>` to add the original repository as the upstream (this is helpful for keeping your fork up-to-date).
 
+For running the project on your machine:
+- Install dependencies using `npm ci`
+- Execute the build command using `npm run build`
+- Set up your Discord Application. Follow this [guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html) if you need help.
+- Copy the contents of the file `sample.env` to `.env`
+- Add the retrieved values to `.env`
+- Run `npm run lint` to lint your code.
+
 ## Claiming an Issue
 
 All of our issues are open to contributors! If you see an open issue you would like to work on, please comment on the issue so we may assign it to you. 
