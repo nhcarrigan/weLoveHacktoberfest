@@ -12,7 +12,7 @@ export const onMessage = async (
       return;
     }
 
-    if (process.env.TARGET_CHANNEL === message.channel.id) {
+    if (process.env.TARGET_CHANNEL !== message.channel.id) {
       return;
     }
   }
@@ -32,13 +32,6 @@ export const onMessage = async (
     }
   }
 
-  /**
-   * Push to responses
-   * make toSay true
-   * timer = date.now
-   */
-
-  // If we should say something. add the reaction and join all the responses in one message
   if (toSay) {
     await message.react("💜");
     await message.channel.send(responses.join("\n"));
