@@ -1,6 +1,10 @@
-import { Client, Message } from "discord.js";
+import { Message } from "discord.js";
+import { ExtendedClientInterface } from "../interfaces/ExtendedClientInterface";
 
-export const onMessage = (message: Message, client: Client) => {
+export const onMessage = async (
+  message: Message,
+  client: ExtendedClientInterface
+): Promise<void> => {
   /*
   if (Date.now() - timer <= 30000) {
     return;
