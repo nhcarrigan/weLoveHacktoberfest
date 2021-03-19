@@ -11,6 +11,7 @@ Ensure your terminal is pointed to the root project directory. Then use `cp samp
 - `TOKEN`: This is your Discord Bot Token. To get a Discord bot token, create an application on the [Discord Developer Portal](https://discord.com/developers/applications), add a bot to the application, and copy the token. 
 - `TARGET_CHANNEL`: This is the Discord ID for the channel the bot should restrict messages to.
 - `NODE_ENV`: Set this to `production` to enable the channel lock and timeout features. Set this to `development` to disable them.
+- `COOLDOWN`: Set this to the time, in `ms`, that the bot should wait before parsing a new message.
 
 To prepare your code for changes, run `npm ci` to install the dependencies. Then, to test your changes, run `npm run build` to compile the TypeScript into JavaScript and `npm run start` to launch the application.
 
