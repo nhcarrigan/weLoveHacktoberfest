@@ -36,6 +36,5 @@ export const onMessage = async (
     await message.react("💜");
     await message.channel.send(responses.join("\n"));
     client.timer = Date.now();
-    toSay = false;
   }
 };
