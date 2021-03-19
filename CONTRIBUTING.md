@@ -6,14 +6,15 @@ Please ensure all pull requests and contributions comply with the [Developer Cer
 
 First, fork this repository to your own account. Then use `git clone <url>` to bring your forked repository down to your local machine (remember to get the URL for *your* repository, not the original). Optionally, use `git remote add upstream <url>` to add the original repository as the upstream (this is helpful for keeping your fork up-to-date).
 
-For running the project on your machine:
-- Install dependencies using `npm ci`
-- Execute the build command using `npm run build`
-- Set up your Discord Application. Follow this [guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html) if you need help.
-- Copy the contents of the file `sample.env` to `.env`
-- Add the retrieved values to `.env`. The value needed for this project will be `TOKEN` : The Discord page will provide you this value. Remember to put this value in quotes.
+Ensure your terminal is pointed to the root project directory. Then use `cp sample.env .env` to copy the environment variables template and configure the following:
 
-- Run `npm run lint` to lint your code.
+- `TOKEN`: This is your Discord Bot Token. To get a Discord bot token, create an application on the [Discord Developer Portal](https://discord.com/developers/applications), add a bot to the application, and copy the token. 
+- `TARGET_CHANNEL`: This is the Discord ID for the channel the bot should restrict messages to.
+- `NODE_ENV`: Set this to `production` to enable the channel lock and timeout features. Set this to `development` to disable them.
+
+To prepare your code for changes, run `npm ci` to install the dependencies. Then, to test your changes, run `npm run build` to compile the TypeScript into JavaScript and `npm run start` to launch the application.
+
+Before submitting a PR, run `npm run lint` to verify the code meets our standards.
 
 ## Claiming an Issue
 
