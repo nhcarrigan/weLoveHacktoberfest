@@ -5,19 +5,19 @@ export const onMessage = async (
   message: Message,
   client: ExtendedClientInterface
 ): Promise<void> => {
-  /*
-  if (Date.now() - timer <= 30000) {
-    return;
+  // Bypass these restrictions in an explicit development environment
+  if (process.env.NODE_ENV !== "development") {
+    if (Date.now() - client.timer <= 30000) {
+      return;
+    }
+
+    if (process.env.TARGET_CHANNEL === message.channel.id) {
+      return;
+    }
   }
-  */
 
   //bot ignores itself
   if (message.author.id === client.user?.id) {
-    return;
-  }
-
-  //lock to #share-the-love channel
-  if (message.channel.id !== "762002255327002654") {
     return;
   }
 
@@ -34,5 +34,6 @@ export const onMessage = async (
   if (toSay) {
     message.react("💜");
     message.channel.send(responses.join("\n"));
+    client.timer = Date.now();
   }
 };
