@@ -1,8 +1,5 @@
 import { Client, Message } from "discord.js";
-import dotenv from "dotenv";
 
-// initialise
-dotenv.config();
 const client = new Client();
 const token = process.env.TOKEN;
 const timer = 0;
