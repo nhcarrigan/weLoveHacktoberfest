@@ -8,7 +8,7 @@ export const onMessage = async (
 ): Promise<void> => {
   // Bypass these restrictions in an explicit development environment
   if (process.env.NODE_ENV !== "development") {
-    if (Date.now() - client.timer <= 30000) {
+    if (Date.now() - client.timer <= client.cooldown) {
       return;
     }
 

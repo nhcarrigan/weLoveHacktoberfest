@@ -7,6 +7,8 @@ const client = new Client() as ExtendedClientInterface;
 const token = process.env.TOKEN;
 
 client.timer = 0;
+const cooldown = parseInt(process.env.COOLDOWN || "30000");
+client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
 
 if (!token) {
   console.error("Missing Discord Token");
