@@ -17,4 +17,8 @@ client.on("message", async (message) => await onMessage(message, client));
 
 client.on("ready", onReady);
 
+client.on("error", () => {
+  process.exit(1);
+});
+
 client.login(token);
