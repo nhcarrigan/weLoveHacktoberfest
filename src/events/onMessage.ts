@@ -1,5 +1,6 @@
 import { Message } from "discord.js";
 import { ExtendedClientInterface } from "../interfaces/ExtendedClientInterface";
+import { _moduleList } from "../modules/_moduleList";
 
 export const onMessage = async (
   message: Message,
@@ -22,7 +23,14 @@ export const onMessage = async (
   }
 
   const responses: string[] = [];
-  const toSay = false;
+  let toSay = false;
+
+  for (const module of _moduleList) {
+    if (module.validator(message)) {
+      responses.push(module.generator());
+      toSay = true;
+    }
+  }
 
   /**
    * Push to responses
@@ -32,8 +40,9 @@ export const onMessage = async (
 
   // If we should say something. add the reaction and join all the responses in one message
   if (toSay) {
-    message.react("💜");
-    message.channel.send(responses.join("\n"));
+    await message.react("💜");
+    await message.channel.send(responses.join("\n"));
     client.timer = Date.now();
+    toSay = false;
   }
 };
