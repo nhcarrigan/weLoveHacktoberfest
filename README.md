@@ -34,10 +34,6 @@ This project started as a way to show Matt some love for Hacktoberfest, but has 
 - Raven is always very friendly!
 - They are also known as SandyLightSeaGreenJellyfish
 
-### Hacktoberfest 2020
-
-_This repository is (potentially) eligible for Hacktoberfest 2020 - BUT you should totally contribute anyway because Matt deserves the love!_
-
 ## Feedback and Bugs
 
 If you have feedback or a bug report, please feel free to open a GitHub issue!
@@ -52,7 +48,7 @@ Before interacting with our community, please read our [Code of Conduct](CODE_OF
 
 ## Licensing
 
-Copyright (C) 2020 Nicholas Carrigan
+Copyright (C) 2021 Nicholas Carrigan
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -62,4 +58,4 @@ The full license terms may be viewed in the [LICENSE.md file](./LICENSE.md)
 
 ## Contact
 
-We may be contacted through our [Chat Server](http://chat.nhcarrigan.com) or via [email form](https://contact.nhcarrigan.com).
+We may be contacted through our [Chat Server](http://chat.nhcarrigan.com) or via [email form](https://www.nhcarrigan.com/contact).
