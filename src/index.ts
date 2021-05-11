@@ -5,6 +5,7 @@ import { ExtendedClientInterface } from "./interfaces/ExtendedClientInterface";
 
 import * as Sentry from "@sentry/node";
 import { RewriteFrames } from "@sentry/integrations";
+import { errorHandler } from "./utils/errorHandler";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -16,24 +17,26 @@ Sentry.init({
   ],
 });
 
-const client = new Client() as ExtendedClientInterface;
-const token = process.env.TOKEN;
+(async () => {
+  try {
+    const client = new Client() as ExtendedClientInterface;
+    const token = process.env.TOKEN;
 
-client.timer = 0;
-const cooldown = parseInt(process.env.COOLDOWN || "30000");
-client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
+    client.timer = 0;
+    const cooldown = parseInt(process.env.COOLDOWN || "30000");
+    client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
 
-if (!token) {
-  console.error("Missing Discord Token");
-  process.exit(1);
-}
+    if (!token) {
+      console.error("Missing Discord Token");
+      process.exit(1);
+    }
 
-client.on("message", async (message) => await onMessage(message, client));
+    client.on("message", async (message) => await onMessage(message, client));
 
-client.on("ready", () => onReady(client));
+    client.on("ready", () => onReady(client));
 
-client.on("error", () => {
-  process.exit(1);
-});
-
-client.login(token);
+    client.login(token);
+  } catch (err) {
+    errorHandler("initialisation", err);
+  }
+})();
