@@ -6,6 +6,7 @@ import { ExtendedClientInterface } from "./interfaces/ExtendedClientInterface";
 import * as Sentry from "@sentry/node";
 import { RewriteFrames } from "@sentry/integrations";
 import { errorHandler } from "./utils/errorHandler";
+import { logHandler } from "./utils/logHandler";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -27,7 +28,7 @@ Sentry.init({
     client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
 
     if (!token) {
-      console.error("Missing Discord Token");
+      logHandler.log("error", "Missing Discord Token");
       process.exit(1);
     }
 
