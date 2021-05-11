@@ -3,6 +3,19 @@ import { onMessage } from "./events/onMessage";
 import { onReady } from "./events/onReady";
 import { ExtendedClientInterface } from "./interfaces/ExtendedClientInterface";
 
+import * as Sentry from "@sentry/node";
+import { RewriteFrames } from "@sentry/integrations";
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+  tracesSampleRate: 1.0,
+  integrations: [
+    new RewriteFrames({
+      root: global.__dirname,
+    }),
+  ],
+});
+
 const client = new Client() as ExtendedClientInterface;
 const token = process.env.TOKEN;
 
