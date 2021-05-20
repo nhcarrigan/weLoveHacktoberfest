@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/nhcarrigan/we-love-matt#readme",
   "engines": {
-    "node": "^15.10.0",
-    "npm": "^7.6.0"
+    "node": "^16.2.0",
+    "npm": "^7.13.0"
   },
   "dependencies": {
     "@sentry/integrations": "^6.3.6",
