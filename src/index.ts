@@ -7,6 +7,7 @@ import * as Sentry from "@sentry/node";
 import { RewriteFrames } from "@sentry/integrations";
 import { errorHandler } from "./utils/errorHandler";
 import { logHandler } from "./utils/logHandler";
+import { startServer } from "./server/startServer";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -36,7 +37,9 @@ Sentry.init({
 
     client.on("ready", () => onReady(client));
 
-    client.login(token);
+    await client.login(token);
+
+    await startServer();
   } catch (err) {
     errorHandler("initialisation", err);
   }

@@ -1,6 +1,6 @@
 {
   "name": "we-love-matt",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A bot to show Hacktoberfest some love",
   "main": "./prod/index.js",
   "scripts": {
