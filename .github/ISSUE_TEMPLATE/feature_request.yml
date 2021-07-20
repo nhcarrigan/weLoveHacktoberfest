@@ -1,7 +1,7 @@
 name: Feature request
 description: Suggest an idea for this project
-title: "[FEAT]"
-labels: [🚦 status: awaiting triage]
+title: "[FEAT] - "
+labels: ["🚦 status: awaiting triage"]
 assignees: "nhcarrigan"
 body:
   - type: markdown

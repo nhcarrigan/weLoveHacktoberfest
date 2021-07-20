@@ -1,7 +1,7 @@
 name: Documentation
 description: Request an update to invalid/outdated documentation
-title: "[DOC]"
-labels: [🚦 status: awaiting triage]
+title: "[DOC] - "
+labels: ["🚦 status: awaiting triage"]
 assignees: nhcarrigan
 body:
   - type: markdown
