@@ -8,6 +8,7 @@ import { RewriteFrames } from "@sentry/integrations";
 import { errorHandler } from "./utils/errorHandler";
 import { logHandler } from "./utils/logHandler";
 import { startServer } from "./server/startServer";
+import { IntentOptions } from "./config/IntentOptions";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -21,7 +22,9 @@ Sentry.init({
 
 (async () => {
   try {
-    const client = new Client() as ExtendedClientInterface;
+    const client = new Client({
+      intents: IntentOptions,
+    }) as ExtendedClientInterface;
     const token = process.env.TOKEN;
 
     client.timer = 0;
@@ -33,7 +36,10 @@ Sentry.init({
       process.exit(1);
     }
 
-    client.on("message", async (message) => await onMessage(message, client));
+    client.on(
+      "messageCreate",
+      async (message) => await onMessage(message, client)
+    );
 
     client.on("ready", () => onReady(client));
 
