@@ -2,12 +2,6 @@
 
 A Discord bot to spread Hacktoberfest love.
 
-![](https://img.shields.io/codeclimate/maintainability/nhcarrigan/we-love-hacktoberfest)
-![](https://img.shields.io/codeclimate/issues/nhcarrigan/we-love-hacktoberfest)
-![](https://img.shields.io/codeclimate/tech-debt/nhcarrigan/we-love-hacktoberfest)
-![](https://img.shields.io/lgtm/alerts/github/nhcarrigan/we-love-hacktoberfest)
-![](https://img.shields.io/lgtm/grade/javascript/github/nhcarrigan/we-love-hacktoberfest)
-
 ## Live Version
 
 This page is currently deployed. [View the live site](https://discord.gg/hacktoberfest)
