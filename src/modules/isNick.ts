@@ -1,7 +1,8 @@
+/* eslint-disable jsdoc/require-jsdoc */
+import { nick } from "../data/phrases";
 import { checkMentions } from "../helpers/checkMentions";
 import { getRandom } from "../helpers/getRandom";
 import { ModuleInterface } from "../interfaces/ModuleInterface";
-import { nick } from "../data/phrases";
 
 export const isNick: ModuleInterface = {
   validator: (message) => {

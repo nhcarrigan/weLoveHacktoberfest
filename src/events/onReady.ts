@@ -1,9 +1,16 @@
-import express from "express";
 import http from "http";
+
+import express from "express";
+
 import { ExtendedClientInterface } from "../interfaces/ExtendedClientInterface";
 import { errorHandler } from "../utils/errorHandler";
 import { logHandler } from "../utils/logHandler";
 
+/**
+ * Handles the ready event (when the bot connects to Discord).
+ *
+ * @param {ExtendedClientInterface} client The client object.
+ */
 export const onReady = (client: ExtendedClientInterface): void => {
   try {
     logHandler.log("debug", "Discord is ready!");

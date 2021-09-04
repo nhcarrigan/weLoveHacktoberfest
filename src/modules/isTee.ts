@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-jsdoc */
 import { ModuleInterface } from "../interfaces/ModuleInterface";
 
 export const isTee: ModuleInterface = {

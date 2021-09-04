@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-jsdoc */
 import { hacktoberfest } from "../data/phrases";
 import { getRandom } from "../helpers/getRandom";
 import { ModuleInterface } from "../interfaces/ModuleInterface";

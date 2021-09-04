@@ -1,7 +1,8 @@
+/* eslint-disable jsdoc/require-jsdoc */
+import { raven } from "../data/phrases";
 import { checkMentions } from "../helpers/checkMentions";
 import { getRandom } from "../helpers/getRandom";
 import { ModuleInterface } from "../interfaces/ModuleInterface";
-import { raven } from "../data/phrases";
 
 export const isRaven: ModuleInterface = {
   validator: (message) => {

@@ -1,7 +1,8 @@
+/* eslint-disable jsdoc/require-jsdoc */
+import { luke } from "../data/phrases";
 import { checkMentions } from "../helpers/checkMentions";
 import { getRandom } from "../helpers/getRandom";
 import { ModuleInterface } from "../interfaces/ModuleInterface";
-import { luke } from "../data/phrases";
 
 export const isLuke: ModuleInterface = {
   validator: (message) => {
