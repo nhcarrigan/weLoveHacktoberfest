@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-jsdoc */
 import { restarter } from "../data/phrases";
 import { checkMentions } from "../helpers/checkMentions";
 import { getRandom } from "../helpers/getRandom";

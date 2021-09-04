@@ -1,14 +1,14 @@
+import { RewriteFrames } from "@sentry/integrations";
+import * as Sentry from "@sentry/node";
 import { Client } from "discord.js";
+
+import { IntentOptions } from "./config/IntentOptions";
 import { onMessage } from "./events/onMessage";
 import { onReady } from "./events/onReady";
 import { ExtendedClientInterface } from "./interfaces/ExtendedClientInterface";
-
-import * as Sentry from "@sentry/node";
-import { RewriteFrames } from "@sentry/integrations";
+import { startServer } from "./server/startServer";
 import { errorHandler } from "./utils/errorHandler";
 import { logHandler } from "./utils/logHandler";
-import { startServer } from "./server/startServer";
-import { IntentOptions } from "./config/IntentOptions";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,

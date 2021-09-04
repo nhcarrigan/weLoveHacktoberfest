@@ -1,9 +1,14 @@
-import express from "express";
+import { readFile } from "fs/promises";
 import http from "http";
 import https from "https";
-import { readFile } from "fs/promises";
+
+import express from "express";
+
 import { logHandler } from "../utils/logHandler";
 
+/**
+ * Function to start a basic express server for uptime monitoring.
+ */
 export const startServer = async (): Promise<void> => {
   const app = express();
 

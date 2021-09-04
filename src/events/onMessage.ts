@@ -1,8 +1,15 @@
 import { Message } from "discord.js";
+
 import { ExtendedClientInterface } from "../interfaces/ExtendedClientInterface";
 import { _moduleList } from "../modules/_moduleList";
 import { errorHandler } from "../utils/errorHandler";
 
+/**
+ * Handles the message event.
+ *
+ * @param {Message} message The message object.
+ * @param {ExtendedClientInterface} client The client object.
+ */
 export const onMessage = async (
   message: Message,
   client: ExtendedClientInterface
@@ -35,9 +42,9 @@ export const onMessage = async (
     }
 
     if (toSay) {
+      client.timer = Date.now();
       await message.react("💜");
       await message.channel.send(responses.join("\n"));
-      client.timer = Date.now();
     }
   } catch (err) {
     errorHandler("message event", err);
