@@ -40,8 +40,8 @@
     "@typescript-eslint/parser": "4.30.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsdoc": "^36.0.8",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-jsdoc": "36.0.8",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.3.2"
   }
