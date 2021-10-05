@@ -2,6 +2,7 @@ import { isAndy } from "./isAndy";
 import { isBen } from "./isBen";
 import { isCatbirby } from "./isCatbirby";
 import { isDaniel } from "./isDaniel";
+import { isDeepSource } from "./isDeepSource";
 import { isDiana } from "./isDiana";
 import { isDigitalOcean } from "./isDigitalOcean";
 import { isGabriel } from "./isGabriel";
@@ -24,6 +25,7 @@ export const _moduleList = [
   isBen,
   isCatbirby,
   isDaniel,
+  isDeepSource,
   isDiana,
   isDigitalOcean,
   isGabriel,
