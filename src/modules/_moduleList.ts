@@ -16,7 +16,6 @@ import { isPaul } from "./isPaul";
 import { isRaven } from "./isRaven";
 import { isRestarter } from "./isRestarter";
 import { isTee } from "./isTee";
-import { isVonage } from "./isVonage";
 import { isWalshy } from "./isWalshy";
 
 export const _moduleList = [
@@ -38,6 +37,5 @@ export const _moduleList = [
   isRaven,
   isRestarter,
   isTee,
-  isVonage,
   isWalshy,
 ];
