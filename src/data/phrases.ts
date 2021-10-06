@@ -333,21 +333,6 @@ export const ocean = [
   "DigitalOcean (noun): Simple and scalable cloud platform",
   "DigitalOcean (noun): Amazing company",
 ];
-export const vonage = [
-  "We Love Vonage!",
-  "Vonage is Awesome!",
-  "Vonage team is so nice",
-  "Vonage team is amazing",
-  "We love working on Vonage projects",
-  "We love attending Vonage twitch streams",
-  "Vonage is 11/10!",
-  "Vonage is :vonageheart:",
-  "Vonage makes the world a better place.",
-  "Be like Vonage's communication APIs, be Amazing",
-  "Vonage team is the Best!",
-  "Vonage (noun): Customer Experience haven",
-  "Vonage (noun): Amazing company",
-];
 
 export const diana = [
   "We Love Diana!",
