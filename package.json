@@ -22,7 +22,7 @@
   "homepage": "https://github.com/nhcarrigan/we-love-matt#readme",
   "engines": {
     "node": "^16.9.1",
-    "npm": "^7.24.0"
+    "npm": "^8.0.0"
   },
   "dependencies": {
     "@sentry/integrations": "^6.12.0",
