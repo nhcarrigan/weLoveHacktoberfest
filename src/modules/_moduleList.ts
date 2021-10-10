@@ -7,6 +7,7 @@ import { isDiana } from "./isDiana";
 import { isDigitalOcean } from "./isDigitalOcean";
 import { isGabriel } from "./isGabriel";
 import { isHacktoberfest } from "./isHacktoberfest";
+import { isIntel } from "./isIntel";
 import { isJoe } from "./isJoe";
 import { isKyle } from "./isKyle";
 import { isLorna } from "./isLorna";
@@ -29,6 +30,7 @@ export const _moduleList = [
   isDigitalOcean,
   isGabriel,
   isHacktoberfest,
+  isIntel,
   isJoe,
   isKyle,
   isLorna,
