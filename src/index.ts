@@ -5,7 +5,7 @@ import { Client } from "discord.js";
 import { IntentOptions } from "./config/IntentOptions";
 import { onMessage } from "./events/onMessage";
 import { onReady } from "./events/onReady";
-import { ExtendedClientInterface } from "./interfaces/ExtendedClientInterface";
+import { Bot } from "./interfaces/Bot";
 import { startServer } from "./server/startServer";
 import { errorHandler } from "./utils/errorHandler";
 import { logHandler } from "./utils/logHandler";
@@ -24,7 +24,7 @@ Sentry.init({
   try {
     const client = new Client({
       intents: IntentOptions,
-    }) as ExtendedClientInterface;
+    }) as Bot;
     const token = process.env.TOKEN;
 
     client.timer = 0;
