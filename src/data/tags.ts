@@ -32,7 +32,7 @@ export const tags: Tag[] = [
   {
     name: "prs",
     content:
-      "```\nPRs count if:\nSubmitted during the month of October AND (\n  The PR is labelled as hacktoberfest-accepted by a maintainer OR\n  Submitted in a repo with the hacktoberfest topic AND (\n    The PR is merged OR\n    The PR has been approved\n  )\n)",
+      "```\nPRs count if:\nSubmitted during the month of October AND (\n  The PR is labelled as hacktoberfest-accepted by a maintainer OR\n  Submitted in a repo with the hacktoberfest topic AND (\n    The PR is merged OR\n    The PR has been approved\n  )\n)\n```",
   },
   {
     name: "repos",
