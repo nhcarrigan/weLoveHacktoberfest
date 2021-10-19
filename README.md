@@ -6,33 +6,17 @@ A Discord bot to spread Hacktoberfest love.
 
 This page is currently deployed. [View the live site](https://discord.gg/hacktoberfest)
 
-## Spreading Hacktoberfest Love!
+## Spreading Hacktoberfest Love
 
-This project started as a way to show Matt some love for Hacktoberfest, but has since evolved to encompass other folks involved as well.
+This project started as a way to show Matt some love for Hacktoberfest back in 2020, but has since evolved to express love for all of the folks who make Hacktoberfest so amazing.
 
-### Reasons we love [@MattIPv4](https://github.com/MattIPv4)
+The bot will only spread love within the `sharing-the-love` channel, and is heavily rate-limited to avoid spam.
 
-- Multitalented Person ❤️
-- [Contributed in Rythm Project](https://rythmbot.co/) ❤️❤️
-- [Hacktoberfest](https://github.com/digitalocean/hacktoberfest/pull/596) ❤️❤️❤️
-- [DigitalOcean](https://github.com/digitalocean) ❤️❤️❤️❤️
-- [cdnjs](https://github.com/cdnjs) ❤️❤️❤️❤️❤️
-- Matt is hard working!
-- Matt is smart!
-- Matt is **AWESOME!!!**
+## Providing Useful Information
 
-### Reasons we love [@Luke From Vonage](https://github.com/lukeocodes)
+The bot now has a tag system, which allows for FAQ-like responses to quickly respond to common questions.
 
-- Luke is Humble
-- Helps out everyone in the community ❤️
-- Maybe his puns 😜
-- He's Santa 🎅
-
-### Reasons we love [Raven @ Digital Ocean](https://github.com/AmNotADev)
-
-- Made a fantastic Discord banner
-- Raven is always very friendly!
-- They are also known as SandyLightSeaGreenJellyfish
+To use the tag system, type `hf.<name>` where `<name>` is replaced by the name of the tag you want to send. To view available tags, type `hf.--list`.
 
 ## Feedback and Bugs
 
