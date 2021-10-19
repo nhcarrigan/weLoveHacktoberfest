@@ -1,6 +1,6 @@
 export interface LoveData {
   name: string;
-  id: string;
-  text: string;
+  id?: string;
+  emoji: string;
   phrases: string[];
 }
