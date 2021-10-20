@@ -56,13 +56,11 @@ export const tags: Tag[] = [
   },
   {
     name: "luke",
-    content:
-      "Hi. Find out more about me with the hf.bestmod command.",
+    content: "Hi. Find out more about me with the hf.bestmod command.",
   },
   {
     name: "bestmod",
-    content:
-      "Hi. Find out more about me with the hf.luke command.",
+    content: "Hi. Find out more about me with the hf.luke command.",
   },
   {
     name: "started",
