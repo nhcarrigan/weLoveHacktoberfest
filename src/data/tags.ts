@@ -55,6 +55,16 @@ export const tags: Tag[] = [
       "Hacktoberfest starts on the 1st of October and ends on October 31st. PRs created before October 1st, or after October 31st, do not count.",
   },
   {
+    name: "luke",
+    content:
+      "Hi. Find out more about me with the hf.bestmod command.",
+  },
+  {
+    name: "bestmod",
+    content:
+      "Hi. Find out more about me with the hf.luke command.",
+  },
+  {
     name: "started",
     content: "Yes, Hacktoberfest has started.",
   },
