@@ -52,7 +52,7 @@ export const tags: Tag[] = [
   {
     name: "trees",
     content:
-      "Rather than receive t-shirts as swag, you can choose to have a tree planted in your name and help make Hacktoberfest 2021 more carbon neutral.\n Trees > Tees",
+      "Rather than receive t-shirts as swag, you can choose to have a tree planted in your name and help make Hacktoberfest 2021 more carbon neutral.\nTrees > Tees",
   },
   {
     name: "start",
