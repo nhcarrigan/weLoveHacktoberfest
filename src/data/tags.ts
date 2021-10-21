@@ -58,4 +58,8 @@ export const tags: Tag[] = [
     name: "started",
     content: "Yes, Hacktoberfest has started.",
   },
+  {
+    name: "0days",
+    content: "It means that the time left for maturation of your repo is less than 1 day.",
+  },
 ];
