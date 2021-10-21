@@ -50,6 +50,11 @@ export const tags: Tag[] = [
       "👋 If you're worried about getting a shirt, don't worry! Shirts will likely be available well into the third week of the competition if not the whole way through. However, we never give out numbers for completions as we go, as it’d incentivise further spam and likely disincentivise legitimate contributions at a point.\n\nPlease keep in mind though that Hacktoberfest isn't just about getting a T-shirt, that is not the core aim for participating in Hacktoberfest. A T-shirt may be motivating to win, but Hacktoberfest is about learning and contributing to open source, doing good for the open-source community and helping projects out, not primarily about getting a free T-shirt.\n\nAlso, if you do win, you should really consider opt-ing to have a tree planted on your behalf in the Hacktoberfest Forest instead of claiming a T-shirt, we need to look after our climate!",
   },
   {
+    name: "trees",
+    content:
+      "Rather than receive t-shirts as swag, you can choose to have a tree planted in your name and help make Hacktoberfest 2021 more carbon neutral.\n Trees > Tees",
+  },
+  {
     name: "start",
     content:
       "Hacktoberfest starts on the 1st of October and ends on October 31st. PRs created before October 1st, or after October 31st, do not count.",
