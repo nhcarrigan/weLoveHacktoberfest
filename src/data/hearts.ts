@@ -13,7 +13,7 @@ export const hearts = [
   "hf_heart_2019",
   "hf_heart_2020",
   "hf_heart_2021",
-  "hf_pixel_heart",
+  "hf_pixel_heart_21",
   "india_heart",
   "italian_heart",
   "javascript_heart",
