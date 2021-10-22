@@ -60,6 +60,7 @@ export const tags: Tag[] = [
   },
   {
     name: "0days",
-    content: "It means that the time left for maturation of your repo is less than 1 day.",
+    content: 
+      "If your PR is showing `Matures in 0 Days`, that means your PR is still in progress but has less than 24 hours to go. You can use this time to keep contributing to open source!",
   },
 ];
