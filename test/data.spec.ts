@@ -33,6 +33,14 @@ suite("Data Validation", () => {
           `${tag.name} content is too long!`
         );
       });
+
+      test(`${tag.name} should ahve title less than 256 characters`, () => {
+        assert.isAtMost(
+          tag.title.length,
+          256,
+          `${tag.name} title is too long!`
+        );
+      });
     }
   });
 });
