@@ -31,7 +31,7 @@ export const sendTag = async (message: Message): Promise<void> => {
       return;
     }
 
-    embed.setTitle(tag.name);
+    embed.setTitle(tag.title);
     embed.setDescription(tag.content);
 
     await message.reply({ embeds: [embed] });
