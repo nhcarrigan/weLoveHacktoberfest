@@ -62,5 +62,9 @@ suite("Data Validation", () => {
         });
       }
     }
+
+    test("Tags should be alphabetical", () => {
+      assert.deepEqual(tagNames, tagNames.sort(), "Tags are not sorted!");
+    });
   });
 });

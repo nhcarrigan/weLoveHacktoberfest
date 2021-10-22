@@ -22,6 +22,13 @@ export const tags: Tag[] = [
     aliases: [],
   },
   {
+    name: "helpers",
+    content:
+      "The Hacktoberfest community is successful, in part, due to the efforts of the helpers to keep things safe and welcoming. Helpers not only moderate the community, but answer your questions and help you in your efforts to contribute to open source. Our valued helpers are:\n\n[Matt](https://mattcowley.co.uk/)\n[CatBirby](https://catbirby.com/)\n[LukeOCodes](https://github.com/lukeocodes/)\n[nhcarrigan](https://nhcarrigan.com)\n[Walshy](https://walshy.dev/)",
+    title: "What is a helper?",
+    aliases: ["mods"],
+  },
+  {
     name: "matures",
     content: `The fourteen day "matures" period begins after your PR is approved/merged, and is the Hacktoberfest review period. There is nothing wrong with your PR, you just need to be patient for the 14 days to pass.`,
     title: "Why does my PR say 'Matures in 14 days'?",
