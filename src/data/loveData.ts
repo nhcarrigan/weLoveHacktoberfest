@@ -1,6 +1,7 @@
 import { LoveData } from "../interfaces/LoveData";
 
 import {
+  appwrite,
   catbirby,
   daniel,
   deepsource,
@@ -82,6 +83,11 @@ export const loveData: LoveData[] = [
     id: "453920106498621451",
     emoji: "W A L S H Y",
     phrases: walshy,
+  },
+  {
+    name: "appwrite",
+    emoji: "A P P W R I T E",
+    phrases: appwrite,
   },
   {
     name: "website",
