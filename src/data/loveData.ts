@@ -12,7 +12,7 @@ import {
   ocean,
   raven,
   walshy,
-  website
+  website,
 } from "./phrases";
 
 export const loveData: LoveData[] = [
