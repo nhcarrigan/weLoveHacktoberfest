@@ -1,5 +1,6 @@
-import { Message } from "discord.js";
+import { Message, MessageEmbed } from "discord.js";
 
+import { hearts } from "../data/hearts";
 import { loveData } from "../data/loveData";
 import { getRandom } from "../helpers/getRandom";
 import { Bot } from "../interfaces/Bot";
@@ -27,22 +28,30 @@ export const sendLove = async (
       if (process.env.TARGET_CHANNEL !== message.channel.id) {
         return;
       }
+    }
 
-      const responses: string[] = [];
-      let toSay = false;
+    const responses: string[] = [];
+    let toSay = false;
 
-      for (const love of loveData) {
-        if (validateLove(message, love)) {
-          responses.push(getRandom(love.phrases));
-          toSay = true;
-        }
+    for (const love of loveData) {
+      if (validateLove(message, love)) {
+        responses.push(getRandom(love.phrases));
+        toSay = true;
       }
+    }
 
-      if (toSay) {
-        client.timer = Date.now();
-        await message.react("💜");
-        await message.channel.send(responses.join("\n"));
-      }
+    if (toSay) {
+      client.timer = Date.now();
+      const embed = new MessageEmbed();
+      embed.setTitle("Spread the Love!");
+      embed.setDescription(responses.join("\n"));
+      embed.setThumbnail(
+        `https://raw.githubusercontent.com/lukeocodes/dev-hearts/main/build/${getRandom(
+          hearts
+        )}.png`
+      );
+      await message.react("💜");
+      await message.channel.send({ embeds: [embed] });
     }
   } catch (err) {
     errorHandler("send love", err);
