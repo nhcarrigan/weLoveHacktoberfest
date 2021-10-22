@@ -83,16 +83,16 @@ export const tags: Tag[] = [
     aliases: [],
   },
   {
+    name: "uwu",
+    content: "Oh hello uwu",
+    title: "UWU?",
+    aliases: [],
+  },
+  {
     name: "0days",
     content:
       "If your PR is showing `Matures in 0 Days`, that means your PR is still in progress but has less than 24 hours to go. You can use this time to keep contributing to open source!",
     title: "Why does my PR say 'Matures in 0 Days'?",
     aliases: ["zerodays"],
-  },
-  {
-    name: "uwu",
-    content: "Oh hello uwu",
-    title: "UWU",
-    aliases:[]
   },
 ];
