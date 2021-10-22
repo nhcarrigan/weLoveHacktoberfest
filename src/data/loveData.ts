@@ -12,6 +12,7 @@ import {
   ocean,
   raven,
   walshy,
+  appwrite,
 } from "./phrases";
 
 export const loveData: LoveData[] = [
@@ -81,5 +82,10 @@ export const loveData: LoveData[] = [
     id: "453920106498621451",
     emoji: "W A L S H Y",
     phrases: walshy,
+  },
+  {
+    name: "appwrite",
+    emoji: "A P P W R I T E",
+    phrases: appwrite,
   },
 ];
