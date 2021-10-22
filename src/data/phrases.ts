@@ -528,7 +528,7 @@ export const appwrite = [
   "Be like Appwrite, be Amazing",
   "Appwrite does everything so well!",
   "We all aspire to be Appwrite!",
-]
+];
 
 export const website = [
   "We Love The Website!",
