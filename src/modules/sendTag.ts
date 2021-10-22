@@ -16,12 +16,23 @@ export const sendTag = async (message: Message): Promise<void> => {
 
     if (target === "--list") {
       embed.setTitle("Available Tags");
-      embed.setDescription(tags.map((tag) => `\`${tag.name}\``).join(" | "));
+      embed.setDescription(
+        tags
+          .map(
+            (tag) =>
+              `\`${tag.name}\` ${
+                tag.aliases.length ? ` (\`${tag.aliases.join("/")}\`)` : ""
+              }`
+          )
+          .join(" | ")
+      );
       await message.reply({ embeds: [embed] });
       return;
     }
 
-    const tag = tags.find((t) => t.name === target);
+    const tag = tags.find(
+      (t) => t.name === target || t.aliases.includes(target)
+    );
     if (!tag) {
       embed.setTitle("Invalid Tag!");
       embed.setDescription(
@@ -33,6 +44,7 @@ export const sendTag = async (message: Message): Promise<void> => {
 
     embed.setTitle(tag.title);
     embed.setDescription(tag.content);
+    embed.setFooter([tag.name, ...tag.aliases].join(", "));
 
     await message.reply({ embeds: [embed] });
   } catch (err) {

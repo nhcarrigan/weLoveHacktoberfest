@@ -5,6 +5,9 @@ import { tags } from "../src/data/tags";
 suite("Data Validation", () => {
   suite("Tags Validation", () => {
     const tagNames = tags.map((el) => el.name);
+    tags.forEach((tag) => {
+      tagNames.push(...tag.aliases);
+    });
     for (const tag of tags) {
       test(`${tag.name} should be unique`, () => {
         assert.equal(
@@ -48,6 +51,16 @@ suite("Data Validation", () => {
           `${tag.name} title does not appear to be a question`
         );
       });
+
+      for (const alias of tag.aliases) {
+        test(`${tag.name} should have unique aliases`, () => {
+          assert.equal(
+            tagNames.indexOf(alias),
+            tagNames.lastIndexOf(alias),
+            `${alias} is not unique!`
+          );
+        });
+      }
     }
   });
 });
