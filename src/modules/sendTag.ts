@@ -21,7 +21,9 @@ export const sendTag = async (message: Message): Promise<void> => {
       return;
     }
 
-    const tag = tags.find((t) => t.name === target);
+    const tag = tags.find(
+      (t) => t.name === target || t.aliases.includes(target)
+    );
     if (!tag) {
       embed.setTitle("Invalid Tag!");
       embed.setDescription(
