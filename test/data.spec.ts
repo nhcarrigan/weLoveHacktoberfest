@@ -41,6 +41,13 @@ suite("Data Validation", () => {
           `${tag.name} title is too long!`
         );
       });
+
+      test(`${tag.name} title should be a question`, () => {
+        assert(
+          tag.title.endsWith("?"),
+          `${tag.name} title does not appear to be a question`
+        );
+      });
     }
   });
 });

@@ -21,7 +21,7 @@ export const tags: Tag[] = [
   {
     name: "matures",
     content: `The fourteen day "matures" period begins after your PR is approved/merged, and is the Hacktoberfest review period. There is nothing wrong with your PR, you just need to be patient for the 14 days to pass.`,
-    title: "Why does my PR say 'Matures in 14 days?'",
+    title: "Why does my PR say 'Matures in 14 days'?",
   },
   {
     name: "profile",
