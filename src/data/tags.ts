@@ -89,4 +89,10 @@ export const tags: Tag[] = [
     title: "Why does my PR say 'Matures in 0 Days'?",
     aliases: ["zerodays"],
   },
+  {
+    name: "uwu",
+    content: "Oh hello uwu",
+    title: "UWU",
+    aliases:[]
+  },
 ];
