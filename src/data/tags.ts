@@ -51,9 +51,9 @@ export const tags: Tag[] = [
   {
     name: "prs",
     content:
-      "```\nPRs count if:\nSubmitted during the month of October AND (\n  The PR is labelled as hacktoberfest-accepted by a maintainer OR\n  Submitted in a repo with the hacktoberfest topic AND (\n    The PR is merged OR\n    The PR has been approved\n  )\n)\n```",
-    title: "How does a PR count for Hacktoberfest?",
-    aliases: [],
+      "```\nPRs/MRs count if:\nSubmitted during the month of October AND (\n  The PR/MR is labelled as hacktoberfest-accepted by a maintainer OR\n  Submitted in a repo with the hacktoberfest topic AND (\n    The PR/MR is merged OR\n    The PR/MR has been approved\n  )\n)\n```\n\nYou can read more about the specifics of what qualifies a pull/merge request at <https://hacktoberfest.digitalocean.com/resources/participation>.",
+    title: "How does a PR/MR count for Hacktoberfest?",
+    aliases: ["pr", "mrs", "mr"],
   },
   {
     name: "shipping",
