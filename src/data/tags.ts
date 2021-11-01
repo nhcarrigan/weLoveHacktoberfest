@@ -9,6 +9,14 @@ export const tags: Tag[] = [
     aliases: ["start"],
   },
   {
+    name: "disqualified",
+    content:
+      "You have had 2 or more PRs/MRs labelled with `invalid` or `spam` and have been disqualified from participating in Hacktoberfest.\n\nThe Hacktoberfest team cannot control how maintainers choose to label your contributions, and as such we cannot offer support here. You can politely ask the maintainer to remove the labels, but ultimately it is their choice. Please do not harass maintainers.\n\nIf the maintainer chooses to remove the label, let us know so we can re-evaluate your Hacktoberfest account.",
+    title:
+      "I have four completed PRs. Why don't I see the confirmation screen?",
+    aliases: ["dq"],
+  },
+  {
     name: "exact-start",
     content:
       "To quote <@!541305895544422430>:\n> I've said it before, and I'll say it again, y'all really don't need to worry about the exact time it all starts. You've got the whole month to get your PRs submitted.",
