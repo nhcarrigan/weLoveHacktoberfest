@@ -50,7 +50,10 @@ export const sendLove = async (
           hearts
         )}.png`
       );
-      embed.setFooter("Spread the love? https://donate.nhcarrigan.com");
+      embed.setFooter(
+        "Spread the love? https://donate.nhcarrigan.com",
+        "https://cdn.nhcarrigan.com/profile-transparent.png"
+      );
       await message.react("💜");
       await message.channel.send({ embeds: [embed] });
     }
