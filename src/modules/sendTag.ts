@@ -28,7 +28,10 @@ export const sendTag = async (message: Message): Promise<void> => {
           true
         );
       }
-      embed.setFooter("Spread the love? https://donate.nhcarrigan.com");
+      embed.setFooter(
+        "Spread the love? https://donate.nhcarrigan.com",
+        "https://cdn.nhcarrigan.com/profile-transparent.png"
+      );
       await message.reply({ embeds: [embed] });
       return;
     }
@@ -41,14 +44,20 @@ export const sendTag = async (message: Message): Promise<void> => {
       embed.setDescription(
         `${target} is not a valid tag! If you want to create or edit a tag, [make a pull request!](https://github.com/nhcarrigan/we-love-hacktoberfest)`
       );
-      embed.setFooter("Spread the love? https://donate.nhcarrigan.com");
+      embed.setFooter(
+        "Spread the love? https://donate.nhcarrigan.com",
+        "https://cdn.nhcarrigan.com/profile-transparent.png"
+      );
       await message.reply({ embeds: [embed] });
       return;
     }
 
     embed.setTitle(tag.title);
     embed.setDescription(tag.content);
-    embed.setFooter("Spread the love? https://donate.nhcarrigan.com");
+    embed.setFooter(
+      "Spread the love? https://donate.nhcarrigan.com",
+      "https://cdn.nhcarrigan.com/profile-transparent.png"
+    );
 
     await message.reply({ embeds: [embed] });
   } catch (err) {
