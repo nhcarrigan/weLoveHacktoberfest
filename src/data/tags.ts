@@ -96,4 +96,11 @@ export const tags: Tag[] = [
     title: "UWU?",
     aliases: [],
   },
+  {
+    name: "track",
+    content:
+      "How to track your Hacktoberfest Swag:\n1. Turn off your computer\n2. Go for a walk\n3. Realise that in the grand scheme of things a free shirt is really not that important\n4. Return home\n5. Turn on your computer\n6. Thank <@541305895544422430> for being so awesome",
+    title: "How do I track my swag?",
+    aliases: [],
+  },
 ];
