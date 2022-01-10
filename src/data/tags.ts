@@ -66,7 +66,7 @@ export const tags: Tag[] = [
   {
     name: "shipfaster",
     content:
-      "How to get your Hacktoberfest Swag faster:\n1. Sacrifice a goat\n2. Realize what you've just done for a t-shirt, and go for a walk\n3. Wait a month, and perform the [Ritual of Cleansing](https://www.youtube.com/watch?v=zL19uMsnpSU)\n4. Realize there's more to life than waiting for a free t-shirt that may or may not arrive arrive soon\n5. Forget about the shirt\n6. Be surprised when your swag finally appears after you've completely forgotten the entire thing\n7. Thank <@541305895544422430> for being so awesome",
+      "How to get your Hacktoberfest Swag faster:\n1. Go for a walk\n2. Wait a month, and perform the [Ritual of Cleansing](https://www.youtube.com/watch?v=zL19uMsnpSU)\n3. Realize there's more to life than waiting for a free t-shirt that may or may not arrive arrive soon\n4. Forget about the shirt\n5. Be surprised when your swag finally appears after you've completely forgotten the entire thing\n6. Thank <@541305895544422430> for being so awesome",
     title: "How do I get my swag faster?",
     aliases: [],
   },
