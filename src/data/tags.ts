@@ -113,7 +113,7 @@ export const tags: Tag[] = [
   {
     name: "doubleswags",
     content:
-      "How to double your Hacktober swags:\n1. Open your potato PC\n2. Learn some hecking skills from this tutorial [ https://youtu.be/dQw4w9WgXcQ ]\n3. Realize that all the PR's you have made till now was nothing more than spamming\n4. Get inspire to plant tree instead of demanding free tshirt from next time \n5. Feel regret for missing this year's opportunity to plant a tree \n6. Thank <@599518639686680576> for being so awesome",
+      "How to double your Hacktober swags:\n1. Open your potato PC\n2. Learn some hecking skills from [this tutorial](https://youtu.be/dQw4w9WgXcQ) \n3. Realize that all the PR's you have made till now was nothing more than spamming\n4. Get inspire to plant tree instead of demanding free tshirt from next time \n5. Feel regret for missing this year's opportunity to plant a tree \n6. Thank <@599518639686680576> for being so awesome",
     title: "How can I double my swag snd goodies?",
     aliases: [],
   },
