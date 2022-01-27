@@ -9,7 +9,7 @@ import {
   intel,
   luke,
   matt,
-  nick,
+  naomi,
   ocean,
   raven,
   walshy,
@@ -65,7 +65,7 @@ export const loveData: LoveData[] = [
     name: "nhcarrigan",
     id: "465650873650118659",
     emoji: "N H C A R R I G A N",
-    phrases: nick,
+    phrases: naomi,
   },
   {
     name: "raven",
