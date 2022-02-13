@@ -27,6 +27,6 @@ export const onMessage = async (
 
     await sendLove(client, message);
   } catch (err) {
-    errorHandler("message event", err);
+    await errorHandler("message event", err);
   }
 };

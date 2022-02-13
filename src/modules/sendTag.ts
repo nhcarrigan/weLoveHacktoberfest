@@ -61,6 +61,6 @@ export const sendTag = async (message: Message): Promise<void> => {
 
     await message.reply({ embeds: [embed] });
   } catch (err) {
-    errorHandler("send tag", err);
+    await errorHandler("send tag", err);
   }
 };
