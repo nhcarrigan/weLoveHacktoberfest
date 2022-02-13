@@ -1,6 +1,4 @@
-import http from "http";
-
-import express from "express";
+import { WebhookClient } from "discord.js";
 
 import { Bot } from "../interfaces/Bot";
 import { errorHandler } from "../utils/errorHandler";
@@ -11,7 +9,7 @@ import { logHandler } from "../utils/logHandler";
  *
  * @param {Bot} client The client object.
  */
-export const onReady = (client: Bot): void => {
+export const onReady = async (client: Bot): Promise<void> => {
   try {
     logHandler.log("debug", "Discord is ready!");
 
@@ -30,18 +28,10 @@ export const onReady = (client: Bot): void => {
       `Cooldown is set to ${client.cooldown / 1000} seconds.`
     );
 
-    const endpoint = express();
+    const hook = new WebhookClient({ url: process.env.DEBUG_HOOK as string });
 
-    endpoint.use((req, res) => {
-      res.status(200).send("We love hacktoberfest!");
-    });
-
-    const server = http.createServer(endpoint);
-
-    server.listen(5000, () => {
-      logHandler.log("http", "Monitor endpoint is ready on port 5000!");
-    });
+    await hook.send("Hacktoberfest bot online!");
   } catch (err) {
-    errorHandler("ready event", err);
+    await errorHandler("ready event", err);
   }
 };

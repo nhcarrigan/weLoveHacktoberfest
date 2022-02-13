@@ -21,7 +21,7 @@ export const validateLove = (message: Message, data: LoveData): boolean => {
         (message.author.id === data.id || checkMentions(message, data.id)))
     );
   } catch (err) {
-    errorHandler("validate love", err);
+    void errorHandler("validate love", err);
     return false;
   }
 };

@@ -41,12 +41,12 @@ Sentry.init({
       async (message) => await onMessage(message, client)
     );
 
-    client.on("ready", () => onReady(client));
+    client.on("ready", async () => await onReady(client));
 
     await client.login(token);
 
     await startServer();
   } catch (err) {
-    errorHandler("initialisation", err);
+    await errorHandler("initialisation", err);
   }
 })();
