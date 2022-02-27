@@ -42,4 +42,4 @@ The full license terms may be viewed in the [LICENSE.md file](./LICENSE.md)
 
 ## Contact
 
-We may be contacted through our [Chat Server](http://chat.nhcarrigan.com) or via [email form](https://www.nhcarrigan.com/contact).
+We may be contacted through our [Chat Server](http://chat.nhcarrigan.com) or via `contact@nhcarrigan.com`.
