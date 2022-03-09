@@ -2,6 +2,13 @@ import { Tag } from "../interfaces/Tag";
 
 export const tags: Tag[] = [
   {
+    name: "customs",
+    content:
+      "We write down a low enough dollar value on the mailed packages that we don't expect any issues with customs tax, but we cannot guarantee that - you might have to pay a small fee depending on your country's import policies. DigitalOcean and Kotis Design will not issue a refund for shipping/duty fees.",
+    title: "Will I have to pay anything/custom tax/duty for the shirt?",
+    aliases: ["fees", "taxes"],
+  },
+  {
     name: "dates",
     content:
       "Hacktoberfest starts on the 1st of October and ends on October 31st. PRs created before October 1st, or after October 31st, do not count.",
