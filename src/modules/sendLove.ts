@@ -52,7 +52,7 @@ export const sendLove = async (
       );
       embed.setFooter(
         "Spread the love? https://donate.nhcarrigan.com",
-        "https://cdn.nhcarrigan.com/profile-transparent.png"
+        "https://cdn.nhcarrigan.com/profile.png"
       );
       await message.react("💜");
       await message.channel.send({ embeds: [embed] });

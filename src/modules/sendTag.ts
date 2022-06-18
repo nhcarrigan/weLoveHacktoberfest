@@ -30,7 +30,7 @@ export const sendTag = async (message: Message): Promise<void> => {
       }
       embed.setFooter(
         "Spread the love? https://donate.nhcarrigan.com",
-        "https://cdn.nhcarrigan.com/profile-transparent.png"
+        "https://cdn.nhcarrigan.com/profile.png"
       );
       await message.reply({ embeds: [embed] });
       return;
@@ -46,7 +46,7 @@ export const sendTag = async (message: Message): Promise<void> => {
       );
       embed.setFooter(
         "Spread the love? https://donate.nhcarrigan.com",
-        "https://cdn.nhcarrigan.com/profile-transparent.png"
+        "https://cdn.nhcarrigan.com/profile.png"
       );
       await message.reply({ embeds: [embed] });
       return;
@@ -56,7 +56,7 @@ export const sendTag = async (message: Message): Promise<void> => {
     embed.setDescription(tag.content);
     embed.setFooter(
       "Spread the love? https://donate.nhcarrigan.com",
-      "https://cdn.nhcarrigan.com/profile-transparent.png"
+      "https://cdn.nhcarrigan.com/profile.png"
     );
 
     await message.reply({ embeds: [embed] });
