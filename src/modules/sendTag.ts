@@ -1,4 +1,4 @@
-import { Message, MessageEmbed } from "discord.js";
+import { Message, EmbedBuilder } from "discord.js";
 
 import { tags } from "../data/tags";
 import { errorHandler } from "../utils/errorHandler";
@@ -10,7 +10,7 @@ import { errorHandler } from "../utils/errorHandler";
  */
 export const sendTag = async (message: Message): Promise<void> => {
   try {
-    const embed = new MessageEmbed();
+    const embed = new EmbedBuilder();
 
     const target = message.content.split(".")[1];
 
@@ -19,19 +19,18 @@ export const sendTag = async (message: Message): Promise<void> => {
       embed.setDescription(
         "These are the available tags and aliases. The tag data are all open source, and you can [make a pull request](https://github.com/nhcarrigan/we-love-hacktoberfest) to update the data."
       );
-      for (const tag of tags) {
-        embed.addField(
-          tag.name,
-          tag.aliases.length
+      embed.addFields(
+        tags.map((tag) => ({
+          name: tag.name,
+          value: tag.aliases.length
             ? tag.aliases.map((el) => `\`${el}\``).join(", ")
-            : "*This tag has no aliases.*",
-          true
-        );
-      }
-      embed.setFooter(
-        "Spread the love? https://donate.nhcarrigan.com",
-        "https://cdn.nhcarrigan.com/profile.png"
+            : "*This tag has no aliases.",
+        }))
       );
+      embed.setFooter({
+        text: "Spread the love? https://donate.nhcarrigan.com",
+        iconURL: "https://cdn.nhcarrigan.com/profile.png",
+      });
       await message.reply({ embeds: [embed] });
       return;
     }
@@ -44,20 +43,20 @@ export const sendTag = async (message: Message): Promise<void> => {
       embed.setDescription(
         `${target} is not a valid tag! If you want to create or edit a tag, [make a pull request!](https://github.com/nhcarrigan/we-love-hacktoberfest)`
       );
-      embed.setFooter(
-        "Spread the love? https://donate.nhcarrigan.com",
-        "https://cdn.nhcarrigan.com/profile.png"
-      );
+      embed.setFooter({
+        text: "Spread the love? https://donate.nhcarrigan.com",
+        iconURL: "https://cdn.nhcarrigan.com/profile.png",
+      });
       await message.reply({ embeds: [embed] });
       return;
     }
 
     embed.setTitle(tag.title);
     embed.setDescription(tag.content);
-    embed.setFooter(
-      "Spread the love? https://donate.nhcarrigan.com",
-      "https://cdn.nhcarrigan.com/profile.png"
-    );
+    embed.setFooter({
+      text: "Spread the love? https://donate.nhcarrigan.com",
+      iconURL: "https://cdn.nhcarrigan.com/profile.png",
+    });
 
     await message.reply({ embeds: [embed] });
   } catch (err) {

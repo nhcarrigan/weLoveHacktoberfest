@@ -1,4 +1,4 @@
-import { Message, MessageEmbed } from "discord.js";
+import { EmbedBuilder, Message } from "discord.js";
 
 import { hearts } from "../data/hearts";
 import { loveData } from "../data/loveData";
@@ -42,7 +42,7 @@ export const sendLove = async (
 
     if (toSay) {
       client.timer = Date.now();
-      const embed = new MessageEmbed();
+      const embed = new EmbedBuilder();
       embed.setTitle("Spread the Love!");
       embed.setDescription(responses.join("\n"));
       embed.setThumbnail(
@@ -50,10 +50,10 @@ export const sendLove = async (
           hearts
         )}.png`
       );
-      embed.setFooter(
-        "Spread the love? https://donate.nhcarrigan.com",
-        "https://cdn.nhcarrigan.com/profile.png"
-      );
+      embed.setFooter({
+        text: "Spread the love? https://donate.nhcarrigan.com",
+        iconURL: "https://cdn.nhcarrigan.com/profile.png",
+      });
       await message.react("💜");
       await message.channel.send({ embeds: [embed] });
     }
