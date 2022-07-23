@@ -6,7 +6,6 @@ import { IntentOptions } from "./config/IntentOptions";
 import { onMessage } from "./events/onMessage";
 import { onReady } from "./events/onReady";
 import { Bot } from "./interfaces/Bot";
-import { startServer } from "./server/startServer";
 import { errorHandler } from "./utils/errorHandler";
 import { logHandler } from "./utils/logHandler";
 
@@ -44,8 +43,6 @@ Sentry.init({
     client.on("ready", async () => await onReady(client));
 
     await client.login(token);
-
-    await startServer();
   } catch (err) {
     await errorHandler("initialisation", err);
   }
