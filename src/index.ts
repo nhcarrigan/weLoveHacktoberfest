@@ -3,10 +3,12 @@ import * as Sentry from "@sentry/node";
 import { Client } from "discord.js";
 
 import { IntentOptions } from "./config/IntentOptions";
+import { onInteraction } from "./events/onInteractionCreate";
 import { onMessage } from "./events/onMessage";
 import { onReady } from "./events/onReady";
 import { Bot } from "./interfaces/Bot";
 import { errorHandler } from "./utils/errorHandler";
+import { loadCommands } from "./utils/loadCommands";
 import { logHandler } from "./utils/logHandler";
 
 Sentry.init({
@@ -29,6 +31,8 @@ Sentry.init({
     client.timer = 0;
     const cooldown = parseInt(process.env.COOLDOWN || "30000");
     client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
+    client.homeGuild = process.env.HOME_GUILD || "";
+    client.commands = await loadCommands();
 
     if (!token) {
       logHandler.log("error", "Missing Discord Token");
@@ -39,6 +43,10 @@ Sentry.init({
       "messageCreate",
       async (message) => await onMessage(message, client)
     );
+
+    client.on("interactionCreate", async (interaction) => {
+      await onInteraction(client, interaction);
+    });
 
     client.on("ready", async () => await onReady(client));
 

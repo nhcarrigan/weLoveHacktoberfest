@@ -2,7 +2,6 @@ import { Message } from "discord.js";
 
 import { Bot } from "../interfaces/Bot";
 import { sendLove } from "../modules/sendLove";
-import { sendTag } from "../modules/sendTag";
 import { errorHandler } from "../utils/errorHandler";
 
 /**
@@ -17,11 +16,6 @@ export const onMessage = async (
 ): Promise<void> => {
   try {
     if (message.author.id === client.user?.id) {
-      return;
-    }
-
-    if (message.content.startsWith("hf.")) {
-      await sendTag(message);
       return;
     }
 

@@ -3,6 +3,7 @@ import { WebhookClient } from "discord.js";
 import { Bot } from "../interfaces/Bot";
 import { errorHandler } from "../utils/errorHandler";
 import { logHandler } from "../utils/logHandler";
+import { registerCommands } from "../utils/registerCommands";
 
 /**
  * Handles the ready event (when the bot connects to Discord).
@@ -27,6 +28,8 @@ export const onReady = async (client: Bot): Promise<void> => {
       "debug",
       `Cooldown is set to ${client.cooldown / 1000} seconds.`
     );
+
+    await registerCommands(client);
 
     const hook = new WebhookClient({ url: process.env.DEBUG_HOOK as string });
 
