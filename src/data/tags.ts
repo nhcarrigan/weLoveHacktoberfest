@@ -77,6 +77,12 @@ export const tags: Tag[] = [
     aliases: ["pr", "mrs", "mr"],
   },
   {
+    name: "pr-count",
+    content: "You need four PRs/MRs accepted between October 1 and October 31 to complete Hacktoberfest",
+    title: "How many PRs/MRs do I need?",
+    aliases: ["mr-count"],
+  },
+  {
     name: "shipfaster",
     content:
       "How to get your Hacktoberfest Swag faster:\n1. Go for a walk\n2. Wait a month, and perform the [Ritual of Cleansing](https://www.youtube.com/watch?v=zL19uMsnpSU)\n3. Realize there's more to life than waiting for a free t-shirt that may or may not arrive arrive soon\n4. Forget about the shirt\n5. Be surprised when your swag finally appears after you've completely forgotten the entire thing\n6. Thank <@541305895544422430> for being so awesome",
