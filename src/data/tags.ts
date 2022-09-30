@@ -133,7 +133,7 @@ export const tags: Tag[] = [
   },
   {
     name: "win",
-    content: 
+    content:
       "Hacktoberfest doesn't have any winners or losers. Positive contributions to the open-source community is a win-win for everyone",
     title: "Can I/how do I win Hacktoberfest?",
     aliases: [],
