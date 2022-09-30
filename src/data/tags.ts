@@ -82,7 +82,7 @@ export const tags: Tag[] = [
     content:
       "You need four PRs/MRs accepted between October 1 and October 31 to complete Hacktoberfest",
     title: "How many PRs/MRs do I need?",
-    aliases: ["mr-count"],
+    aliases: ["mr-count", "count"],
   },
   {
     name: "shipfaster",
