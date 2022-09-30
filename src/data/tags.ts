@@ -107,7 +107,7 @@ export const tags: Tag[] = [
   },
   {
     name: "started",
-    content: "No, Hacktoberfest has not started.",
+    content: "Yes, Hacktoberfest has started.",
     title: "Has Hacktoberfest started?",
     aliases: [],
   },
