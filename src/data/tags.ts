@@ -138,4 +138,12 @@ export const tags: Tag[] = [
     title: "Can I/how do I win Hacktoberfest?",
     aliases: [],
   },
+  {
+    name: "not-accepted",
+    content:
+      "After you have made a PR and the website shows it, it will present you a \"Not accepted\" title until the maintainer has approved or merged your PR/MR.",
+    title:
+      "Why does it say \"Not accepted\" on my PR/MR?",
+    aliases: [],
+  },
 ];
