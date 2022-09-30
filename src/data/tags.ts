@@ -3,9 +3,10 @@ import { Tag } from "../interfaces/Tag";
 export const tags: Tag[] = [
   {
     name: "contribute",
-    content: "You can contribute to any repo with the hacktoberfest label, or if your PR gets the hacktoberfest-accepted label. You can find these by searching on either [GitHub](https://github.com/topics/hacktoberfest) or [GitLab](https://gitlab.com/explore/projects/topics/hacktoberfest).\n\nYou can contribute both code and low-code. See also [GitHub's guide](https://opensource.guide/how-to-contribute/) for contributing if you're not sure how. The [Hacktoberfest website](https://hacktoberfest.com/participation/#contributors) also contains some resources to help you get started.",
+    content:
+      "You can contribute to any repo with the hacktoberfest label, or if your PR gets the hacktoberfest-accepted label. You can find these by searching on either [GitHub](https://github.com/topics/hacktoberfest) or [GitLab](https://gitlab.com/explore/projects/topics/hacktoberfest).\n\nYou can contribute both code and low-code. See also [GitHub's guide](https://opensource.guide/how-to-contribute/) for contributing if you're not sure how. The [Hacktoberfest website](https://hacktoberfest.com/participation/#contributors) also contains some resources to help you get started.",
     title: "How do I contribute?",
-    aliases: ["contributors", "contributing"]
+    aliases: ["contributors", "contributing"],
   },
   {
     name: "customs",
@@ -78,7 +79,8 @@ export const tags: Tag[] = [
   },
   {
     name: "pr-count",
-    content: "You need four PRs/MRs accepted between October 1 and October 31 to complete Hacktoberfest",
+    content:
+      "You need four PRs/MRs accepted between October 1 and October 31 to complete Hacktoberfest",
     title: "How many PRs/MRs do I need?",
     aliases: ["mr-count"],
   },
@@ -131,7 +133,8 @@ export const tags: Tag[] = [
   },
   {
     name: "win",
-    content: "Hacktoberfest doesn't have any winners or losers. Positive contributions to the open-source community is a win-win for everyone",
+    content: 
+      "Hacktoberfest doesn't have any winners or losers. Positive contributions to the open-source community is a win-win for everyone",
     title: "Can I/how do I win Hacktoberfest?",
     aliases: [],
   },
