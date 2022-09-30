@@ -2,6 +2,13 @@ import { Tag } from "../interfaces/Tag";
 
 export const tags: Tag[] = [
   {
+    name: "contribute",
+    content:
+      "You can contribute to any repo with the hacktoberfest label, or repos using the `hacktoberfest-accepted` label on individual PRs/MRs. You can find these by searching on either [GitHub](https://github.com/topics/hacktoberfest) or [GitLab](https://gitlab.com/explore/projects/topics/hacktoberfest).\n\nYou can contribute both code and low-code. See also [GitHub's guide](https://opensource.guide/how-to-contribute/) for contributing if you're not sure how. The [Hacktoberfest website](https://hacktoberfest.com/participation/#contributors) also contains some resources to help you get started.",
+    title: "How do I contribute?",
+    aliases: ["contributors", "contributing"],
+  },
+  {
     name: "customs",
     content:
       "We write down a low enough dollar value on the mailed packages that we don't expect any issues with customs tax, but we cannot guarantee that - you might have to pay a small fee depending on your country's import policies. DigitalOcean and Kotis Design will not issue a refund for shipping/duty fees.",
@@ -71,6 +78,13 @@ export const tags: Tag[] = [
     aliases: ["pr", "mrs", "mr"],
   },
   {
+    name: "pr-count",
+    content:
+      "You need four PRs/MRs accepted between October 1 and October 31 to complete Hacktoberfest",
+    title: "How many PRs/MRs do I need?",
+    aliases: ["mr-count", "count"],
+  },
+  {
     name: "shipfaster",
     content:
       "How to get your Hacktoberfest Swag faster:\n1. Go for a walk\n2. Wait a month, and perform the [Ritual of Cleansing](https://www.youtube.com/watch?v=zL19uMsnpSU)\n3. Realize there's more to life than waiting for a free t-shirt that may or may not arrive arrive soon\n4. Forget about the shirt\n5. Be surprised when your swag finally appears after you've completely forgotten the entire thing\n6. Thank <@541305895544422430> for being so awesome",
@@ -115,6 +129,13 @@ export const tags: Tag[] = [
     name: "uwu",
     content: "Oh hello uwu",
     title: "UWU?",
+    aliases: [],
+  },
+  {
+    name: "win",
+    content:
+      "Hacktoberfest doesn't have any winners or losers. Positive contributions to the open-source community is a win for everyone",
+    title: "Can I/how do I win Hacktoberfest?",
     aliases: [],
   },
 ];
