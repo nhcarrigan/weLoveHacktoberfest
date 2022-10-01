@@ -138,4 +138,11 @@ export const tags: Tag[] = [
     title: "Can I/how do I win Hacktoberfest?",
     aliases: [],
   },
+  {
+    name: "language",
+    content:
+      "Want to find a project with a specific language to contribute to?\n\nUse the below to the language of your choice 👇,\nUse this link, and just change the last parameter!\n\n`https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`\n\nAs an example, if I wanted to find JS projects: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
+    title: "How do I find projects in specific languages to Contribute to?",
+    aliases: ["languages"],
+  },
 ];
