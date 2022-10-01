@@ -51,6 +51,13 @@ export const tags: Tag[] = [
     aliases: ["mods"],
   },
   {
+    name: "language",
+    content:
+      "Want to find a project with a specific language to contribute to?\n\nUse the below to the language of your choice 👇,\nUse this link, and just change the last parameter!\n\n`https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`\n\nAs an example, if I wanted to find JS projects: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
+    title: "How do I find projects in specific languages to Contribute to?",
+    aliases: ["languages"],
+  },
+  {
     name: "matures",
     content: `The seven day "matures" period begins after your PR is approved/merged, and is the Hacktoberfest review period. There is nothing wrong with your PR, you just need to be patient for the 7 days to pass.`,
     title: "Why does my PR say 'Matures in 7 days'?",
@@ -137,12 +144,5 @@ export const tags: Tag[] = [
       "Hacktoberfest doesn't have any winners or losers. Positive contributions to the open-source community is a win for everyone",
     title: "Can I/how do I win Hacktoberfest?",
     aliases: [],
-  },
-  {
-    name: "language",
-    content:
-      "Want to find a project with a specific language to contribute to?\n\nUse the below to the language of your choice 👇,\nUse this link, and just change the last parameter!\n\n`https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`\n\nAs an example, if I wanted to find JS projects: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
-    title: "How do I find projects in specific languages to Contribute to?",
-    aliases: ["languages"],
   },
 ];
