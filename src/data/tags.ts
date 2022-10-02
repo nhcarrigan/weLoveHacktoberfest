@@ -6,7 +6,7 @@ export const tags: Tag[] = [
     content:
       "You don't. There's no way to tell which repos have been excluded. However, repos [are not arbitrarily excluded](https://hacktoberfest.com/participation/#spam). Simplistic repos, list repos, collection repos, and DSA repos are some examples of repos that generally get excluded, though exceptions can (very rarely) apply.\n\nSee also the FAQ entry `excluded`",
     title: "How do I check if a repo has been excluded?",
-    aliases: ["exclusion-check"]
+    aliases: ["exclusion-check"],
   },
   {
     name: "contribute",
