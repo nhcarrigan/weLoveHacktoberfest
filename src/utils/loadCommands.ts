@@ -12,15 +12,16 @@ import { errorHandler } from "./errorHandler";
  * @returns {Command[]} Array of Command objects representing the imported commands.
  */
 export const loadCommands = async (): Promise<Command[]> => {
-  const path = process.env.NODE_ENV === "development" ? "src" : "prod";
-
   try {
     const result: Command[] = [];
-    const files = await readdir(join(process.cwd(), path, "commands"), "utf-8");
+    const files = await readdir(
+      join(process.cwd(), "prod", "commands"),
+      "utf-8"
+    );
     for (const file of files) {
       const name = file.split(".")[0];
       const mod = await import(
-        join(process.cwd(), path, "commands", `${file}`)
+        join(process.cwd(), "prod", "commands", `${file}`)
       );
       result.push(mod[name] as Command);
     }
