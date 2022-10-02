@@ -2,6 +2,13 @@ import { Tag } from "../interfaces/Tag";
 
 export const tags: Tag[] = [
   {
+    name: "check-exclusion",
+    content:
+      "You don't. There's no way to tell which repos have been excluded. However, repos [are not arbitrarily excluded](https://hacktoberfest.com/participation/#spam). Simplistic repos, list repos, collection repos, and DSA repos are some examples of repos that generally get excluded, though exceptions can (very rarely) apply.\n\nSee also the FAQ entry `excluded`",
+    title: "How do I check if a repo has been excluded?",
+    aliases: ["exclusion-check"]
+  },
+  {
     name: "contribute",
     content:
       "You can contribute to any repo with the hacktoberfest label, or repos using the `hacktoberfest-accepted` label on individual PRs/MRs. You can find these by searching on either [GitHub](https://github.com/topics/hacktoberfest) or [GitLab](https://gitlab.com/explore/projects/topics/hacktoberfest).\n\nYou can contribute both code and low-code. See also [GitHub's guide](https://opensource.guide/how-to-contribute/) for contributing if you're not sure how. The [Hacktoberfest website](https://hacktoberfest.com/participation/#contributors) also contains some resources to help you get started.",
@@ -53,7 +60,7 @@ export const tags: Tag[] = [
   {
     name: "language",
     content:
-      "Want to find a project with a specific language to contribute to?\n\nYou can use this link to find hacktoberfest repos in a language of your choice: https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>. Don't forget to replace <<change_this_to_language>> with the language you want to search for.\n\nAs an example, if you want to find JS projects, you'd use: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
+      "Want to find a project with a specific language to contribute to?\n\nYou can use this link to find hacktoberfest repos in a language of your choice: `https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`. Don't forget to replace <<change_this_to_language>> with the language you want to search for.\n\nAs an example, if you want to find JavaScript projects, you'd use: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
     title: "How do I find projects in specific languages to Contribute to?",
     aliases: ["languages"],
   },
