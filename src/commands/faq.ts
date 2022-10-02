@@ -35,19 +35,18 @@ export const faq: Command = {
 
       const userId = interaction.options.getString("user");
 
-      const description = userId
-        ? `Hey ${userId}, this should answer your question.\n${target.content}`
-        : target.content;
-
       const embed = new EmbedBuilder();
       embed.setTitle(target.title);
-      embed.setDescription(description);
+      embed.setDescription(target.content);
       embed.setFooter({
         text: "Spread the love? https://donate.nhcarrigan.com",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
       });
 
-      await interaction.editReply({ embeds: [embed] });
+      await interaction.editReply({
+        embeds: [embed],
+        content: `Hey ${userId}, this should answer your question.`,
+      });
     } catch (err) {
       await errorHandler("faq command", err);
     }
