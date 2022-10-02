@@ -14,6 +14,11 @@ export const faq: Command = {
         .setDescription("The tag name for the relevant response.")
         .setRequired(true)
         .setAutocomplete(true)
+    )
+    .addStringOption((option) =>
+      option
+        .setName("user")
+        .setDescription("The user to whom the request should be addressed to.")
     ),
   run: async (bot, interaction) => {
     try {
@@ -28,9 +33,15 @@ export const faq: Command = {
         return;
       }
 
+      const userId = interaction.options.getString("user");
+
+      const description = userId
+        ? `Hey ${userId}, this should answer your question.\n${target.content}`
+        : target.content;
+
       const embed = new EmbedBuilder();
       embed.setTitle(target.title);
-      embed.setDescription(target.content);
+      embed.setDescription(description);
       embed.setFooter({
         text: "Spread the love? https://donate.nhcarrigan.com",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
