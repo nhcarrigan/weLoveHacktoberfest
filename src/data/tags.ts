@@ -58,6 +58,13 @@ export const tags: Tag[] = [
     aliases: ["languages"],
   },
   {
+    name: "maintainer-swag",
+    content:
+      "The maintainer kit for maintainers is the exact same as for contributors. Participants are only eligible for one reward kit, with contributor rewards being checked first.",
+    title: "What's the reward kit for maintainers?",
+    aliases: []
+  },
+  {
     name: "matures",
     content: `The seven day "matures" period begins after your PR is approved/merged, and is the Hacktoberfest review period. There is nothing wrong with your PR, you just need to be patient for the 7 days to pass.`,
     title: "Why does my PR say 'Matures in 7 days'?",
