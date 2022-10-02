@@ -29,7 +29,7 @@ export const faq: Command = {
       );
 
       if (!target) {
-        await interaction.reply(`No tag found for \`${targetName}\`.`);
+        await interaction.editReply(`No tag found for \`${targetName}\`.`);
         return;
       }
 
