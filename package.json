@@ -7,7 +7,6 @@
     "prebuild": "rm -rf ./prod",
     "build": "tsc",
     "start": "node -r dotenv/config ./prod/index.js",
-    "dev": "tsnd -r dotenv/config 'src/index.ts' --watch",
     "lint": "eslint src --max-warnings 0",
     "test": "ts-mocha -u tdd test/**/*.spec.ts --recursive --exit"
   },
@@ -32,7 +31,6 @@
     "discord.js": "^14.0.0",
     "dotenv": "^16.0.0",
     "string-similarity": "^4.0.4",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^4.5.4",
     "winston": "^3.4.0"
   },
