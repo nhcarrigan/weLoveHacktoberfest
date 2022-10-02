@@ -71,6 +71,13 @@ export const tags: Tag[] = [
     aliases: [],
   },
   {
+    name: "own-repo",
+    content:
+      "Yes. There are no requirements or rules for who has to own the repository.\n\nHowever, you're still encouraged to contribute to other repositories rather than, or in addition to, your own repositories.",
+    title: "Do PRs/MRs to my own repo or a repo I'm a maintainer of count?",
+    aliases: [],
+  },
+  {
     name: "profile",
     content:
       "If your profile isn't showing any PRs, try hard-refreshing the page.\n\nUpdates to the state of your PRs can take around 15 minutes on average. If your PR was merged and hasn't updated on the website immediately, don't panic! Your contributions will be counted on the next update. 🙂",
