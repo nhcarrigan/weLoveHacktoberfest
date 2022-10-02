@@ -62,7 +62,7 @@ export const tags: Tag[] = [
     content:
       "The maintainer kit for maintainers is the exact same as for contributors. Participants are only eligible for one reward kit, with contributor rewards being checked first.",
     title: "What's the reward kit for maintainers?",
-    aliases: []
+    aliases: [],
   },
   {
     name: "matures",
