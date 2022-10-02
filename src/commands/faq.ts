@@ -14,6 +14,11 @@ export const faq: Command = {
         .setDescription("The tag name for the relevant response.")
         .setRequired(true)
         .setAutocomplete(true)
+    )
+    .addStringOption((option) =>
+      option
+        .setName("user")
+        .setDescription("The user to whom the request should be addressed to.")
     ),
   run: async (bot, interaction) => {
     try {
@@ -28,6 +33,8 @@ export const faq: Command = {
         return;
       }
 
+      const userId = interaction.options.getString("user");
+
       const embed = new EmbedBuilder();
       embed.setTitle(target.title);
       embed.setDescription(target.content);
@@ -36,7 +43,10 @@ export const faq: Command = {
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
       });
 
-      await interaction.editReply({ embeds: [embed] });
+      await interaction.editReply({
+        embeds: [embed],
+        content: `Hey ${userId}, this should answer your question.`,
+      });
     } catch (err) {
       await errorHandler("faq command", err);
     }
