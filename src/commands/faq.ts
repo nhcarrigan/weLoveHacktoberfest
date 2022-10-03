@@ -15,7 +15,7 @@ export const faq: Command = {
         .setRequired(true)
         .setAutocomplete(true)
     )
-    .addStringOption((option) =>
+    .addUserOption((option) =>
       option
         .setName("user")
         .setDescription("The user to whom the request should be addressed to.")
@@ -33,7 +33,7 @@ export const faq: Command = {
         return;
       }
 
-      const userId = interaction.options.getString("user");
+      const userId = interaction.options.getUser("user");
 
       const embed = new EmbedBuilder();
       embed.setTitle(target.title);
@@ -45,7 +45,7 @@ export const faq: Command = {
 
       await interaction.editReply({
         embeds: [embed],
-        content: `Hey ${userId}, this should answer your question.`,
+        content: `Hey <@!${userId}>, this should answer your question.`,
       });
     } catch (err) {
       await errorHandler("faq command", err);
