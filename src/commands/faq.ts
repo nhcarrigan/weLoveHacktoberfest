@@ -47,6 +47,9 @@ export const faq: Command = {
         ? {
             embeds: [embed],
             content: `Hey <@!${user.id}>, this should answer your question.`,
+            allowedMentions: {
+              users: [user.id],
+            },
           }
         : {
             embeds: [embed],
