@@ -33,7 +33,7 @@ export const faq: Command = {
         return;
       }
 
-      const userId = interaction.options.getUser("user");
+      const user = interaction.options.getUser("user");
 
       const embed = new EmbedBuilder();
       embed.setTitle(target.title);
@@ -43,10 +43,16 @@ export const faq: Command = {
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
       });
 
-      await interaction.editReply({
-        embeds: [embed],
-        content: `Hey <@!${userId}>, this should answer your question.`,
-      });
+      const response = user
+        ? {
+            embeds: [embed],
+            content: `Hey <@!${user.id}>, this should answer your question.`,
+          }
+        : {
+            embeds: [embed],
+          };
+
+      await interaction.editReply(response);
     } catch (err) {
       await errorHandler("faq command", err);
     }
