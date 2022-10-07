@@ -10,8 +10,8 @@ export const faq: Command = {
     .setDescription("Get answers for frequently asked questions.")
     .addStringOption((option) =>
       option
-        .setName("tag")
-        .setDescription("The tag name for the relevant response.")
+        .setName("question")
+        .setDescription("The question to find in the FAQ.")
         .setRequired(true)
         .setAutocomplete(true)
     )
@@ -23,21 +23,19 @@ export const faq: Command = {
   run: async (bot, interaction) => {
     try {
       await interaction.deferReply();
-      const targetName = interaction.options.getString("tag", true);
-      const target = tags.find(
-        (tag) => tag.name === targetName || tag.aliases.includes(targetName)
-      );
+      const targetQ = interaction.options.getString("tag", true);
+      const target = tags.find((tag) => tag.question === targetQ);
 
       if (!target) {
-        await interaction.editReply(`No tag found for \`${targetName}\`.`);
+        await interaction.editReply(`No tag found for \`${targetQ}\`.`);
         return;
       }
 
       const user = interaction.options.getUser("user");
 
       const embed = new EmbedBuilder();
-      embed.setTitle(target.title);
-      embed.setDescription(target.content);
+      embed.setTitle(target.question);
+      embed.setDescription(target.answer);
       embed.setFooter({
         text: "Spread the love? https://donate.nhcarrigan.com",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
