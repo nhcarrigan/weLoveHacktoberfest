@@ -23,7 +23,7 @@ export const faq: Command = {
   run: async (bot, interaction) => {
     try {
       await interaction.deferReply();
-      const targetQ = interaction.options.getString("tag", true);
+      const targetQ = interaction.options.getString("question", true);
       const target = tags.find((tag) => tag.question === targetQ);
 
       if (!target) {
