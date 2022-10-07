@@ -15,11 +15,8 @@ export const onInteraction = async (bot: Bot, interaction: Interaction) => {
     if (interaction.commandName === "faq") {
       const option = interaction.options.getFocused(true);
 
-      if (option.name === "tag") {
-        const tagNames = tags.map((tag) => tag.name);
-        for (const tag of tags) {
-          tagNames.push(...tag.aliases);
-        }
+      if (option.name === "question") {
+        const tagNames = tags.map((tag) => tag.question);
         const search = option.value.toLowerCase();
         const choices = tagNames
           .sort((a, b) =>

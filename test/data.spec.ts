@@ -6,68 +6,43 @@ import { tags } from "../src/data/tags";
 
 suite("Data Validation", () => {
   suite("Tags Validation", () => {
-    const tagNames = tags.map((el) => el.name);
-    tags.forEach((tag) => {
-      tagNames.push(...tag.aliases);
-    });
+    const tagNames = tags.map((el) => el.question);
     for (const tag of tags) {
-      test(`${tag.name} should be unique`, () => {
+      test(`${tag.question} should be unique`, () => {
         assert.equal(
-          tagNames.indexOf(tag.name),
-          tagNames.lastIndexOf(tag.name),
-          `${tag.name} is not unique!`
+          tagNames.indexOf(tag.question),
+          tagNames.lastIndexOf(tag.question),
+          `${tag.question} is not unique!`
         );
       });
 
-      test(`${tag.name} should be lowercase`, () => {
-        assert.equal(
-          tag.name,
-          tag.name.toLowerCase(),
-          `${tag.name} is not lowercase!`
-        );
+      test(`${tag.question} should have answer`, () => {
+        assert.notEqual(tag.answer, "");
       });
 
-      test(`${tag.name} should have content`, () => {
-        assert.notEqual(tag.content, "");
-      });
-
-      test(`${tag.name} should have content less than 4000 characters`, () => {
+      test(`${tag.question} should have answer less than 4000 characters`, () => {
         assert.isAtMost(
-          tag.content.length,
+          tag.answer.length,
           4000,
-          `${tag.name} content is too long!`
+          `${tag.answer} content is too long!`
         );
       });
 
-      test(`${tag.name} should ahve title less than 256 characters`, () => {
+      test(`${tag.question} should have question less than 256 characters`, () => {
         assert.isAtMost(
-          tag.title.length,
+          tag.question.length,
           256,
-          `${tag.name} title is too long!`
+          `${tag.question} title is too long!`
         );
       });
 
-      test(`${tag.name} title should be a question`, () => {
+      test(`${tag.question} question should be a question`, () => {
         assert(
-          tag.title.endsWith("?"),
-          `${tag.name} title does not appear to be a question`
+          tag.question.endsWith("?"),
+          `${tag.question} title does not appear to be a question`
         );
       });
-
-      for (const alias of tag.aliases) {
-        test(`${tag.name} should have unique aliases`, () => {
-          assert.equal(
-            tagNames.indexOf(alias),
-            tagNames.lastIndexOf(alias),
-            `${alias} is not unique!`
-          );
-        });
-      }
     }
-
-    test("Tags should be alphabetical", () => {
-      assert.deepEqual(tagNames, tagNames.sort(), "Tags are not sorted!");
-    });
   });
 
   suite("Hearts should be valid", () => {
