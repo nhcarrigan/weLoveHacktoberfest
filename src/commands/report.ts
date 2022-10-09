@@ -74,6 +74,13 @@ export const report: Command = {
       return;
     }
 
+    if (response.code === "NotFound") {
+      await interaction.editReply(
+        `Could not find a repository at https://${provider}.com/${owner}/${repo}`
+      );
+      return;
+    }
+
     await interaction.editReply(
       `Your report has been submitted. Thank you for your contribution!`
     );
