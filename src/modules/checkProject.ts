@@ -50,10 +50,10 @@ export const checkProject = async (client: Bot, message: Message) => {
     return;
   }
 
-  if (matches.length > 1) {
+  if (matches.length > 5) {
     await message.delete();
     await message.channel.send(
-      `<@!${message.author.id}>, please only post one project at a time.`
+      `<@!${message.author.id}>, please don't post multiple links as this gets quite spammy.`
     );
     return;
   }
