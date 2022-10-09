@@ -33,6 +33,7 @@ Sentry.init({
     client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
     client.homeGuild = process.env.HOME_GUILD || "";
     client.commands = await loadCommands();
+    client.reportTokens = {};
 
     if (!token) {
       logHandler.log("error", "Missing Discord Token");
