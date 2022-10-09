@@ -8,4 +8,7 @@ export interface Bot extends Client {
   timer: number;
   cooldown: number;
   commands: Command[];
+  reportTokens: {
+    [userId: string]: string;
+  };
 }
