@@ -37,15 +37,23 @@ export const checkProject = async (client: Bot, message: Message) => {
     return;
   }
 
-  const hasProject =
-    /\bhttps?:\/\/(www\.)?git(hub|lab)\.com\/[^/]+\/[^/]+((\/-)?\/issues(\/\d+)?)?\/?\b/.test(
-      message.content
-    );
+  const validLinkRegex =
+    /\bhttps?:\/\/(www\.)?git(hub\.com\/([!$&-;=-[\]_a-z~]|%[0-9a-fA-F]{2})+\/([!$&-;=-[\]_a-z~]|%[0-9a-fA-F]{2})+(\/issues(\/\d+))?|lab\.com(\/([!$&-;=-[\]_a-z~]|%[0-9a-fA-F]{2})+){2,}(\/-\/issues(\/\d+))?)\/?\b/gm;
 
-  if (!hasProject) {
+  const matches = message.content.match(validLinkRegex);
+
+  if (!matches || matches.length < 1) {
     await message.delete();
     await message.channel.send(
       `<@!${message.author.id}>, please don't post in this channel if you aren't sharing a project.`
+    );
+    return;
+  }
+
+  if (matches.length > 1) {
+    await message.delete();
+    await message.channel.send(
+      `<@!${message.author.id}>, please only post one project at a time.`
     );
     return;
   }
