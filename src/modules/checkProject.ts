@@ -44,17 +44,19 @@ export const checkProject = async (client: Bot, message: Message) => {
 
   if (!matches || matches.length < 1) {
     await message.delete();
-    await message.channel.send(
+    const notif = await message.channel.send(
       `<@!${message.author.id}>, please don't post in this channel if you aren't sharing a project.`
     );
+    setTimeout(async () => await notif.delete(), 60000);
     return;
   }
 
   if (matches.length > 5) {
     await message.delete();
-    await message.channel.send(
+    const notif = await message.channel.send(
       `<@!${message.author.id}>, please don't post multiple links as this gets quite spammy.`
     );
+    setTimeout(async () => await notif.delete(), 60000);
     return;
   }
 };
