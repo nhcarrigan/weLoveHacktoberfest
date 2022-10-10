@@ -38,7 +38,7 @@ export const checkProject = async (client: Bot, message: Message) => {
   }
 
   const validLinkRegex =
-    /\bhttps?:\/\/(www\.)?git(hub\.com\/([!$&-;=-[\]_a-z~]|%[0-9a-fA-F]{2})+\/([!$&-;=-[\]_a-z~]|%[0-9a-fA-F]{2})+(\/issues(\/\d+))?|lab\.com(\/([!$&-;=-[\]_a-z~]|%[0-9a-fA-F]{2})+){2,}(\/-\/issues(\/\d+))?)\/?\b/gm;
+    /\bhttps?:\/\/(?:www\.)?git(?:hub\.com(\/[^\/#?\s]+\/[^\/#?\s]+)(?:\/issues(\/\d+))?|lab\.com((?:\/[^\/#?\s]+){2,})(?:\/-\/issues(\/\d+))?)\b/gmi;
 
   const matches = message.content.match(validLinkRegex);
 
