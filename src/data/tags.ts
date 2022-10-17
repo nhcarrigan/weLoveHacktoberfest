@@ -118,4 +118,9 @@ export const tags: Tag[] = [
       "Hacktoberfest doesn't have any winners or losers. Positive contributions to the open-source community is a win for everyone",
     question: "Can I/how do I win Hacktoberfest?",
   },
+  {
+    answer:
+      "You have to opt-in via email for Holopin badges. Check your spam/trash before asking again.",
+    question: "Why aren't my Holopin badges showing up?",
+  },
 ];
