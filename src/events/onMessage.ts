@@ -1,6 +1,7 @@
 import { Message } from "discord.js";
 
 import { Bot } from "../interfaces/Bot";
+import { checkProject } from "../modules/checkProject";
 import { sendLove } from "../modules/sendLove";
 import { errorHandler } from "../utils/errorHandler";
 
@@ -20,6 +21,8 @@ export const onMessage = async (
     }
 
     await sendLove(client, message);
+
+    await checkProject(client, message);
   } catch (err) {
     await errorHandler("message event", err);
   }
