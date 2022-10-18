@@ -118,4 +118,9 @@ export const tags: Tag[] = [
       "Hacktoberfest doesn't have any winners or losers. Positive contributions to the open-source community is a win for everyone",
     question: "Can I/how do I win Hacktoberfest?",
   },
+  {
+    answer:
+      "You have to opt-in via email for Holopin badges. If you opted in, make sure that the email did not land in your spam folder. Also, be sure that you opted in with the correct email address (not the GitHub no-reply email address). Finally, you should also see a `Claim Now` link in your Hacktoberfest profile.",
+    question: "Why aren't my Holopin badges showing up?",
+  },
 ];
