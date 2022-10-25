@@ -1,6 +1,6 @@
 import { RewriteFrames } from "@sentry/integrations";
 import * as Sentry from "@sentry/node";
-import { Client } from "discord.js";
+import { Client, Message } from "discord.js";
 
 import { IntentOptions } from "./config/IntentOptions";
 import { onInteraction } from "./events/onInteractionCreate";
@@ -47,8 +47,9 @@ Sentry.init({
     );
 
     client.on(
-      "messageEdit",
-      async (_, newMessage) => await onMessageEdit(newMessage, client)
+      "messageUpdate",
+      async (_, newMessage) =>
+        await onMessageEdit(newMessage as Message, client)
     );
 
     client.on("interactionCreate", async (interaction) => {
