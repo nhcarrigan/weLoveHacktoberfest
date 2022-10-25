@@ -123,4 +123,9 @@ export const tags: Tag[] = [
       "You have to opt-in via email for Holopin badges. If you opted in, make sure that the email did not land in your spam folder. Also, be sure that you opted in with the correct email address (not the GitHub no-reply email address). Finally, you should also see a `Claim Now` link in your Hacktoberfest profile.",
     question: "Why aren't my Holopin badges showing up?",
   },
+  {
+    answer:
+      "Yes, your PR/MR will mature into November, even after October 31st! Don't worry about your PR/MR that's still awaiting review during the last week of October, the Hacktoberfest team had this in mind and allows your MR/PR to be potentially accepted and matured even though October has ended.",
+    question: "Will my PR/MR still be accepted, even if October is almost done?"
+  }
 ];
