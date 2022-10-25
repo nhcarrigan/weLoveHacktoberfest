@@ -5,6 +5,7 @@ import { Client } from "discord.js";
 import { IntentOptions } from "./config/IntentOptions";
 import { onInteraction } from "./events/onInteractionCreate";
 import { onMessage } from "./events/onMessage";
+import { onMessageEdit } from "./events/onMessageEdit";
 import { onReady } from "./events/onReady";
 import { Bot } from "./interfaces/Bot";
 import { errorHandler } from "./utils/errorHandler";
@@ -43,6 +44,11 @@ Sentry.init({
     client.on(
       "messageCreate",
       async (message) => await onMessage(message, client)
+    );
+
+    client.on(
+      "messageEdit",
+      async (_, newMessage) => await onMessageEdit(newMessage, client)
     );
 
     client.on("interactionCreate", async (interaction) => {
