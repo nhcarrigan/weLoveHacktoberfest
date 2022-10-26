@@ -125,7 +125,7 @@ export const tags: Tag[] = [
   },
   {
     answer:
-      "Yes, your PR/MR will mature into November, even after October 31st! Don't worry about your PR/MR that's still awaiting review during the last week of October, the Hacktoberfest team had this in mind and allows your MR/PR to be potentially accepted and matured even though October has ended.",
-    question: "Will my PR/MR still be accepted, even if October is almost done?"
+      "As long as your PR/MR is approved, merged, or given the `hacktoberfest-accepted` label before October ends, it can be eligible for Hacktoberfest. The maturation period might extend into November, but that will not prevent your contribution from being counted.",
+    question: "Will my PR/MR still be eligible, even if October is almost done?"
   }
 ];
