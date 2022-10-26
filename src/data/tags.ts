@@ -128,5 +128,5 @@ export const tags: Tag[] = [
       "As long as your PR/MR is approved, merged, or given the `hacktoberfest-accepted` label before October ends, it can be eligible for Hacktoberfest. The maturation period might extend into November, but that will not prevent your contribution from being counted.",
     question:
       "Will my PR/MR still be eligible, even if October is almost done?",
-  }
+  },
 ];
