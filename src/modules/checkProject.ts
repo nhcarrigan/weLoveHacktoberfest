@@ -45,7 +45,7 @@ export const checkProject = async (client: Bot, message: Message) => {
   if (!matches || matches.length < 1) {
     await message.delete();
     const notif = await message.channel.send(
-      `<@!${message.author.id}>, please don't post in this channel if you aren't sharing a project.`
+      `<@!${message.author.id}>, please don't post in this channel if you aren't sharing a project. Make sure you're sharing a GitHub/GitLab repository link, or a specific issue link.`
     );
     setTimeout(async () => await notif.delete(), 60000);
     return;
@@ -54,7 +54,7 @@ export const checkProject = async (client: Bot, message: Message) => {
   if (matches.length > 5) {
     await message.delete();
     const notif = await message.channel.send(
-      `<@!${message.author.id}>, please don't post multiple links as this gets quite spammy.`
+      `<@!${message.author.id}>, please don't post many links at once, as this can be quite spammy.`
     );
     setTimeout(async () => await notif.delete(), 60000);
     return;
