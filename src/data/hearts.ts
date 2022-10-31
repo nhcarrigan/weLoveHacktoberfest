@@ -30,4 +30,5 @@ export const hearts = [
   "wales_heart",
   "white_heart",
   "yellow_heart",
+  "indian_heart"
 ];
