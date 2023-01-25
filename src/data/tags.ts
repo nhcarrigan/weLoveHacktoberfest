@@ -128,5 +128,10 @@ export const tags: Tag[] = [
       "As long as your PR/MR is approved, merged, or given the `hacktoberfest-accepted` label before October ends, it can be eligible for Hacktoberfest. The maturation period might extend into November, but that will not prevent your contribution from being counted.",
     question:
       "Will my PR/MR still be eligible, even if October is almost done?",
+  },  
+  {
+    answer:
+      "Some folks have found that the tracking link that Kotis Design have sent out has been returning an error. It is infrequently a problem with the URL. Ensure the URL uses HTTPS.\n\nFailing that, you can find the tracking code in the URL, and try it directly by Googling the shipping company and using their website to track your package.\n\nIf you continue to have problems, please email Kotis directly.",
+    question: "Why doesn't my tracking link work?",
   },
 ];
