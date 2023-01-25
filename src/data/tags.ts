@@ -129,4 +129,9 @@ export const tags: Tag[] = [
     question:
       "Will my PR/MR still be eligible, even if October is almost done?",
   },
+  {
+    answer:
+      "Some folks have found that the tracking link that Kotis Design have sent out has been returning an error. It is infrequently a problem with the URL. Ensure the URL uses HTTPS.\n\nFailing that, you can find the tracking code in the URL, and try it directly by Googling the shipping company and using their website to track your package.\n\nIf you continue to have problems, please email Kotis directly.",
+    question: "Why doesn't my tracking link work?",
+  },
 ];
