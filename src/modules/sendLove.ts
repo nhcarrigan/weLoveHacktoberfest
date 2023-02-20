@@ -51,7 +51,7 @@ export const sendLove = async (
         )}.png`
       );
       embed.setFooter({
-        text: "Spread the love? https://donate.nhcarrigan.com",
+        text: "Join our server: https://discord.gg/nhcarrigan",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
       });
       await message.react("💜");
