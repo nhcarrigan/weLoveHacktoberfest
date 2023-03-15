@@ -1,5 +1,4 @@
 import { SlashCommandBuilder } from "discord.js";
-import fetch from "node-fetch";
 
 import { Command } from "../interfaces/Command";
 
