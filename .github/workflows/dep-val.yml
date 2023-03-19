@@ -1,0 +1,17 @@
+name: Dependency Validation
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Dependencies are Pinned
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Source Files
+        uses: actions/checkout@v3
+
+      - name: Check Dependencies
+        uses: naomi-lgbt/dependency-pin-check@main
