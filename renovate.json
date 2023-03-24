@@ -1,5 +1,5 @@
 {
   "extends": [
-    "config:base"
+    "github>naomi-lgbt/renovate-config"
   ]
 }
