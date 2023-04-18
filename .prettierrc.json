@@ -1,0 +1,6 @@
+{
+  "endOfLine": "lf",
+  "useTabs": false,
+  "singleQuote": false,
+  "extends": "@nhcarrigan/prettier-config"
+}
