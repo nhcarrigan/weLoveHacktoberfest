@@ -10,5 +10,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "exclude": ["./test"]
+  "exclude": ["./test"],
+  "extends": "@nhcarrigan/typescript-config"
 }
