@@ -36,7 +36,7 @@
   "devDependencies": {
     "@nhcarrigan/eslint-config": "1.1.1",
     "@nhcarrigan/prettier-config": "1.0.1",
-    "@nhcarrigan/typescript-config": "1.0.0",
+    "@nhcarrigan/typescript-config": "1.0.1",
     "@types/chai": "4.3.4",
     "@types/mocha": "10.0.1",
     "@types/node": "18.15.12",
