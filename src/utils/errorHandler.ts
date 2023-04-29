@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/no-undefined-types */
 import * as Sentry from "@sentry/node";
 import { EmbedBuilder, WebhookClient } from "discord.js";
 
