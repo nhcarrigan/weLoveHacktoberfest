@@ -25,8 +25,8 @@
     "npm": "9.6.6"
   },
   "dependencies": {
-    "@sentry/integrations": "7.50.0",
-    "@sentry/node": "7.50.0",
+    "@sentry/integrations": "7.51.0",
+    "@sentry/node": "7.51.0",
     "discord.js": "14.10.2",
     "dotenv": "16.0.3",
     "string-similarity": "4.0.4",
