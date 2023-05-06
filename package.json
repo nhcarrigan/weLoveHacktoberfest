@@ -27,7 +27,7 @@
   "dependencies": {
     "@sentry/integrations": "7.51.0",
     "@sentry/node": "7.51.0",
-    "discord.js": "14.10.2",
+    "discord.js": "14.11.0",
     "dotenv": "16.0.3",
     "string-similarity": "4.0.4",
     "typescript": "5.0.4",
