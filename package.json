@@ -31,7 +31,7 @@
     "dotenv": "16.1.3",
     "string-similarity": "4.0.4",
     "typescript": "5.1.6",
-    "winston": "3.9.0"
+    "winston": "3.10.0"
   },
   "devDependencies": {
     "@nhcarrigan/eslint-config": "1.1.3",
