@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['javascript']
+        language: ["javascript"]
         node-version: [18.x]
     steps:
       - name: Checkout repository
@@ -22,10 +22,14 @@ jobs:
         uses: actions/setup-node@bea5baf987ba7aa777a8a0b4ace377a21c45c381 # v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
       - name: Build files
-        run: npm run build
+        run: pnpm run build
       - name: Setup CodeQL
         uses: github/codeql-action/init@a09933a12a80f87b87005513f0abb1494c27a716 # v2
         with:
