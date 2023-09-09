@@ -37,7 +37,7 @@ export const faq: Command = {
       embed.setTitle(target.question);
       embed.setDescription(target.answer);
       embed.setFooter({
-        text: "Join our server: https://chat.naomi.lgbt",
+        text: "Join our server: https://chat.nhcarrigan.com",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
       });
 
