@@ -1,2 +1,15 @@
-export const ProjectRegex =
-  /\bhttps?:\/\/(?:www\.)?git(?:hub\.com(\/[^/#?\s]+\/[^/#?\s]+)(?:\/issues(\/\d+))?|lab\.com((?:\/[^/#?\s]+){2,})(?:\/-\/issues(\/\d+))?)\b/gim;
+const protocol = "(?:https?:\\/\\/)?";
+const www = "(?:www\\.)?";
+// credit: https://github.com/shinnn/github-username-regex
+const githubUsername = "(?!orgs)[a-z\\d](?:[a-z\\d]|-(?=[a-z\\d])){0,38}";
+const gitlabUsername = "[a-z\\d](?:[a-z\\d]|-(?=[a-z\\d])){1,254}";
+const repo = "[a-z\\d\\-\\._]{1,}";
+const optionalIssues = "(?:\\/(?:-\\/)?issues\\/\\d+)?";
+
+const githubPath = `${githubUsername}\\/${repo}${optionalIssues}`;
+const gitlabPath = `${gitlabUsername}\\/${repo}${optionalIssues}`;
+
+export const ProjectRegex = new RegExp(
+  `\\b${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})\\b`,
+  "gmi"
+);
