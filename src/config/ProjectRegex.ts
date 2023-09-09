@@ -11,5 +11,5 @@ const gitlabPath = `${gitlabUsername}\\/${repo}${optionalIssues}`;
 
 export const ProjectRegex = new RegExp(
   `\\b${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})\\b`,
-  "gmi"
+  "mi"
 );
