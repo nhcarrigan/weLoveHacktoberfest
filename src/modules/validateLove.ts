@@ -15,7 +15,10 @@ import { errorHandler } from "../utils/errorHandler";
 export const validateLove = (message: Message, data: LoveData): boolean => {
   try {
     return (
-      message.content.replace(/\s/g, "").toLowerCase().includes(data.name) ||
+      message.content
+        .replace(/\s/g, "")
+        .toLowerCase()
+        .includes(data.name.toLowerCase()) ||
       message.content.includes(data.emoji) ||
       (!!data.id &&
         (message.author.id === data.id || checkMentions(message, data.id)))
