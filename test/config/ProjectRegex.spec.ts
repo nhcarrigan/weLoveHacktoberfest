@@ -2,7 +2,7 @@ import { assert } from "chai";
 
 import { ProjectRegex } from "../../src/config/ProjectRegex";
 
-suite.only("ProjectRegex", () => {
+suite("ProjectRegex", () => {
   test("should match a GitHub repository link", () => {
     assert.isTrue(
       ProjectRegex.test(
