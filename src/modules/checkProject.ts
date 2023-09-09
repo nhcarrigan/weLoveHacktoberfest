@@ -4,6 +4,7 @@ import {
   PermissionFlagsBits,
 } from "discord.js";
 
+import { ProjectRegex } from "../config/ProjectRegex";
 import { Bot } from "../interfaces/Bot";
 
 /**
@@ -37,10 +38,7 @@ export const checkProject = async (client: Bot, message: Message) => {
     return;
   }
 
-  const validLinkRegex =
-    /\bhttps?:\/\/(?:www\.)?git(?:hub\.com(\/[^/#?\s]+\/[^/#?\s]+)(?:\/issues(\/\d+))?|lab\.com((?:\/[^/#?\s]+){2,})(?:\/-\/issues(\/\d+))?)\b/gim;
-
-  const matches = message.content.match(validLinkRegex);
+  const matches = message.content.match(ProjectRegex);
 
   if (!matches || matches.length < 1) {
     await message.delete();
