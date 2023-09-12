@@ -1,4 +1,5 @@
-const boundary = "(?:^|$|[ \t\n])";
+const boundaryStart = "(?:^|[ \t\n<(])";
+const boundaryEnd = "(?:$|[ \t\n>)])";
 const protocol = "(?:https?:\\/\\/)?";
 const www = "(?:www\\.)?";
 // credit: https://github.com/shinnn/github-username-regex
@@ -11,6 +12,6 @@ const githubPath = `${githubUsername}\\/${repo}${optionalIssues}`;
 const gitlabPath = `${gitlabUsername}\\/${repo}${optionalIssues}`;
 
 export const ProjectRegex = new RegExp(
-  `${boundary}${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})${boundary}`,
+  `${boundaryStart}${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})${boundaryEnd}`,
   "mi"
 );
