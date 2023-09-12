@@ -35,6 +35,46 @@ suite("ProjectRegex", () => {
     );
   });
 
+  test("should match a suppressed link", () => {
+    assert.isTrue(
+      ProjectRegex.test(
+        "This repo <https://github.com/nhcarrigan/weLoveHacktoberfest> is really cool."
+      )
+    )
+  });
+
+  test("should match a Markdown link", () => {
+    assert.isTrue(
+      ProjectRegex.test(
+        "This [repo](https://github.com/nhcarrigan/weLoveHacktoberfest) is really cool."
+      )
+    )
+  });
+
+  test("should match a suppressed Markdown link", () => {
+    assert.isTrue(
+      ProjectRegex.test(
+        "This [repo](<https://github.com/nhcarrigan/weLoveHacktoberfest>) is really cool."
+      )
+    )
+  });
+
+  test("should match a link followed by a period", () => {
+    assert.isTrue(
+      ProjectRegex.test(
+        "Check out my repo: https://github.com/nhcarrigan/weLoveHacktoberfest. It is really cool."
+      )
+    )
+  });
+
+  test("should match a link followed by a comma", () => {
+    assert.isTrue(
+      ProjectRegex.test(
+        "You can contribute at https://github.com/nhcarrigan/weLoveHacktoberfest, it is really cool."
+      )
+    )
+  });
+
   test("should match a GitHub repository link", () => {
     assert.isTrue(
       ProjectRegex.test("https://github.com/nhcarrigan/weLoveHacktoberfest")
