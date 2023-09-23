@@ -13,11 +13,6 @@ export const tags: Tag[] = [
   },
   {
     answer:
-      "We write down a low enough dollar value on the mailed packages that we don't expect any issues with customs tax, but we cannot guarantee that - you might have to pay a small fee depending on your country's import policies. DigitalOcean and Kotis Design will not issue a refund for shipping/duty fees.",
-    question: "Will I have to pay anything/custom tax/duty for the shirt?",
-  },
-  {
-    answer:
       "Hacktoberfest starts on the 1st of October and ends on October 31st. PRs created before October 1st, or after October 31st, do not count.",
     question: "When does Hacktoberfest start?",
   },
@@ -33,23 +28,18 @@ export const tags: Tag[] = [
     question: "What's the exact time I can start making PRs?",
   },
   {
-    answer: `An "Excluded Project" is a repository which has been blocked by the Hacktoberfest team for being "cheaty" or "spammy".\n\nHacktoberfest is about making valuable contributions to open source, not adding a random algorithm, to a folder, adding a name or similar to get a free t-shirt.\n\nWe recommend searching for things that you use (Such as Freecodecamp, Notion, zsh or a lot more!). You can also search <#735506115810426971> we try to keep this clean of all cheaty repos.\n\nYou can read more about what Hacktoberfest is doing to reduce spam at <https://hacktoberfest.digitalocean.com/resources#reduce-spam>.\n\nFound a repo that you think doesn't follow the values? Report it at <https://hacktoberfest.digitalocean.com/report>.`,
+    answer: `An "Excluded Project" is a repository which has been blocked by the Hacktoberfest team for being "cheaty" or "spammy".\n\nHacktoberfest is about making valuable contributions to open source, not adding a random algorithm, to a folder, adding a name or similar to "win".\n\nWe recommend searching for things that you use (Such as freeCodeCamp, Notion, zsh or a lot more!). You can also search <#735506115810426971> - we try to keep this clean of all cheaty repos.\n\nYou can read more about what Hacktoberfest is doing to reduce spam at <https://hacktoberfest.digitalocean.com/resources#reduce-spam>.\n\nFound a repo that you think doesn't follow the values? Report it at <https://hacktoberfest.digitalocean.com/report>.`,
     question: "Why does my PR say 'Excluded Project'?",
   },
   {
     answer:
-      "The Hacktoberfest community is successful, in part, due to the efforts of the helpers to keep things safe and welcoming. Helpers not only moderate the community, but answer your questions and help you in your efforts to contribute to open source. Our valued helpers are:\n\n[Matt](https://mattcowley.co.uk/)\n[LukeOCodes](https://github.com/lukeocodes/)\n[Naomi](https://naomi.lgbt)\n[Walshy](https://walshy.dev/)",
+      "The Hacktoberfest community is successful, in part, due to the efforts of the helpers to keep things safe and welcoming. Helpers not only moderate the community, but answer your questions and help you in your efforts to contribute to open source. Our valued helpers are:\n\n- [Matt](https://mattcowley.co.uk/)\n- [LukeOCodes](https://github.com/lukeocodes/)\n- [Naomi](https://naomi.lgbt)\n- [Walshy](https://walshy.dev/)",
     question: "What is a helper?",
   },
   {
     answer:
-      "Want to find a project with a specific language to contribute to?\n\nYou can use this link to find hacktoberfest repos in a language of your choice: `https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`. Don't forget to replace <<change_this_to_language>> with the language you want to search for.\n\nAs an example, if you want to find JavaScript projects, you'd use: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
+      "Want to find a project with a specific language to contribute to?\n\nYou can use this link to find hacktoberfest repos in a language of your choice: `https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`. Don't forget to replace `<<change_this_to_language>>` with the language you want to search for.\n\nAs an example, if you want to find JavaScript projects, you'd use: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
     question: "How do I find projects in specific languages to Contribute to?",
-  },
-  {
-    answer:
-      "The maintainer kit for maintainers is the exact same as for contributors. Participants are only eligible for one reward kit, with contributor rewards being checked first.",
-    question: "What's the reward kit for maintainers?",
   },
   {
     answer: `The seven day "matures" period begins after your PR is approved/merged, and is the Hacktoberfest review period. There is nothing wrong with your PR, you just need to be patient for the 7 days to pass.`,
@@ -81,18 +71,7 @@ export const tags: Tag[] = [
     question: "How many PRs/MRs do I need?",
   },
   {
-    answer:
-      "How to get your Hacktoberfest Swag faster:\n1. Go for a walk\n2. Wait a month, and perform the [Ritual of Cleansing](https://www.youtube.com/watch?v=zL19uMsnpSU)\n3. Realize there's more to life than waiting for a free t-shirt that may or may not arrive arrive soon\n4. Forget about the shirt\n5. Be surprised when your swag finally appears after you've completely forgotten the entire thing\n6. Thank <@541305895544422430> for being so awesome",
-    question: "How do I get my swag faster?",
-  },
-  {
-    answer:
-      "We're working hard to get all the shirts shipped out, though this takes a while considering how many users have won and claimed a T-shirt. We hope to have all the swag shipped out over the next month, though given the global health pandemic we can't promise this\n\nThere is no order to the swag being shipped out, it is random -- there is not a specific country being shipped to first, there is not a specific color/type being shipped first, it is random. We kindly ask that you just have patience as we work hard to get it all shipped out.\n\nOnce your swag has been shipped you'll get an email from our swag provider, Kotis, with tracking information for your package! Please don't email us asking for tracking before you've got the email, it will automatically be sent to you when your swag gets shipped. Once shipped, delivery is expected to take between 8 - 12 weeks, though, again, given the global health pandemic things might be a bit slower than expected.",
-    question: "Where is my swag?",
-  },
-  {
-    answer:
-      "👋 If you're worried about getting a shirt, don't worry! Shirts will likely be available well into the third week of the competition if not the whole way through. However, we never give out numbers for completions as we go, as it’d incentivise further spam and likely disincentivise legitimate contributions at a point.\n\nPlease keep in mind though that Hacktoberfest isn't just about getting a T-shirt, that is not the core aim for participating in Hacktoberfest. A T-shirt may be motivating to win, but Hacktoberfest is about learning and contributing to open source, doing good for the open-source community and helping projects out, not primarily about getting a free T-shirt.\n\nAlso, if you do win, you should really consider opt-ing to have a tree planted on your behalf in the Hacktoberfest Forest instead of claiming a T-shirt, we need to look after our climate!",
+    answer: "Hacktoberfest is not offering shirts or physical swag this year.",
     question: "Are there still shirts left?",
   },
   {
@@ -100,14 +79,8 @@ export const tags: Tag[] = [
     question: "Has Hacktoberfest started?",
   },
   {
-    answer:
-      "How to track your Hacktoberfest Swag:\n1. Turn off your computer\n2. Go for a walk\n3. Realise that in the grand scheme of things a free shirt is really not that important\n4. Return home\n5. Turn on your computer\n6. Thank <@541305895544422430> for being so awesome",
+    answer: "Hacktoberfest is not offering shirts or physical swag this year.",
     question: "How do I track my swag?",
-  },
-  {
-    answer:
-      "Rather than receive t-shirts as swag, you can choose to have a tree planted in your name and help make Hacktoberfest more carbon neutral.\nTrees > Tees",
-    question: "Is there another option besides a shirt?",
   },
   {
     answer: "Oh hello uwu",
@@ -128,10 +101,5 @@ export const tags: Tag[] = [
       "As long as your PR/MR is approved, merged, or given the `hacktoberfest-accepted` label before October ends, it can be eligible for Hacktoberfest. The maturation period might extend into November, but that will not prevent your contribution from being counted.",
     question:
       "Will my PR/MR still be eligible, even if October is almost done?",
-  },
-  {
-    answer:
-      "Some folks have found that the tracking link that Kotis Design have sent out has been returning an error. It is infrequently a problem with the URL. Ensure the URL uses HTTPS.\n\nFailing that, you can find the tracking code in the URL, and try it directly by Googling the shipping company and using their website to track your package.\n\nIf you continue to have problems, please email Kotis directly.",
-    question: "Why doesn't my tracking link work?",
   },
 ];
