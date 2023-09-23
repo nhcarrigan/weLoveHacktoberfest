@@ -2,6 +2,7 @@ import { EmbedBuilder, Message } from "discord.js";
 
 import { hearts } from "../data/hearts";
 import { loveData } from "../data/loveData";
+import { phrases } from "../data/phrases";
 import { getRandom } from "../helpers/getRandom";
 import { Bot } from "../interfaces/Bot";
 import { errorHandler } from "../utils/errorHandler";
@@ -35,7 +36,7 @@ export const sendLove = async (
 
     for (const love of loveData) {
       if (validateLove(message, love)) {
-        responses.push(getRandom(love.phrases));
+        responses.push(getRandom(phrases).replace("{name}", love.name));
         toSay = true;
       }
     }
@@ -51,7 +52,7 @@ export const sendLove = async (
         )}.png`
       );
       embed.setFooter({
-        text: "Join our server: https://chat.naomi.lgbt",
+        text: "Join our server: https://chat.nhcarrigan.com",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
       });
       await message.react("💜");

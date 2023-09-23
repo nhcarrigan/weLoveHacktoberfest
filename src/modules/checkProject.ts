@@ -4,6 +4,7 @@ import {
   PermissionFlagsBits,
 } from "discord.js";
 
+import { ProjectRegex } from "../config/ProjectRegex";
 import { Bot } from "../interfaces/Bot";
 
 /**
@@ -37,24 +38,10 @@ export const checkProject = async (client: Bot, message: Message) => {
     return;
   }
 
-  const validLinkRegex =
-    /\bhttps?:\/\/(?:www\.)?git(?:hub\.com(\/[^/#?\s]+\/[^/#?\s]+)(?:\/issues(\/\d+))?|lab\.com((?:\/[^/#?\s]+){2,})(?:\/-\/issues(\/\d+))?)\b/gim;
-
-  const matches = message.content.match(validLinkRegex);
-
-  if (!matches || matches.length < 1) {
+  if (!ProjectRegex.test(message.content)) {
     await message.delete();
     const notif = await message.channel.send(
       `<@!${message.author.id}>, please don't post in this channel if you aren't sharing a project. Make sure you're sharing a GitHub/GitLab repository link, or a specific issue link.`
-    );
-    setTimeout(async () => await notif.delete(), 60000);
-    return;
-  }
-
-  if (matches.length > 5) {
-    await message.delete();
-    const notif = await message.channel.send(
-      `<@!${message.author.id}>, please don't post many links at once, as this can be quite spammy.`
     );
     setTimeout(async () => await notif.delete(), 60000);
     return;
