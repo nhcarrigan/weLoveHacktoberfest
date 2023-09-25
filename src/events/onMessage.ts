@@ -22,7 +22,7 @@ export const onMessage = async (
 
     await sendLove(client, message);
 
-    await checkProject(client, message);
+    await checkProject(client, message, false);
   } catch (err) {
     await errorHandler("message event", err);
   }

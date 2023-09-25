@@ -18,8 +18,13 @@ const TTD = 1000 * 60 * 5;
  *
  * @param {Bot} client The bot's Discord instance.
  * @param {Message} message The message payload from Discord.
+ * @param {boolean} isEdited If this was an edited message (rather than a created message).
  */
-export const checkProject = async (client: Bot, message: Message) => {
+export const checkProject = async (
+  client: Bot,
+  message: Message,
+  isEdited: boolean
+) => {
   if (!process.env.PROJECT_CHANNEL) {
     return;
   }
@@ -63,6 +68,13 @@ export const checkProject = async (client: Bot, message: Message) => {
       `<@!${message.author.id}>, please don't post many links at once, as this can be quite spammy.`
     );
     setTimeout(async () => await notif.delete(), TTD);
+    return;
+  }
+
+  // we don't run the database logic on message edits.
+  // theoretically this means someone could abuse the system by editing a repo link in,
+  // but then we'll just ban them forever :3
+  if (isEdited) {
     return;
   }
 
