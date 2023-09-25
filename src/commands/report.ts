@@ -48,7 +48,7 @@ export const report: Command = {
     }
 
     const response = await fetch(
-      "https://hackathon-tracker.digitalocean.com/events/4/excluded_repositories",
+      "https://hackathon-tracker.digitalocean.com/events/5/excluded_repositories",
       {
         method: "POST",
         headers: {
