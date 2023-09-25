@@ -26,6 +26,12 @@ const languages: { [key: string]: number } = {
   vue: 25,
 };
 
+/**
+ * Returns the ID used by GitHub to denote a language on their explore page.
+ *
+ * @param {string} lang The name of the language.
+ * @returns {number | undefined} The ID for the language, undefined otherwise.
+ */
 export const getGitlabLanguageId = (lang: string): number | undefined => {
   if (lang in languages) {
     return languages[lang];
