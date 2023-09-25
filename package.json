@@ -7,7 +7,7 @@
     "prebuild": "rm -rf ./prod && prisma generate",
     "build": "tsc",
     "start": "node -r dotenv/config ./prod/index.js",
-    "lint": "eslint src --max-warnings 0",
+    "lint": "eslint src --max-warnings 0 && prettier src --check",
     "test": "ts-mocha -u tdd 'test/**/*.spec.ts' --recursive --exit --timeout 5000"
   },
   "repository": {

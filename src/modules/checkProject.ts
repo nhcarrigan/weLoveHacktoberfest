@@ -6,8 +6,9 @@ import {
 
 import { ProjectRegexString } from "../config/ProjectRegex";
 import { Bot } from "../interfaces/Bot";
-import { parseProjectLink } from "./parseProjectLink";
+
 import { isInDatabase } from "./isInDatabase";
+import { parseProjectLink } from "./parseProjectLink";
 
 // 5 minutes
 const TTD = 1000 * 60 * 5;

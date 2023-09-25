@@ -1,3 +1,4 @@
+import { PrismaClient } from "@prisma/client";
 import { RewriteFrames } from "@sentry/integrations";
 import * as Sentry from "@sentry/node";
 import { Client, Message } from "discord.js";
@@ -11,7 +12,6 @@ import { Bot } from "./interfaces/Bot";
 import { errorHandler } from "./utils/errorHandler";
 import { loadCommands } from "./utils/loadCommands";
 import { logHandler } from "./utils/logHandler";
-import { PrismaClient } from "@prisma/client";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -29,7 +29,6 @@ Sentry.init({
       intents: IntentOptions,
     }) as Bot;
     client.db = new PrismaClient();
-    await client.db.$connect();
     const token = process.env.TOKEN;
 
     client.timer = 0;
@@ -61,6 +60,7 @@ Sentry.init({
 
     client.on("ready", async () => await onReady(client));
 
+    await client.db.$connect();
     await client.login(token);
   } catch (err) {
     await errorHandler("initialisation", err);
