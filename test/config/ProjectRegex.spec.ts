@@ -183,3 +183,45 @@ suite("ProjectRegex", () => {
     assert.lengthOf(matches as RegExpMatchArray, 2);
   });
 });
+
+suite("project regex REGRESSIONS", () => {
+  test("should match a link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest/ is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match a suppressed link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "<https://github.com/nhcarrigan/weLoveHacktoberfest/> is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match a Markdown link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "[my project](https://github.com/nhcarrigan/weLoveHacktoberfest/) is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match a suppressed Markdown link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "[my project](<https://github.com/nhcarrigan/weLoveHacktoberfest/>) is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+});
