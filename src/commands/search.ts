@@ -2,6 +2,7 @@ import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
+import { getGitlabLanguageId } from "../helpers/getGitlabLanguageId";
 
 export const search: Command = {
   data: new SlashCommandBuilder()
@@ -14,8 +15,8 @@ export const search: Command = {
         .setName("vcs")
         .setDescription("The Version Control Service that you want to search.")
         .addChoices(
-          { name: "GitHub", value: "github.com" },
-          { name: "GitLab", value: "gitlab.com" }
+          { name: "GitHub", value: "github" },
+          { name: "GitLab", value: "gitlab" }
         )
         .setRequired(true)
     )
@@ -31,11 +32,16 @@ export const search: Command = {
       const vcs = interaction.options.getString("vcs", true);
       const lang = interaction.options.getString("lang", true);
 
+      const url =
+        vcs === "github"
+          ? `https://${vcs}.com/search?q=topic%3Ahacktoberfest%20language%3A${lang}&type=repositories`
+          : `https://${vcs}.com/explore/projects/topics/hacktoberfest?language=${
+              getGitlabLanguageId(lang.toLowerCase()) ?? ""
+            }`;
+
       const embed = new EmbedBuilder()
         .setTitle(`${lang} projects on ${vcs}`)
-        .setDescription(
-          `https://${vcs}/search?q=topic%3Ahacktoberfest%20language%3A${lang}&type=repositories`
-        );
+        .setDescription(url);
       embed.setFooter({
         text: "Join our server: https://chat.nhcarrigan.com",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
