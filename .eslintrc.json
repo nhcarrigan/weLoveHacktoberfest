@@ -1,3 +1,6 @@
 {
-  "extends": "@nhcarrigan"
+  "extends": "@nhcarrigan",
+  "rules": {
+    "camelcase": ["error", { "allow": ["userId_repo_owner"] }]
+  }
 }

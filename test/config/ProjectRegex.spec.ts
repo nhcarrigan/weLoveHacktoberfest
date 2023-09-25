@@ -1,134 +1,185 @@
 import { assert } from "chai";
 
-import { ProjectRegex } from "../../src/config/ProjectRegex";
+import { ProjectRegexString } from "../../src/config/ProjectRegex";
 
 suite("ProjectRegex", () => {
   test("should match at beginning of message", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "https://github.com/nhcarrigan/weLoveHacktoberfest is really cool."
-      )
-    );
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match at end of string", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "This is a really cool project: https://github.com/nhcarrigan/weLoveHacktoberfest"
-      )
-    );
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "This is a really cool project: https://github.com/nhcarrigan/weLoveHacktoberfest".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match in middle of string", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "This repo https://github.com/nhcarrigan/weLoveHacktoberfest is really cool."
-      )
-    );
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "This repo https://github.com/nhcarrigan/weLoveHacktoberfest is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match with new lines", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "This repo\nhttps://github.com/nhcarrigan/weLoveHacktoberfest\nis really cool."
-      )
-    );
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "This repo\nhttps://github.com/nhcarrigan/weLoveHacktoberfest\nis really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a suppressed link", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "This repo <https://github.com/nhcarrigan/weLoveHacktoberfest> is really cool."
-      )
-    )
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "This repo <https://github.com/nhcarrigan/weLoveHacktoberfest> is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a Markdown link", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "This [repo](https://github.com/nhcarrigan/weLoveHacktoberfest) is really cool."
-      )
-    )
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "This [repo](https://github.com/nhcarrigan/weLoveHacktoberfest) is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a suppressed Markdown link", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "This [repo](<https://github.com/nhcarrigan/weLoveHacktoberfest>) is really cool."
-      )
-    )
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "This [repo](<https://github.com/nhcarrigan/weLoveHacktoberfest>) is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a link followed by a period", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "Check out my repo: https://github.com/nhcarrigan/weLoveHacktoberfest. It is really cool."
-      )
-    )
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "Check out my repo: https://github.com/nhcarrigan/weLoveHacktoberfest. It is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a link followed by a comma", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "You can contribute at https://github.com/nhcarrigan/weLoveHacktoberfest, it is really cool."
-      )
-    )
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "You can contribute at https://github.com/nhcarrigan/weLoveHacktoberfest, it is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a GitHub repository link", () => {
-    assert.isTrue(
-      ProjectRegex.test("https://github.com/nhcarrigan/weLoveHacktoberfest")
-    );
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "You can contribute at https://github.com/nhcarrigan/weLoveHacktoberfest, it is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a GitLab repository link", () => {
-    assert.isTrue(ProjectRegex.test("https://gitlab.com/gitlab-org/gitlab"));
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://gitlab.com/gitlab-org/gitlab".match(ProjectRegex);
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a GitHub issue link", () => {
-    assert.isTrue(
-      ProjectRegex.test(
-        "https://github.com/nhcarrigan/weLoveHacktoberfest/issues/1"
-      )
-    );
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest/issues/1".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should match a GitLab issue link", () => {
-    assert.isTrue(
-      ProjectRegex.test("https://gitlab.com/gitlab-org/gitlab/-/issues/1")
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://gitlab.com/gitlab-org/gitlab/-/issues/1".match(
+      ProjectRegex
     );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
   test("should not match a GitHub user link", () => {
-    assert.isFalse(ProjectRegex.test("https://github.com/naomi-lgbt"));
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://github.com/naomi-lgbt".match(ProjectRegex);
+    assert.isNull(matches);
   });
 
   test("should not match a GitLab user link", () => {
-    assert.isFalse(ProjectRegex.test("https://gitlab.com/hacktoberfest"));
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://gitlab.com/hacktoberfest".match(ProjectRegex);
+    assert.isNull(matches);
   });
 
   test("should not allow a GitHub Org link", () => {
-    assert.isFalse(ProjectRegex.test("https://github.com/orgs/nhcarrigan"));
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://github.com/orgs/nhcarrigan".match(ProjectRegex);
+    assert.isNull(matches);
   });
 
   test("should not match a non-project link", () => {
-    assert.isFalse(ProjectRegex.test("https://google.com"));
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://google.com".match(ProjectRegex);
+    assert.isNull(matches);
   });
 
   test("should not match when a message has no link", () => {
-    assert.isFalse(ProjectRegex.test("This is a message with no link"));
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "This is a message with no link".match(ProjectRegex);
+    assert.isNull(matches);
   });
 
   test("should not match file links", () => {
-    assert.isFalse(
-      ProjectRegex.test(
-        "https://github.com/nhcarrigan/weLoveHacktoberfest/blob/0564dbe3abaa047eefe0a294fa09377ace59225d/package.json"
-      )
-    );
-    assert.isFalse(
-      ProjectRegex.test(
-        "https://gitlab.com/gitlab-org/gitlab/-/blob/master/.gitlab-ci.yml"
-      )
-    );
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest/blob/0564dbe3abaa047eefe0a294fa09377ace59225d/package.json".match(
+        ProjectRegex
+      );
+    const matches2 =
+      "https://gitlab.com/gitlab-org/gitlab/-/blob/master/.gitlab-ci.yml".match(
+        ProjectRegex
+      );
+    assert.isNull(matches);
+    assert.isNull(matches2);
+  });
+
+  test("should match multiple links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/naomi-lgbt/naomi-lgbt.github.io and https://github.com/beccalyria/discord-bot are both looking for contributions! Check out our [docs](https://contribute.nhcarrigan.com)".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 2);
   });
 });

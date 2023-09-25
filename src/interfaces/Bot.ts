@@ -1,3 +1,4 @@
+import { PrismaClient } from "@prisma/client";
 import { Client } from "discord.js";
 
 import { Command } from "./Command";
@@ -11,4 +12,5 @@ export interface Bot extends Client {
   reportTokens: {
     [userId: string]: string;
   };
+  db: PrismaClient;
 }
