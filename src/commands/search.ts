@@ -1,8 +1,8 @@
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 
-import { getGitlabLanguageId } from "../helpers/getGitlabLanguageId";
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
+import { GitLabLanguageIds } from "../config/GitLabLanguageIds";
 
 export const search: Command = {
   data: new SlashCommandBuilder()
@@ -36,7 +36,7 @@ export const search: Command = {
         vcs === "github"
           ? `https://${vcs}.com/search?q=topic%3Ahacktoberfest%20language%3A${lang}&type=repositories`
           : `https://${vcs}.com/explore/projects/topics/hacktoberfest?language=${
-              getGitlabLanguageId(lang.toLowerCase()) ?? ""
+              GitLabLanguageIds[lang.toLowerCase()] ?? ""
             }`;
 
       const embed = new EmbedBuilder()
