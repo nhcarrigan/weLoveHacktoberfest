@@ -7,6 +7,8 @@ interface params {
   userId: string;
 }
 
+const threeDays = 1000 * 60 * 60 * 24 * 3;
+
 /**
  * Checks if the database contains the specified project for the user.
  * Creates it if not.
@@ -25,7 +27,15 @@ export const isInDatabase = async (
         userId_repo_owner: opts,
       },
     });
-    if (exists) {
+    if (exists && exists.lastSent.getTime() + threeDays > Date.now()) {
+      await client.db.links.update({
+        where: {
+          userId_repo_owner: opts,
+        },
+        data: {
+          lastSent: new Date(),
+        },
+      });
       return true;
     }
     await client.db.links.create({

@@ -8,10 +8,11 @@ datasource db {
 }
 
 model links {
-    id     String @id @default(auto()) @map("_id") @db.ObjectId
-    userId String
-    repo   String
-    owner  String
+    id       String   @id @default(auto()) @map("_id") @db.ObjectId
+    userId   String
+    repo     String
+    owner    String
+    lastSent DateTime @default(now())
 
     @@unique([userId, repo, owner], map: "unique_repo_owner")
 }
