@@ -1,6 +1,10 @@
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 
-import { GitLabLanguageIds } from "../config/GitLabLanguageIds";
+import {
+  GitLabLanguageIds,
+  LanguageChoices,
+  LanguageColours,
+} from "../config/Languages";
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
 
@@ -25,23 +29,30 @@ export const search: Command = {
         .setName("lang")
         .setDescription("The Language that you want to search for.")
         .setRequired(true)
+        .setAutocomplete(true)
     ),
   run: async (bot, interaction) => {
     try {
       await interaction.deferReply();
       const vcs = interaction.options.getString("vcs", true);
-      const lang = interaction.options.getString("lang", true);
+      const lang = interaction.options.getString(
+        "lang",
+        true
+      ) as keyof typeof LanguageChoices;
 
       const url =
         vcs === "github"
           ? `https://${vcs}.com/search?q=topic%3Ahacktoberfest%20language%3A${lang}&type=repositories`
           : `https://${vcs}.com/explore/projects/topics/hacktoberfest?language=${
-              GitLabLanguageIds[lang.toLowerCase()] ?? ""
+              GitLabLanguageIds[lang] ?? ""
             }`;
 
       const embed = new EmbedBuilder()
         .setTitle(`${lang} projects on ${vcs}`)
-        .setDescription(url);
+        .setDescription(
+          `[Click here to view ${lang} projects on ${vcs}](${url})`
+        )
+        .setColor(LanguageColours[lang] ?? null);
       embed.setFooter({
         text: "Join our server: https://chat.nhcarrigan.com",
         iconURL: "https://cdn.nhcarrigan.com/profile.png",
