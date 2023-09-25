@@ -1,8 +1,8 @@
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 
+import { GitLabLanguageIds } from "../config/GitLabLanguageIds";
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
-import { GitLabLanguageIds } from "../config/GitLabLanguageIds";
 
 export const search: Command = {
   data: new SlashCommandBuilder()
