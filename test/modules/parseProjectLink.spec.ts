@@ -142,7 +142,7 @@ suite("parseProjectLink", () => {
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
       owner: "nhcarrigan",
-    }); /*  */
+    });
   });
 
   test("should parse a GitLab issue link", () => {
@@ -169,6 +169,54 @@ suite("parseProjectLink", () => {
     assert.deepEqual(parseProjectLink(matches?.[1] || ""), {
       repo: "discord-bot",
       owner: "beccalyria",
+    });
+  });
+
+  test("should match a link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest/ is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan",
+    });
+  });
+
+  test("should match a suppressed link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "<https://github.com/nhcarrigan/weLoveHacktoberfest/> is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan",
+    });
+  });
+
+  test("should match a Markdown link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "[my project](https://github.com/nhcarrigan/weLoveHacktoberfest/) is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan",
+    });
+  });
+
+  test("should match a suppressed Markdown link with a trailing slash", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "[my project](<https://github.com/nhcarrigan/weLoveHacktoberfest/>) is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan",
     });
   });
 });

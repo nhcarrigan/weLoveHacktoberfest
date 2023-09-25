@@ -1,5 +1,5 @@
 export const boundaryStart = "(?:^|[ \t\n<(])";
-export const boundaryEnd = "(?:$|[ \t\n>),.])";
+export const boundaryEnd = "\\/?(?:$|[ \t\n>),.])";
 export const protocol = "(?:https?:\\/\\/)?";
 export const www = "(?:www\\.)?";
 // credit: https://github.com/shinnn/github-username-regex
