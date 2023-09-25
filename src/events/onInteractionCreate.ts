@@ -1,6 +1,7 @@
 import { Interaction, InteractionType } from "discord.js";
 import { compareTwoStrings } from "string-similarity";
 
+import { LanguageChoices } from "../config/Languages";
 import { tags } from "../data/tags";
 import { Bot } from "../interfaces/Bot";
 
@@ -12,6 +13,24 @@ import { Bot } from "../interfaces/Bot";
  */
 export const onInteraction = async (bot: Bot, interaction: Interaction) => {
   if (interaction.type === InteractionType.ApplicationCommandAutocomplete) {
+    if (interaction.commandName === "search") {
+      const option = interaction.options.getFocused(true);
+
+      if (option.name === "lang") {
+        const languageNames = Object.entries(LanguageChoices);
+        const search = option.value;
+        const choices = languageNames
+          .sort((a, b) =>
+            compareTwoStrings(b[1], search) > compareTwoStrings(a[1], search)
+              ? 1
+              : -1
+          )
+          .slice(0, 5);
+        await interaction.respond(
+          choices.map(([value, name]) => ({ name, value }))
+        );
+      }
+    }
     if (interaction.commandName === "faq") {
       const option = interaction.options.getFocused(true);
 
