@@ -29,7 +29,7 @@ export const isInDatabase = async (
     });
     if (exists) {
       // return true only if exists and hasn't been three days since last sent
-      if (!(exists.lastSent.getTime() + threeDays > Date.now())) {
+      if (exists.lastSent.getTime() + threeDays > Date.now()) {
         return true;
       }
       // need to update here, create call would fail because of unique index
