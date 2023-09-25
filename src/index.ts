@@ -11,6 +11,7 @@ import { Bot } from "./interfaces/Bot";
 import { errorHandler } from "./utils/errorHandler";
 import { loadCommands } from "./utils/loadCommands";
 import { logHandler } from "./utils/logHandler";
+import { PrismaClient } from "@prisma/client";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -27,6 +28,8 @@ Sentry.init({
     const client = new Client({
       intents: IntentOptions,
     }) as Bot;
+    client.db = new PrismaClient();
+    await client.db.$connect();
     const token = process.env.TOKEN;
 
     client.timer = 0;
