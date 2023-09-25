@@ -11,7 +11,4 @@ const optionalIssues = "(?:\\/(?:-\\/)?issues\\/\\d+)?";
 const githubPath = `${githubUsername}\\/${repo}${optionalIssues}`;
 const gitlabPath = `${gitlabUsername}\\/${repo}${optionalIssues}`;
 
-export const ProjectRegex = new RegExp(
-  `${boundaryStart}${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})${boundaryEnd}`,
-  "mi"
-);
+export const ProjectRegexString = `${boundaryStart}${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})${boundaryEnd}`;
