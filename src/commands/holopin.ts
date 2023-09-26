@@ -1,8 +1,4 @@
-import {
-  AttachmentBuilder,
-  EmbedBuilder,
-  SlashCommandBuilder,
-} from "discord.js";
+import { AttachmentBuilder, SlashCommandBuilder } from "discord.js";
 
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
