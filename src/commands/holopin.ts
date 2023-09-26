@@ -1,4 +1,4 @@
-import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
+import { AttachmentBuilder, SlashCommandBuilder } from "discord.js";
 
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
@@ -19,9 +19,7 @@ export const holopin: Command = {
       await interaction.deferReply();
       const target = interaction.options.getString("username", true);
 
-      const res = await fetch(`https://holopin.me/${target}`, {
-        method: "HEAD",
-      }).catch(() => null);
+      const res = await fetch(`https://holopin.me/${target}`).catch(() => null);
 
       if (!res || res.status !== 200) {
         await interaction.editReply(
@@ -30,10 +28,13 @@ export const holopin: Command = {
         return;
       }
 
-      const embed = new EmbedBuilder();
-      embed.setTitle(`${target}'s Holopin Badge Board`);
-      embed.setImage(`https://holopin.me/${target}`);
-      await interaction.editReply({ embeds: [embed] });
+      const arrayBuffer = await res.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      const attachment = new AttachmentBuilder(buffer, {
+        name: `${target}.png`,
+      });
+
+      await interaction.editReply({ files: [attachment] });
     } catch (err) {
       await errorHandler("holopin command", err);
     }
