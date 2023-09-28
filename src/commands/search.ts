@@ -31,7 +31,7 @@ export const search: Command = {
         .setRequired(true)
         .setAutocomplete(true)
     ),
-  run: async (bot, interaction) => {
+  run: async (_bot, interaction) => {
     try {
       await interaction.deferReply();
       const vcs = interaction.options.getString("vcs", true);

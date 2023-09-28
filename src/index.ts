@@ -14,7 +14,7 @@ import { loadCommands } from "./utils/loadCommands";
 import { logHandler } from "./utils/logHandler";
 
 Sentry.init({
-  dsn: process.env.SENTRY_DSN,
+  dsn: process.env.SENTRY_DSN || "",
   tracesSampleRate: 1.0,
   integrations: [
     new RewriteFrames({

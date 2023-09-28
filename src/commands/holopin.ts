@@ -14,7 +14,7 @@ export const holopin: Command = {
         .setRequired(true)
         .setAutocomplete(true)
     ),
-  run: async (bot, interaction) => {
+  run: async (_bot, interaction) => {
     try {
       await interaction.deferReply();
       const target = interaction.options.getString("username", true);

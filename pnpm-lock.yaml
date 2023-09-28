@@ -38,8 +38,8 @@ devDependencies:
     specifier: 1.0.1
     version: 1.0.1(prettier@2.8.8)
   '@nhcarrigan/typescript-config':
-    specifier: 1.0.1
-    version: 1.0.1(typescript@5.2.2)
+    specifier: 3.0.0
+    version: 3.0.0(typescript@5.2.2)
   '@types/chai':
     specifier: 4.3.6
     version: 4.3.6
@@ -252,8 +252,9 @@ packages:
       prettier: 2.8.8
     dev: true
 
-  /@nhcarrigan/typescript-config@1.0.1(typescript@5.2.2):
-    resolution: {integrity: sha512-RGx6CecTDbn8KkKuRamb+mt4HfTRdWhGhkOVpgXf8oOmyHIJjJetS407OsJ8pIKefjamYXmZ1WEPNLPR0CJpXg==}
+  /@nhcarrigan/typescript-config@3.0.0(typescript@5.2.2):
+    resolution: {integrity: sha512-uLi6gIMBW9Frqfg+XwKKEt1JW/s2oJiCoQ2MA6DJROeSLcAd+kvDcMTRGb74DT86PSIEVGby9/BqJSl7okSgZg==}
+    engines: {node: '20', pnpm: '8'}
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
