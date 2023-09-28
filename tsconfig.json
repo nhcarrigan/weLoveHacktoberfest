@@ -2,7 +2,8 @@
   "extends": "@nhcarrigan/typescript-config",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./prod"
+    "outDir": "./prod",
+    "lib": ["es2023"]
   },
   "exclude": ["./test"]
 }

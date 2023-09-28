@@ -1,4 +1,4 @@
-export const boundaryStart = "(?:^|[ \t\n<(])";
+export const boundaryStart = "(?:^|[ \t\n<(])?";
 export const boundaryEnd = "\\/?(?:$|[ \t\n>),.])";
 export const protocol = "(?:https?:\\/\\/)?";
 export const www = "(?:www\\.)?";

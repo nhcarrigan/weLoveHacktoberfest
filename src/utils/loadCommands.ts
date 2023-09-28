@@ -20,6 +20,9 @@ export const loadCommands = async (): Promise<Command[]> => {
     );
     for (const file of files) {
       const name = file.split(".")[0];
+      if (!name) {
+        continue;
+      }
       const mod = await import(
         join(process.cwd(), "prod", "commands", `${file}`)
       );

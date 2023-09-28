@@ -5,5 +5,6 @@
  * @returns {number} The random index.
  */
 export const getRandom = <T>(phrases: Array<T>): T => {
-  return phrases[Math.floor(Math.random() * phrases.length)];
+  const result = phrases[Math.floor(Math.random() * phrases.length)];
+  return result as T;
 };

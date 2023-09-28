@@ -78,9 +78,14 @@ export const checkProject = async (
     return;
   }
 
+  const matchedRepos = matches
+    .map((m) => parseProjectLink(m))
+    .filter(
+      (m, i, a) =>
+        a.findLastIndex((x) => x.repo === m.repo && x.owner === m.owner) === i
+    );
   let existsNotified = false;
-  for (const match of matches) {
-    const data = parseProjectLink(match);
+  for (const data of matchedRepos) {
     const opts = { ...data, userId: message.author.id };
     const alreadySent = await isInDatabase(client, opts);
     if (alreadySent && !existsNotified) {

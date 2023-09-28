@@ -2,7 +2,7 @@ import { assert } from "chai";
 
 import { ProjectRegexString } from "../../src/config/ProjectRegex";
 
-suite("ProjectRegex", () => {
+suite.only("ProjectRegex", () => {
   test("should match at beginning of message", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches =
@@ -177,6 +177,16 @@ suite("ProjectRegex", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches =
       "https://github.com/naomi-lgbt/naomi-lgbt.github.io and https://github.com/beccalyria/discord-bot are both looking for contributions! Check out our [docs](https://contribute.nhcarrigan.com)".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 2);
+  });
+
+  test("should match multiple links with no separations", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/naomi-lgbt/naomi-lgbt.github.io https://github.com/beccalyria/discord-bot are both looking for contributions! Check out our [docs](https://contribute.nhcarrigan.com)".match(
         ProjectRegex
       );
     assert.isNotNull(matches);
