@@ -40,4 +40,28 @@ export const loveData: LoveData[] = [
     name: "Appwrite",
     emoji: "A P P W R I T E",
   },
+  {
+    name: "IllaCloud",
+    emoji: "I L L A C L O U D",
+  },
+  {
+    name: "Amplication",
+    emoji: "A M P L I C A T I O N",
+  },
+  {
+    name: "Runme",
+    emoji: "R U N M E",
+  },
+  {
+    name: "OpenSauced",
+    emoji: "O P E N S A U C E D",
+  },
+  {
+    name: "MLH",
+    emoji: "M L H",
+  },
+  {
+    name: "HuggingFace",
+    emoji: "H U G G I N G F A C E",
+  },
 ];
