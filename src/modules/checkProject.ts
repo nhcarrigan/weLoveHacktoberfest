@@ -37,6 +37,11 @@ export const checkProject = async (
     return;
   }
 
+  // ignoring helpers to allow us to reply to messages when needed
+  if (message.member?.roles.cache.has("735507717233573964")) {
+    return;
+  }
+
   const me =
     guild.members.cache.get(client.user?.id || "oopsie") ||
     (await guild.members.fetch(client.user?.id || "oopsie"));
