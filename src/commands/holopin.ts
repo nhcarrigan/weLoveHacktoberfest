@@ -12,7 +12,6 @@ export const holopin: Command = {
         .setName("username")
         .setDescription("The user to display the Holopin badge board for.")
         .setRequired(true)
-        .setAutocomplete(true)
     ),
   run: async (_bot, interaction) => {
     try {
