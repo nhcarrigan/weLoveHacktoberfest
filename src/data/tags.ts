@@ -3,7 +3,7 @@ import { Tag } from "../interfaces/Tag";
 export const tags: Tag[] = [
   {
     answer:
-      "You don't. There's no way to tell which repos have been excluded. However, repos [are not arbitrarily excluded](https://hacktoberfest.com/participation/#spam). Simplistic repos, list repos, collection repos, and DSA repos are some examples of repos that generally get excluded, though exceptions can (very rarely) apply.\n\nSee also the FAQ entry `excluded`",
+      "You don't. There's no way to tell which repos have been excluded. However, repos [are not arbitrarily excluded](https://hacktoberfest.com/participation/#spam). Simplistic repos, list repos, collection repos, and DSA repos are some examples of repos that generally get excluded, though exceptions can (very rarely) apply.",
     question: "How do I check if a repo has been excluded?",
   },
   {
@@ -38,7 +38,7 @@ export const tags: Tag[] = [
   },
   {
     answer:
-      "Want to find a project with a specific language to contribute to?\n\nYou can use this link to find hacktoberfest repos in a language of your choice: `https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`. Don't forget to replace `<<change_this_to_language>>` with the language you want to search for.\n\nAs an example, if you want to find JavaScript projects, you'd use: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript)",
+      "Want to find a project with a specific language to contribute to?\n\nYou can use this link to find hacktoberfest repos in a language of your choice: `https://github.com/topics/hacktoberfest?l=<<change_this_to_language>>`. Don't forget to replace `<<change_this_to_language>>` with the language you want to search for.\n\nAs an example, if you want to find JavaScript projects, you'd use: [https://github.com/topics/hacktoberfest?l=javascript](https://github.com/topics/hacktoberfest?l=javascript). You can also use the `/search` command.",
     question: "How do I find projects in specific languages to Contribute to?",
   },
   {
@@ -57,7 +57,7 @@ export const tags: Tag[] = [
   },
   {
     answer:
-      "Any project with the `hacktoberfest` topic is considered to be participating in Hacktoberfest.\n\nYou can search for these both on [GitHub](https://github.com/topics/hacktoberfest) and [GitLab](https://gitlab.com/explore/projects?topic=hacktoberfest).\n\nWe also recommend taking a look at <#735506115810426971> as folks share their projects there.",
+      "Any project with the `hacktoberfest` topic is considered to be participating in Hacktoberfest.\n\nYou can search for these both on [GitHub](https://github.com/topics/hacktoberfest) and [GitLab](https://gitlab.com/explore/projects?topic=hacktoberfest).\n\nWe also recommend taking a look at <#735506115810426971> as folks share their projects there. You can also use the `/search` command to generate query links for a specific language.",
     question: "Where do I find projects to contribute to?",
   },
   {
@@ -101,5 +101,20 @@ export const tags: Tag[] = [
       "As long as your PR/MR is approved, merged, or given the `hacktoberfest-accepted` label before October ends, it can be eligible for Hacktoberfest. The maturation period might extend into November, but that will not prevent your contribution from being counted.",
     question:
       "Will my PR/MR still be eligible, even if October is almost done?",
+  },
+  {
+    answer:
+      "Maintainer activities are not tracked. Additionally, there are no rewards for maintainer activity this year. Only 4 completed PR/MRs will be tracked.",
+    question: "How do I track my maintainer activity?",
+  },
+  {
+    answer:
+      "We do not typically accept appeals for spam-based disqualification. You may politely ask the maintainer to remove the `spam` label, but it is their choice. Please do not harass maintainers. If the maintainer chooses to remove the label, let us know so we can re-evaluate your Hacktoberfest account.",
+    question: "How do I appeal my account being disqualified?",
+  },
+  {
+    answer:
+      "To quote <@!465650873650118659>:\n> Look y'all, we don't have the time to sit here and play 'is this eligible or not'.\n\nHere's some guidelines:\n- Pick an actual project. If it's designed to help you find quick and easy PRs just to 'win' hacktoberfest, move on.\n- If you PR to a project that isn't eligible, who cares? That just means it won't count toward your 4 PRs. As long as your **PR itself** isn't labelled spam, there's no issue.",
+    question: "Is this specific project eligible?",
   },
 ];
