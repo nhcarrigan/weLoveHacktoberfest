@@ -25,5 +25,5 @@ export const phrases = [
   "{name} is Legendary!",
   "{name} is 11/10!",
   "{name} is Superb!",
-  "{name} is Wholesome!",
+  "{name} is Wholesome!"
 ];

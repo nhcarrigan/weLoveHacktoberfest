@@ -12,7 +12,7 @@ export const holopin: Command = {
         .setName("username")
         .setDescription("The user to display the Holopin badge board for.")
         .setRequired(true)
-        .setAutocomplete(true),
+        .setAutocomplete(true)
     ),
   run: async (_bot, interaction) => {
     try {
@@ -23,7 +23,7 @@ export const holopin: Command = {
 
       if (!res || res.status !== 200) {
         await interaction.editReply(
-          "Could not locate that user's Holopin badge board.",
+          "Could not locate that user's Holopin badge board."
         );
         return;
       }
@@ -31,12 +31,12 @@ export const holopin: Command = {
       const arrayBuffer = await res.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
       const attachment = new AttachmentBuilder(buffer, {
-        name: `${target}.png`,
+        name: `${target}.png`
       });
 
       await interaction.editReply({ files: [attachment] });
     } catch (err) {
       await errorHandler("holopin command", err);
     }
-  },
+  }
 };

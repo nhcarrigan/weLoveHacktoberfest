@@ -10,7 +10,7 @@ export const token: Command = {
       option
         .setName("token")
         .setDescription("Your Hacktoberfest auth token.")
-        .setRequired(true),
+        .setRequired(true)
     ),
   run: async (bot, interaction) => {
     await interaction.deferReply({ ephemeral: true });
@@ -25,9 +25,9 @@ export const token: Command = {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      },
+          "Content-Type": "application/json"
+        }
+      }
     )
       .then(async (res) => await res.json())
       .catch((err) => err);
@@ -40,7 +40,7 @@ export const token: Command = {
     bot.reportTokens[user] = token;
 
     await interaction.editReply(
-      `Your token has been set for the account ${response.name || "unknown"}`,
+      `Your token has been set for the account ${response.name || "unknown"}`
     );
-  },
+  }
 };

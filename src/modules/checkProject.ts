@@ -1,7 +1,7 @@
 import {
   GuildChannelResolvable,
   Message,
-  PermissionFlagsBits,
+  PermissionFlagsBits
 } from "discord.js";
 
 import { ProjectRegexString } from "../config/ProjectRegex";
@@ -23,7 +23,7 @@ const TTD = 1000 * 60 * 5;
 export const checkProject = async (
   client: Bot,
   message: Message,
-  isEdited: boolean,
+  isEdited: boolean
 ) => {
   if (!process.env.PROJECT_CHANNEL) {
     return;
@@ -61,7 +61,7 @@ export const checkProject = async (
   if (!matches) {
     await message.delete();
     const notif = await message.channel.send(
-      `<@!${message.author.id}>, please don't post in this channel if you aren't sharing a project. Make sure you're sharing a GitHub/GitLab repository link, or a specific issue link.`,
+      `<@!${message.author.id}>, please don't post in this channel if you aren't sharing a project. Make sure you're sharing a GitHub/GitLab repository link, or a specific issue link.`
     );
     setTimeout(async () => await notif.delete(), TTD);
     return;
@@ -70,7 +70,7 @@ export const checkProject = async (
   if (matches.length > 5) {
     await message.delete();
     const notif = await message.channel.send(
-      `<@!${message.author.id}>, please don't post many links at once, as this can be quite spammy.`,
+      `<@!${message.author.id}>, please don't post many links at once, as this can be quite spammy.`
     );
     setTimeout(async () => await notif.delete(), TTD);
     return;
@@ -87,7 +87,7 @@ export const checkProject = async (
     .map((m) => parseProjectLink(m))
     .filter(
       (m, i, a) =>
-        a.findLastIndex((x) => x.repo === m.repo && x.owner === m.owner) === i,
+        a.findLastIndex((x) => x.repo === m.repo && x.owner === m.owner) === i
     );
   let existsNotified = false;
   for (const data of matchedRepos) {
@@ -97,7 +97,7 @@ export const checkProject = async (
       existsNotified = true;
       await message.delete();
       const notif = await message.channel.send(
-        `<@!${message.author.id}>, please do not share your project repeatedly. This channel is searchable, so there is no need to clog it up with multiple posts.`,
+        `<@!${message.author.id}>, please do not share your project repeatedly. This channel is searchable, so there is no need to clog it up with multiple posts.`
       );
       setTimeout(async () => await notif.delete(), TTD);
     }

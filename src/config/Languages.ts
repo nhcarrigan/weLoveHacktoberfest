@@ -27,7 +27,7 @@ export const LanguageChoices = {
   shell: "Shell",
   swift: "Swift",
   typescript: "TypeScript",
-  vue: "Vue",
+  vue: "Vue"
 };
 
 /**
@@ -60,7 +60,7 @@ export const LanguageColours: {
   shell: 0x89e051,
   swift: 0xf05138,
   typescript: 0x3178c6,
-  vue: 0x41b883,
+  vue: 0x41b883
 };
 
 /**
@@ -95,5 +95,5 @@ export const GitLabLanguageIds: {
   shell: 16,
   swift: 28,
   typescript: 19,
-  vue: 25,
+  vue: 25
 };

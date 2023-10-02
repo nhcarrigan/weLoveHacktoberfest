@@ -23,7 +23,7 @@ export const registerCommands = async (bot: Bot): Promise<boolean> => {
 
     await rest.put(
       Routes.applicationGuildCommands(bot.user?.id || "oops", bot.homeGuild),
-      { body: commandData },
+      { body: commandData }
     );
     return true;
   } catch (err) {

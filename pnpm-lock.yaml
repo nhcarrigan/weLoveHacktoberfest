@@ -32,11 +32,11 @@ dependencies:
 
 devDependencies:
   '@nhcarrigan/eslint-config':
-    specifier: 3.0.0
-    version: 3.0.0(eslint@8.50.0)(prettier@3.0.3)(typescript@5.2.2)
+    specifier: 3.2.0
+    version: 3.2.0(eslint@8.50.0)(prettier@3.0.3)(typescript@5.2.2)
   '@nhcarrigan/prettier-config':
-    specifier: 3.0.0
-    version: 3.0.0(prettier@3.0.3)
+    specifier: 3.2.0
+    version: 3.2.0(prettier@3.0.3)
   '@nhcarrigan/typescript-config':
     specifier: 3.0.0
     version: 3.0.0(typescript@5.2.2)
@@ -503,8 +503,9 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@nhcarrigan/eslint-config@3.0.0(eslint@8.50.0)(prettier@3.0.3)(typescript@5.2.2):
-    resolution: {integrity: sha512-6rSHpoWcXn2WH0vqbjOgczX4er/NuSyJQz58pxcKY6EWL8fT7qPxlUMmkCenpCaNTX9ijKwsqLqXeXk5BmA0DA==}
+  /@nhcarrigan/eslint-config@3.2.0(eslint@8.50.0)(prettier@3.0.3)(typescript@5.2.2):
+    resolution: {integrity: sha512-DlB0T5o0BcRlqJ9ktejs+jtufrxwyWnzWXsCM8GrWMph+19dCBOf8w3aDQpuIu9hM16d79mDTvSwwDx5ekOVvw==}
+    engines: {node: '20', pnpm: '8'}
     peerDependencies:
       eslint: '>=8'
     dependencies:
@@ -525,8 +526,9 @@ packages:
       - typescript
     dev: true
 
-  /@nhcarrigan/prettier-config@3.0.0(prettier@3.0.3):
-    resolution: {integrity: sha512-26KbvAxGU3hV3xMK6q19c3lv5pjjPk9oeByz2R8vl9lVYR5BsHBUMRBKVFycmuBNT2KmAbF0N1WZkrlAm9it0g==}
+  /@nhcarrigan/prettier-config@3.2.0(prettier@3.0.3):
+    resolution: {integrity: sha512-AZOzwDTZfRiEinjUmqRj4gqZLYpLANhN1iMIsESxeuln+/BjGI06pINQsePIZ/I2HoPd+HGjNqu0S+Os9nHzuw==}
+    engines: {node: '20', pnpm: '8'}
     peerDependencies:
       prettier: '>=3'
     dependencies:

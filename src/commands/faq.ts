@@ -13,12 +13,12 @@ export const faq: Command = {
         .setName("question")
         .setDescription("The question to find in the FAQ.")
         .setRequired(true)
-        .setAutocomplete(true),
+        .setAutocomplete(true)
     )
     .addUserOption((option) =>
       option
         .setName("user")
-        .setDescription("The user to whom the request should be addressed to."),
+        .setDescription("The user to whom the request should be addressed to.")
     ),
   run: async (_bot, interaction) => {
     try {
@@ -38,7 +38,7 @@ export const faq: Command = {
       embed.setDescription(target.answer);
       embed.setFooter({
         text: "Join our server: https://chat.nhcarrigan.com",
-        iconURL: "https://cdn.nhcarrigan.com/profile.png",
+        iconURL: "https://cdn.nhcarrigan.com/profile.png"
       });
 
       const response = user
@@ -46,16 +46,16 @@ export const faq: Command = {
             embeds: [embed],
             content: `Hey <@!${user.id}>, this should answer your question.`,
             allowedMentions: {
-              users: [user.id],
-            },
+              users: [user.id]
+            }
           }
         : {
-            embeds: [embed],
+            embeds: [embed]
           };
 
       await interaction.editReply(response);
     } catch (err) {
       await errorHandler("faq command", err);
     }
-  },
+  }
 };

@@ -6,7 +6,7 @@ export const report: Command = {
   data: new SlashCommandBuilder()
     .setName("report")
     .setDescription(
-      "Report a repository for being ineligible for Hacktoberfest.",
+      "Report a repository for being ineligible for Hacktoberfest."
     )
     .addStringOption((option) =>
       option
@@ -15,20 +15,20 @@ export const report: Command = {
         .setRequired(true)
         .setChoices(
           { name: "GitHub", value: "github" },
-          { name: "GitLab", value: "gitlab" },
-        ),
+          { name: "GitLab", value: "gitlab" }
+        )
     )
     .addStringOption((option) =>
       option
         .setName("owner")
         .setDescription("The username of the repository owner.")
-        .setRequired(true),
+        .setRequired(true)
     )
     .addStringOption((option) =>
       option
         .setName("repo")
         .setDescription("The name of the repository.")
-        .setRequired(true),
+        .setRequired(true)
     ),
   run: async (bot, interaction) => {
     await interaction.deferReply({ ephemeral: true });
@@ -42,7 +42,7 @@ export const report: Command = {
 
     if (!token) {
       await interaction.editReply(
-        "You must set your token before reporting a repository. Please use `/token` to set your token.",
+        "You must set your token before reporting a repository. Please use `/token` to set your token."
       );
       return;
     }
@@ -53,10 +53,10 @@ export const report: Command = {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify({ provider, name: `${owner}/${repo}` }),
-      },
+        body: JSON.stringify({ provider, name: `${owner}/${repo}` })
+      }
     )
       .then(async (res) => await res.json())
       .catch((err) => err);
@@ -68,20 +68,20 @@ export const report: Command = {
 
     if (response.code === "InvalidCredentials") {
       await interaction.editReply(
-        "Your token is invalid. Please use `/token` to update your token.",
+        "Your token is invalid. Please use `/token` to update your token."
       );
       return;
     }
 
     if (response.code === "NotFound") {
       await interaction.editReply(
-        `Could not find a repository at https://${provider}.com/${owner}/${repo}`,
+        `Could not find a repository at https://${provider}.com/${owner}/${repo}`
       );
       return;
     }
 
     await interaction.editReply(
-      `Your report has been submitted. Thank you for your contribution!`,
+      `Your report has been submitted. Thank you for your contribution!`
     );
-  },
+  }
 };

@@ -3,7 +3,7 @@ import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import {
   GitLabLanguageIds,
   LanguageChoices,
-  LanguageColours,
+  LanguageColours
 } from "../config/Languages";
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
@@ -12,7 +12,7 @@ export const search: Command = {
   data: new SlashCommandBuilder()
     .setName("search")
     .setDescription(
-      "Discover opensource projects built with your programming language.",
+      "Discover opensource projects built with your programming language."
     )
     .addStringOption((option) =>
       option
@@ -20,16 +20,16 @@ export const search: Command = {
         .setDescription("The Version Control Service that you want to search.")
         .addChoices(
           { name: "GitHub", value: "github" },
-          { name: "GitLab", value: "gitlab" },
+          { name: "GitLab", value: "gitlab" }
         )
-        .setRequired(true),
+        .setRequired(true)
     )
     .addStringOption((options) =>
       options
         .setName("lang")
         .setDescription("The Language that you want to search for.")
         .setRequired(true)
-        .setAutocomplete(true),
+        .setAutocomplete(true)
     ),
   run: async (_bot, interaction) => {
     try {
@@ -37,7 +37,7 @@ export const search: Command = {
       const vcs = interaction.options.getString("vcs", true);
       const lang = interaction.options.getString(
         "lang",
-        true,
+        true
       ) as keyof typeof LanguageChoices;
 
       const url =
@@ -50,16 +50,16 @@ export const search: Command = {
       const embed = new EmbedBuilder()
         .setTitle(`${lang} projects on ${vcs}`)
         .setDescription(
-          `[Click here to view ${lang} projects on ${vcs}](${url})`,
+          `[Click here to view ${lang} projects on ${vcs}](${url})`
         )
         .setColor(LanguageColours[lang] ?? null);
       embed.setFooter({
         text: "Join our server: https://chat.nhcarrigan.com",
-        iconURL: "https://cdn.nhcarrigan.com/profile.png",
+        iconURL: "https://cdn.nhcarrigan.com/profile.png"
       });
       await interaction.editReply({ embeds: [embed] });
     } catch (err) {
       await errorHandler("search command", err);
     }
-  },
+  }
 };

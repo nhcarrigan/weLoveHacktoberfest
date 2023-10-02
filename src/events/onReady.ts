@@ -17,16 +17,16 @@ export const onReady = async (client: Bot): Promise<void> => {
     process.env.NODE_ENV === "production"
       ? logHandler.log(
           "info",
-          "Bot is in production mode - channel lock and cooldown are active.",
+          "Bot is in production mode - channel lock and cooldown are active."
         )
       : logHandler.log(
           "warn",
-          "Bot is NOT in production mode - if this a live instance, please set NODE_ENV to 'production'. Protections are disabled otherwise.",
+          "Bot is NOT in production mode - if this a live instance, please set NODE_ENV to 'production'. Protections are disabled otherwise."
         );
 
     logHandler.log(
       "debug",
-      `Cooldown is set to ${client.cooldown / 1000} seconds.`,
+      `Cooldown is set to ${client.cooldown / 1000} seconds.`
     );
 
     await registerCommands(client);
