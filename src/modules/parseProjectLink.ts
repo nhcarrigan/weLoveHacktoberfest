@@ -11,7 +11,7 @@ import {
  * @returns {{ repo: string; owner: string }} The repository and owner.
  */
 export const parseProjectLink = (
-  message: string
+  message: string,
 ): { repo: string; owner: string } => {
   const stripped = message
     .replace(new RegExp(`^${boundaryStart}`), "")

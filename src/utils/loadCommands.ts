@@ -16,7 +16,7 @@ export const loadCommands = async (): Promise<Command[]> => {
     const result: Command[] = [];
     const files = await readdir(
       join(process.cwd(), "prod", "commands"),
-      "utf-8"
+      "utf-8",
     );
     for (const file of files) {
       const name = file.split(".")[0];

@@ -23,11 +23,11 @@ export const onInteraction = async (bot: Bot, interaction: Interaction) => {
           .sort((a, b) =>
             compareTwoStrings(b[1], search) > compareTwoStrings(a[1], search)
               ? 1
-              : -1
+              : -1,
           )
           .slice(0, 5);
         await interaction.respond(
-          choices.map(([value, name]) => ({ name, value }))
+          choices.map(([value, name]) => ({ name, value })),
         );
       }
     }
@@ -39,22 +39,24 @@ export const onInteraction = async (bot: Bot, interaction: Interaction) => {
         const search = option.value.toLowerCase();
         const choices = tagNames
           .sort((a, b) =>
-            compareTwoStrings(b, search) > compareTwoStrings(a, search) ? 1 : -1
+            compareTwoStrings(b, search) > compareTwoStrings(a, search)
+              ? 1
+              : -1,
           )
           .slice(0, 5);
         await interaction.respond(
-          choices.map((choice) => ({ name: choice, value: choice }))
+          choices.map((choice) => ({ name: choice, value: choice })),
         );
       }
     }
   }
   if (interaction.isChatInputCommand()) {
     const target = bot.commands.find(
-      (command) => command.data.name === interaction.commandName
+      (command) => command.data.name === interaction.commandName,
     );
     if (!target) {
       await interaction.reply(
-        "That does not appear to be a valid slash command..."
+        "That does not appear to be a valid slash command...",
       );
       return;
     }

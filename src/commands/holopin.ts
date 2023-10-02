@@ -12,7 +12,7 @@ export const holopin: Command = {
         .setName("username")
         .setDescription("The user to display the Holopin badge board for.")
         .setRequired(true)
-        .setAutocomplete(true)
+        .setAutocomplete(true),
     ),
   run: async (_bot, interaction) => {
     try {
@@ -23,7 +23,7 @@ export const holopin: Command = {
 
       if (!res || res.status !== 200) {
         await interaction.editReply(
-          "Could not locate that user's Holopin badge board."
+          "Could not locate that user's Holopin badge board.",
         );
         return;
       }

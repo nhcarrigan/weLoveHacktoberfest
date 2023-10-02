@@ -12,7 +12,7 @@ import { errorHandler } from "../utils/errorHandler";
  */
 export const onMessageEdit = async (
   message: Message,
-  client: Bot
+  client: Bot,
 ): Promise<void> => {
   try {
     if (message.author.id === client.user?.id) {

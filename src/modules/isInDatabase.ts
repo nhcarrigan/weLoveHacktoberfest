@@ -19,7 +19,7 @@ const threeDays = 1000 * 60 * 60 * 24 * 3;
  */
 export const isInDatabase = async (
   client: Bot,
-  opts: params
+  opts: params,
 ): Promise<boolean | null> => {
   try {
     const exists = await client.db.links.findUnique({

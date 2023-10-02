@@ -17,7 +17,7 @@ import { validateLove } from "./validateLove";
  */
 export const sendLove = async (
   client: Bot,
-  message: Message
+  message: Message,
 ): Promise<void> => {
   try {
     // Bypass these restrictions in an explicit development environment
@@ -48,8 +48,8 @@ export const sendLove = async (
       embed.setDescription(responses.join("\n"));
       embed.setThumbnail(
         `https://raw.githubusercontent.com/lukeocodes/dev-hearts/main/build/${getRandom(
-          hearts
-        )}.png`
+          hearts,
+        )}.png`,
       );
       embed.setFooter({
         text: "Join our server: https://chat.nhcarrigan.com",

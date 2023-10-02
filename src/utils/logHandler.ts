@@ -18,7 +18,7 @@ export const logHandler = createLogger({
       format: "YYYY-MM-DD HH:mm:ss",
     }),
     colorize(),
-    printf((info) => `${info.level}: ${[info.timestamp]}: ${info.message}`)
+    printf((info) => `${info.level}: ${[info.timestamp]}: ${info.message}`),
   ),
   exitOnError: false,
 });

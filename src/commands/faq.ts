@@ -13,12 +13,12 @@ export const faq: Command = {
         .setName("question")
         .setDescription("The question to find in the FAQ.")
         .setRequired(true)
-        .setAutocomplete(true)
+        .setAutocomplete(true),
     )
     .addUserOption((option) =>
       option
         .setName("user")
-        .setDescription("The user to whom the request should be addressed to.")
+        .setDescription("The user to whom the request should be addressed to."),
     ),
   run: async (_bot, interaction) => {
     try {
