@@ -24,6 +24,6 @@ export const onMessage = async (
 
     await checkProject(client, message, false);
   } catch (err) {
-    await errorHandler("message event", err);
+    await errorHandler(client, "message event", err);
   }
 };

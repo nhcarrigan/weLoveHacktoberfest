@@ -20,7 +20,7 @@ export const faq: Command = {
         .setName("user")
         .setDescription("The user to whom the request should be addressed to.")
     ),
-  run: async (_bot, interaction) => {
+  run: async (bot, interaction) => {
     try {
       await interaction.deferReply();
       const targetQ = interaction.options.getString("question", true);
@@ -55,7 +55,7 @@ export const faq: Command = {
 
       await interaction.editReply(response);
     } catch (err) {
-      await errorHandler("faq command", err);
+      await errorHandler(bot, "faq command", err);
     }
   }
 };

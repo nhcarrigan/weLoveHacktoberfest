@@ -48,7 +48,7 @@ export const isInDatabase = async (
     });
     return false;
   } catch (err) {
-    await errorHandler("isInDatabase", err);
+    await errorHandler(client, "isInDatabase", err);
     return null;
   }
 };

@@ -1,38 +1,31 @@
-import * as Sentry from "@sentry/node";
-import { EmbedBuilder, WebhookClient } from "discord.js";
+import { EmbedBuilder } from "discord.js";
 
-import { logHandler } from "./logHandler";
+import { Bot } from "../interfaces/Bot";
 
 /**
- * Standard error handling module to pipe errors to Sentry and
- * format the error for logging.
+ * Formats an error and sends it to the debug hook.
  *
- * @param {string} context A description of where the error occurred.
- * @param {unknown} err The error object.
+ * @param {Bot} bot The bot's Discord instance.
+ * @param {string} context A description of where in the code the error occurred.
+ * @param {unknown} error The Node.js Error.
  */
 export const errorHandler = async (
+  bot: Bot,
   context: string,
-  err: unknown
-): Promise<void> => {
-  const error = err as Error;
-  logHandler.log("error", `There was an error in the ${context}:`);
-  logHandler.log(
-    "error",
-    JSON.stringify({ errorMessage: error.message, errorStack: error.stack })
-  );
-  Sentry.captureException(error);
-
-  const hook = new WebhookClient({ url: process.env.DEBUG_HOOK as string });
-
+  error: unknown
+) => {
+  // typecast
+  const err = error as Error;
   const embed = new EmbedBuilder();
-  embed.setTitle(`There was an error in the ${context}`);
-  embed.setDescription(error.message.slice(0, 2000));
+  embed.setTitle(`Error in \`${context}\`!`);
+  embed.setDescription(
+    `\`\`\`${err.stack || "No stack trace available."}\`\`\``
+  );
   embed.addFields([
     {
-      name: "Stack",
-      value: `\`\`\`${error.stack?.slice(0, 1000) || "no stack"}\`\`\``
+      name: "Message",
+      value: err.message || "No message available."
     }
   ]);
-
-  await hook.send({ embeds: [embed] });
+  await bot.debugHook.send({ embeds: [embed] });
 };

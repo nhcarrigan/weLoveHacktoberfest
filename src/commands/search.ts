@@ -31,7 +31,7 @@ export const search: Command = {
         .setRequired(true)
         .setAutocomplete(true)
     ),
-  run: async (_bot, interaction) => {
+  run: async (bot, interaction) => {
     try {
       await interaction.deferReply();
       const vcs = interaction.options.getString("vcs", true);
@@ -59,7 +59,7 @@ export const search: Command = {
       });
       await interaction.editReply({ embeds: [embed] });
     } catch (err) {
-      await errorHandler("search command", err);
+      await errorHandler(bot, "search command", err);
     }
   }
 };

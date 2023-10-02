@@ -1,17 +1,18 @@
 import { readdir } from "fs/promises";
 import { join } from "path";
 
+import { Bot } from "../interfaces/Bot";
 import { Command } from "../interfaces/Command";
 
 import { errorHandler } from "./errorHandler";
 
 /**
  * Reads the `/commands` directory and dynamically imports the files,
- * then pushes the imported data to an array.
+ * then pushes the imported data to an array. Assigns it to the client.
  *
- * @returns {Command[]} Array of Command objects representing the imported commands.
+ * @param {Bot} bot The client object.
  */
-export const loadCommands = async (): Promise<Command[]> => {
+export const loadCommands = async (bot: Bot): Promise<void> => {
   try {
     const result: Command[] = [];
     const files = await readdir(
@@ -28,9 +29,8 @@ export const loadCommands = async (): Promise<Command[]> => {
       );
       result.push(mod[name] as Command);
     }
-    return result;
+    bot.commands = result;
   } catch (err) {
-    await errorHandler("load commands", err);
-    return [];
+    await errorHandler(bot, "load commands", err);
   }
 };

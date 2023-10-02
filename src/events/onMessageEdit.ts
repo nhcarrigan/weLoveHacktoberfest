@@ -21,6 +21,6 @@ export const onMessageEdit = async (
 
     await checkProject(client, message, true);
   } catch (err) {
-    await errorHandler("message event", err);
+    await errorHandler(client, "message event", err);
   }
 };

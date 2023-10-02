@@ -59,6 +59,6 @@ export const sendLove = async (
       await message.channel.send({ embeds: [embed] });
     }
   } catch (err) {
-    await errorHandler("send love", err);
+    await errorHandler(client, "send love", err);
   }
 };

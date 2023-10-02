@@ -1,10 +1,11 @@
 import { PrismaClient } from "@prisma/client";
-import { Client } from "discord.js";
+import { Client, WebhookClient } from "discord.js";
 
 import { Command } from "./Command";
 
 export interface Bot extends Client {
   token: string;
+  debugHook: WebhookClient;
   homeGuild: string;
   timer: number;
   cooldown: number;
