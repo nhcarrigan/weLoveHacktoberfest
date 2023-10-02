@@ -1,8 +1,9 @@
 import { Message } from "discord.js";
 
-import { checkMentions } from "../helpers/checkMentions";
 import { LoveData } from "../interfaces/LoveData";
 import { errorHandler } from "../utils/errorHandler";
+
+import { checkMentions } from "./checkMentions";
 
 /**
  * Universal module to check if the message meets the love
