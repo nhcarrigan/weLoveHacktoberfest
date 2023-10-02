@@ -1,3 +1,7 @@
 /node_modules
 .env
 /prod
+
+# Testing
+/coverage
+/.nyc_output
