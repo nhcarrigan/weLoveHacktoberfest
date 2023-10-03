@@ -110,7 +110,7 @@ suite("ProjectRegex", () => {
     assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
-  test("should match a GitHub issue link", () => {
+  test("should match a single GitHub issue link", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches =
       "https://github.com/nhcarrigan/weLoveHacktoberfest/issues/1".match(
@@ -120,9 +120,28 @@ suite("ProjectRegex", () => {
     assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
-  test("should match a GitLab issue link", () => {
+  test("should match a single GitLab issue link", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches = "https://gitlab.com/gitlab-org/gitlab/-/issues/1".match(
+      ProjectRegex
+    );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match a GitHub issue page link", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest/issues".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match a GitLab issue page link", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://gitlab.com/gitlab-org/gitlab/-/issues".match(
       ProjectRegex
     );
     assert.isNotNull(matches);

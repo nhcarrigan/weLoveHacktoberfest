@@ -8,7 +8,7 @@ export const githubUsername =
   "(?!orgs)[a-z\\d](?:[a-z\\d]|-(?=[a-z\\d])){0,38}";
 export const gitlabUsername = "[a-z\\d](?:[a-z\\d]|-(?=[a-z\\d])){1,254}";
 export const repo = "[a-z\\d\\-\\._]{1,}";
-export const optionalIssues = "(?:\\/(?:-\\/)?issues\\/\\d+)?";
+export const optionalIssues = "(?:\\/(?:-\\/)?issues\\/?\\d*)?";
 
 export const githubPath = `${githubUsername}\\/${repo}${optionalIssues}`;
 export const gitlabPath = `${gitlabUsername}\\/${repo}${optionalIssues}`;

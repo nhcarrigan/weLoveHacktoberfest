@@ -133,7 +133,7 @@ suite("parseProjectLink", () => {
     });
   });
 
-  test("should parse a GitHub issue link", () => {
+  test("should parse a single GitHub issue link", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches =
       "https://github.com/nhcarrigan/weLoveHacktoberfest/issues/1".match(
@@ -145,9 +145,32 @@ suite("parseProjectLink", () => {
     });
   });
 
-  test("should parse a GitLab issue link", () => {
+  test("should parse a single GitLab issue link", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches = "https://gitlab.com/gitlab-org/gitlab/-/issues/1".match(
+      ProjectRegex
+    );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "gitlab",
+      owner: "gitlab-org"
+    });
+  });
+
+  test("should parse a GitHub issue page link", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest/issues".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan"
+    });
+  });
+
+  test("should parse a GitLab issue page link", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://gitlab.com/gitlab-org/gitlab/-/issues".match(
       ProjectRegex
     );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
