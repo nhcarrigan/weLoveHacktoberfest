@@ -1,6 +1,7 @@
 import {
   boundaryEnd,
   boundaryStart,
+  discordMarkdown,
   optionalIssues
 } from "../config/ProjectRegex";
 
@@ -16,6 +17,8 @@ export const parseProjectLink = (
   const stripped = message
     .replace(new RegExp(`^${boundaryStart}`), "")
     .replace(new RegExp(`${boundaryEnd}$`), "")
+    .replace(new RegExp(`^${discordMarkdown}`), "")
+    .replace(new RegExp(`${discordMarkdown}$`), "")
     .replace(new RegExp(`${optionalIssues}$`), "")
     .replace(/\.$/, "")
     .replace(/\/$/, "");

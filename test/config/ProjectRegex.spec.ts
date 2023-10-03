@@ -110,7 +110,7 @@ suite("ProjectRegex", () => {
     assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
-  test("should match a GitHub issue link", () => {
+  test("should match a single GitHub issue link", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches =
       "https://github.com/nhcarrigan/weLoveHacktoberfest/issues/1".match(
@@ -120,9 +120,28 @@ suite("ProjectRegex", () => {
     assert.lengthOf(matches as RegExpMatchArray, 1);
   });
 
-  test("should match a GitLab issue link", () => {
+  test("should match a single GitLab issue link", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches = "https://gitlab.com/gitlab-org/gitlab/-/issues/1".match(
+      ProjectRegex
+    );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match a GitHub issue page link", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "https://github.com/nhcarrigan/weLoveHacktoberfest/issues".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match a GitLab issue page link", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches = "https://gitlab.com/gitlab-org/gitlab/-/issues".match(
       ProjectRegex
     );
     assert.isNotNull(matches);
@@ -229,6 +248,56 @@ suite("project regex REGRESSIONS", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches =
       "[my project](<https://github.com/nhcarrigan/weLoveHacktoberfest/>) is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match italic links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "*https://github.com/nhcarrigan/weLoveHacktoberfest* is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match bold links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "*https://github.com/nhcarrigan/weLoveHacktoberfest* is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match underlined links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "__https://github.com/nhcarrigan/weLoveHacktoberfest__ is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match strikethrough links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "~~https://github.com/nhcarrigan/weLoveHacktoberfest~~ is really cool.".match(
+        ProjectRegex
+      );
+    assert.isNotNull(matches);
+    assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match hella markdown", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "__***[My Project](<https://github.com/nhcarrigan/weLoveHacktoberfest>)__*** is really cool.".match(
         ProjectRegex
       );
     assert.isNotNull(matches);
