@@ -219,4 +219,64 @@ suite("parseProjectLink", () => {
       owner: "nhcarrigan"
     });
   });
+
+  test("should match italic links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "*https://github.com/nhcarrigan/weLoveHacktoberfest* is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan"
+    });
+  });
+
+  test("should match bold links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "*https://github.com/nhcarrigan/weLoveHacktoberfest* is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan"
+    });
+  });
+
+  test("should match underlined links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "__https://github.com/nhcarrigan/weLoveHacktoberfest__ is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan"
+    });
+  });
+
+  test("should match strikethrough links", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "~~https://github.com/nhcarrigan/weLoveHacktoberfest~~ is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan"
+    });
+  });
+
+  test("should match hella markdown", () => {
+    const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+    const matches =
+      "__***[My Project](<https://github.com/nhcarrigan/weLoveHacktoberfest>)__*** is really cool.".match(
+        ProjectRegex
+      );
+    assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
+      repo: "weLoveHacktoberfest",
+      owner: "nhcarrigan"
+    });
+  });
 });

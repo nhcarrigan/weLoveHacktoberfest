@@ -1,3 +1,4 @@
+export const discordMarkdown = "(?:[\\-\\_\\~*]*)";
 export const boundaryStart = "(?:^|[ \t\n<(])?";
 export const boundaryEnd = "\\/?(?:$|[ \t\n>),.])";
 export const protocol = "(?:https?:\\/\\/)?";
@@ -12,4 +13,4 @@ export const optionalIssues = "(?:\\/(?:-\\/)?issues\\/\\d+)?";
 export const githubPath = `${githubUsername}\\/${repo}${optionalIssues}`;
 export const gitlabPath = `${gitlabUsername}\\/${repo}${optionalIssues}`;
 
-export const ProjectRegexString = `${boundaryStart}${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})${boundaryEnd}`;
+export const ProjectRegexString = `${boundaryStart}${discordMarkdown}${protocol}${www}(?:github\\.com/${githubPath}|gitlab\\.com/${gitlabPath})${discordMarkdown}${boundaryEnd}`;
