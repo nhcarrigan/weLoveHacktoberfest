@@ -15,7 +15,7 @@ export const onMessageEdit = async (
   client: Bot
 ): Promise<void> => {
   try {
-    if (message.author.id === client.user?.id) {
+    if (message.author.bot) {
       return;
     }
 
