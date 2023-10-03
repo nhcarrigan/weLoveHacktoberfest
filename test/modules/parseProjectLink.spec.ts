@@ -12,7 +12,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -24,7 +24,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -36,7 +36,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -48,7 +48,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -60,7 +60,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -72,7 +72,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -84,7 +84,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -96,7 +96,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -108,7 +108,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -120,7 +120,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -129,7 +129,7 @@ suite("parseProjectLink", () => {
     const matches = "https://gitlab.com/gitlab-org/gitlab".match(ProjectRegex);
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "gitlab",
-      owner: "gitlab-org",
+      owner: "gitlab-org"
     });
   });
 
@@ -141,7 +141,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -152,7 +152,7 @@ suite("parseProjectLink", () => {
     );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "gitlab",
-      owner: "gitlab-org",
+      owner: "gitlab-org"
     });
   });
 
@@ -164,11 +164,11 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "naomi-lgbt.github.io",
-      owner: "naomi-lgbt",
+      owner: "naomi-lgbt"
     });
     assert.deepEqual(parseProjectLink(matches?.[1] || ""), {
       repo: "discord-bot",
-      owner: "beccalyria",
+      owner: "beccalyria"
     });
   });
 
@@ -180,7 +180,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -192,7 +192,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -204,7 +204,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 
@@ -216,7 +216,7 @@ suite("parseProjectLink", () => {
       );
     assert.deepEqual(parseProjectLink(matches?.[0] || ""), {
       repo: "weLoveHacktoberfest",
-      owner: "nhcarrigan",
+      owner: "nhcarrigan"
     });
   });
 });

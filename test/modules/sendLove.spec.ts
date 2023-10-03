@@ -8,13 +8,6 @@ import { sendLove } from "../../src/modules/sendLove";
 const guild = new MockGuild({
   name: "Test Guild"
 });
-const bot = new MockUser({
-  username: "Test Bot",
-  avatar: "test",
-  discriminator: 1234,
-  bot: true,
-  system: false
-});
 const user = new MockUser({
   username: "Test User",
   avatar: "test",

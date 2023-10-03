@@ -3,7 +3,7 @@ import { assert } from "chai";
 import {
   LanguageChoices,
   LanguageColours,
-  GitLabLanguageIds,
+  GitLabLanguageIds
 } from "../../src/config/Languages";
 
 suite("LanguageChoices", () => {

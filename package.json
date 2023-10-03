@@ -7,7 +7,7 @@
     "prebuild": "rimraf ./prod && prisma generate",
     "build": "tsc",
     "start": "node -r dotenv/config ./prod/index.js",
-    "lint": "eslint src --max-warnings 0 && prettier src --check",
+    "lint": "eslint src test --max-warnings 0 && prettier src test --check",
     "pretest": "rimraf ./.nyc_output && ts-node test/validateCoverage.ts",
     "test": "nyc --check-coverage ts-mocha -u tdd  'test/**/*.spec.ts' --recursive --exit --timeout 20000",
     "test:nocov": "MOCHA=true ts-mocha -u tdd  'test/**/*.spec.ts' --recursive --exit --timeout 20000",

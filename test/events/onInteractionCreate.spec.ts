@@ -1,9 +1,5 @@
 import { assert } from "chai";
-import {
-  ApplicationCommandOptionType,
-  ChannelType,
-  EmbedBuilder
-} from "discord.js";
+import { ChannelType } from "discord.js";
 import {
   MockChannel,
   MockChatInputCommandInteraction,

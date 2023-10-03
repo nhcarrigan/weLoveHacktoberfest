@@ -1,11 +1,6 @@
 import { assert } from "chai";
 import { ChannelType } from "discord.js";
-import {
-  MockChannel,
-  MockGuild,
-  MockMember,
-  MockUser
-} from "discordjs-testing";
+import { MockChannel, MockGuild, MockUser } from "discordjs-testing";
 
 import { onMessageEdit } from "../../src/events/onMessageEdit";
 
@@ -25,10 +20,6 @@ const user = new MockUser({
   discriminator: 1234,
   bot: false,
   system: false
-});
-const member = new MockMember({
-  guild,
-  user
 });
 const channel = new MockChannel({
   name: "test-channel",
