@@ -5,8 +5,8 @@ import { loveData } from "../data/loveData";
 import { phrases } from "../data/phrases";
 import { Bot } from "../interfaces/Bot";
 import { errorHandler } from "../utils/errorHandler";
+import { getRandom } from "../utils/getRandom";
 
-import { getRandom } from "./getRandom";
 import { validateLove } from "./validateLove";
 
 /**

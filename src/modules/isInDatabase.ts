@@ -27,6 +27,7 @@ export const isInDatabase = async (
         userId_repo_owner: opts
       }
     });
+
     if (exists) {
       // return true only if exists and hasn't been three days since last sent
       if (exists.lastSent.getTime() + threeDays > Date.now()) {
