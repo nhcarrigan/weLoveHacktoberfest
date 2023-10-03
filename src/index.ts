@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { RewriteFrames } from "@sentry/integrations";
 import * as Sentry from "@sentry/node";
-import { Client, Message } from "discord.js";
+import { Client, Message, WebhookClient } from "discord.js";
 
 import { IntentOptions } from "./config/IntentOptions";
 import { onInteraction } from "./events/onInteractionCreate";
@@ -18,30 +18,35 @@ Sentry.init({
   tracesSampleRate: 1.0,
   integrations: [
     new RewriteFrames({
-      root: global.__dirname,
-    }),
-  ],
+      root: global.__dirname
+    })
+  ]
 });
 
 (async () => {
   try {
     const client = new Client({
-      intents: IntentOptions,
+      intents: IntentOptions
     }) as Bot;
     client.db = new PrismaClient();
     const token = process.env.TOKEN;
-
-    client.timer = 0;
-    const cooldown = parseInt(process.env.COOLDOWN || "30000");
-    client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
-    client.homeGuild = process.env.HOME_GUILD || "";
-    client.commands = await loadCommands();
-    client.reportTokens = {};
-
+    client.token = token || "";
     if (!token) {
       logHandler.log("error", "Missing Discord Token");
       process.exit(1);
     }
+
+    if (!process.env.DEBUG_HOOK) {
+      logHandler.log("error", "Missing Debug Hook");
+      process.exit(1);
+    }
+    client.debugHook = new WebhookClient({ url: process.env.DEBUG_HOOK });
+    client.timer = 0;
+    const cooldown = parseInt(process.env.COOLDOWN || "30000");
+    client.cooldown = isNaN(cooldown) ? 30000 : cooldown;
+    client.homeGuild = process.env.HOME_GUILD || "";
+    client.reportTokens = {};
+    await loadCommands(client);
 
     client.on(
       "messageCreate",
@@ -63,6 +68,12 @@ Sentry.init({
     await client.db.$connect();
     await client.login(token);
   } catch (err) {
-    await errorHandler("initialisation", err);
+    await errorHandler(
+      {
+        debugHook: new WebhookClient({ url: process.env.DEBUG_HOOK as string })
+      } as never,
+      "initialisation",
+      err
+    );
   }
 })();

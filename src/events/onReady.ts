@@ -1,5 +1,3 @@
-import { WebhookClient } from "discord.js";
-
 import { Bot } from "../interfaces/Bot";
 import { errorHandler } from "../utils/errorHandler";
 import { logHandler } from "../utils/logHandler";
@@ -31,10 +29,8 @@ export const onReady = async (client: Bot): Promise<void> => {
 
     await registerCommands(client);
 
-    const hook = new WebhookClient({ url: process.env.DEBUG_HOOK as string });
-
-    await hook.send("Hacktoberfest bot online!");
+    await client.debugHook.send("Hacktoberfest bot online!");
   } catch (err) {
-    await errorHandler("ready event", err);
+    await errorHandler(client, "ready event", err);
   }
 };

@@ -12,9 +12,8 @@ export const holopin: Command = {
         .setName("username")
         .setDescription("The user to display the Holopin badge board for.")
         .setRequired(true)
-        .setAutocomplete(true)
     ),
-  run: async (_bot, interaction) => {
+  run: async (bot, interaction) => {
     try {
       await interaction.deferReply();
       const target = interaction.options.getString("username", true);
@@ -31,12 +30,12 @@ export const holopin: Command = {
       const arrayBuffer = await res.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
       const attachment = new AttachmentBuilder(buffer, {
-        name: `${target}.png`,
+        name: `${target}.png`
       });
 
       await interaction.editReply({ files: [attachment] });
     } catch (err) {
-      await errorHandler("holopin command", err);
+      await errorHandler(bot, "holopin command", err);
     }
-  },
+  }
 };

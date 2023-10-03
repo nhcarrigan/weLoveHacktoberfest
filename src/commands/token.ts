@@ -25,8 +25,8 @@ export const token: Command = {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
+          "Content-Type": "application/json"
+        }
       }
     )
       .then(async (res) => await res.json())
@@ -42,5 +42,5 @@ export const token: Command = {
     await interaction.editReply(
       `Your token has been set for the account ${response.name || "unknown"}`
     );
-  },
+  }
 };

@@ -53,9 +53,9 @@ export const report: Command = {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify({ provider, name: `${owner}/${repo}` }),
+        body: JSON.stringify({ provider, name: `${owner}/${repo}` })
       }
     )
       .then(async (res) => await res.json())
@@ -83,5 +83,5 @@ export const report: Command = {
     await interaction.editReply(
       `Your report has been submitted. Thank you for your contribution!`
     );
-  },
+  }
 };

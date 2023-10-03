@@ -2,7 +2,7 @@ import { assert } from "chai";
 
 import { ProjectRegexString } from "../../src/config/ProjectRegex";
 
-suite.only("ProjectRegex", () => {
+suite("ProjectRegex", () => {
   test("should match at beginning of message", () => {
     const ProjectRegex = new RegExp(ProjectRegexString, "mig");
     const matches =

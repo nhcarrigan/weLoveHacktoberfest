@@ -29,5 +29,5 @@ export const hearts = [
   "vonage_heart",
   "wales_heart",
   "white_heart",
-  "yellow_heart",
+  "yellow_heart"
 ];

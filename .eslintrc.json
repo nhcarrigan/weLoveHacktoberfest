@@ -2,5 +2,13 @@
   "extends": "@nhcarrigan",
   "rules": {
     "camelcase": ["error", { "allow": ["userId_repo_owner"] }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["test/__mocks__/Database.mock.ts"],
+      "rules": {
+        "require-await": "off"
+      }
+    }
+  ]
 }

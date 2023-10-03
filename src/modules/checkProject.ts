@@ -1,7 +1,7 @@
 import {
   GuildChannelResolvable,
   Message,
-  PermissionFlagsBits,
+  PermissionFlagsBits
 } from "discord.js";
 
 import { ProjectRegexString } from "../config/ProjectRegex";

@@ -3,7 +3,7 @@ import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import {
   GitLabLanguageIds,
   LanguageChoices,
-  LanguageColours,
+  LanguageColours
 } from "../config/Languages";
 import { Command } from "../interfaces/Command";
 import { errorHandler } from "../utils/errorHandler";
@@ -31,7 +31,7 @@ export const search: Command = {
         .setRequired(true)
         .setAutocomplete(true)
     ),
-  run: async (_bot, interaction) => {
+  run: async (bot, interaction) => {
     try {
       await interaction.deferReply();
       const vcs = interaction.options.getString("vcs", true);
@@ -55,11 +55,11 @@ export const search: Command = {
         .setColor(LanguageColours[lang] ?? null);
       embed.setFooter({
         text: "Join our server: https://chat.nhcarrigan.com",
-        iconURL: "https://cdn.nhcarrigan.com/profile.png",
+        iconURL: "https://cdn.nhcarrigan.com/profile.png"
       });
       await interaction.editReply({ embeds: [embed] });
     } catch (err) {
-      await errorHandler("search command", err);
+      await errorHandler(bot, "search command", err);
     }
-  },
+  }
 };

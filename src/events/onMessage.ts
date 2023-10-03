@@ -16,7 +16,7 @@ export const onMessage = async (
   client: Bot
 ): Promise<void> => {
   try {
-    if (message.author.id === client.user?.id) {
+    if (message.author.bot) {
       return;
     }
 
@@ -24,6 +24,6 @@ export const onMessage = async (
 
     await checkProject(client, message, false);
   } catch (err) {
-    await errorHandler("message event", err);
+    await errorHandler(client, "message event", err);
   }
 };

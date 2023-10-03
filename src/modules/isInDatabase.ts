@@ -24,9 +24,10 @@ export const isInDatabase = async (
   try {
     const exists = await client.db.links.findUnique({
       where: {
-        userId_repo_owner: opts,
-      },
+        userId_repo_owner: opts
+      }
     });
+
     if (exists) {
       // return true only if exists and hasn't been three days since last sent
       if (exists.lastSent.getTime() + threeDays > Date.now()) {
@@ -35,20 +36,20 @@ export const isInDatabase = async (
       // need to update here, create call would fail because of unique index
       await client.db.links.update({
         where: {
-          userId_repo_owner: opts,
+          userId_repo_owner: opts
         },
         data: {
-          lastSent: new Date(),
-        },
+          lastSent: new Date()
+        }
       });
       return false;
     }
     await client.db.links.create({
-      data: opts,
+      data: opts
     });
     return false;
   } catch (err) {
-    await errorHandler("isInDatabase", err);
+    await errorHandler(client, "isInDatabase", err);
     return null;
   }
 };

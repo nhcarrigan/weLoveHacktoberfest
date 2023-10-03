@@ -1,7 +1,7 @@
 import {
   boundaryEnd,
   boundaryStart,
-  optionalIssues,
+  optionalIssues
 } from "../config/ProjectRegex";
 
 /**

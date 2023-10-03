@@ -3,9 +3,9 @@ import { EmbedBuilder, Message } from "discord.js";
 import { hearts } from "../data/hearts";
 import { loveData } from "../data/loveData";
 import { phrases } from "../data/phrases";
-import { getRandom } from "../helpers/getRandom";
 import { Bot } from "../interfaces/Bot";
 import { errorHandler } from "../utils/errorHandler";
+import { getRandom } from "../utils/getRandom";
 
 import { validateLove } from "./validateLove";
 
@@ -53,12 +53,12 @@ export const sendLove = async (
       );
       embed.setFooter({
         text: "Join our server: https://chat.nhcarrigan.com",
-        iconURL: "https://cdn.nhcarrigan.com/profile.png",
+        iconURL: "https://cdn.nhcarrigan.com/profile.png"
       });
       await message.react("💜");
       await message.channel.send({ embeds: [embed] });
     }
   } catch (err) {
-    await errorHandler("send love", err);
+    await errorHandler(client, "send love", err);
   }
 };
