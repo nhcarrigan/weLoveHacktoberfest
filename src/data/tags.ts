@@ -119,6 +119,6 @@ export const tags: Tag[] = [
   {
     answer:
       "GitHub caches images aggressively. You can purge the CDN cache following the official GitHub documentation: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-anonymized-urls#removing-an-image-from-camos-cache",
-    question: "My holopin board on GitHub is not updating"
+    question: "Why doesn't my Holopin board update on GitHub?"
   }
 ];
