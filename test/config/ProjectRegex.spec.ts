@@ -1,6 +1,7 @@
 import { assert } from "chai";
 
 import { ProjectRegexString } from "../../src/config/ProjectRegex";
+import { RegressionsFromProduction } from "../__statics__/RegexRegressions";
 
 suite("ProjectRegex", () => {
   test("should match at beginning of message", () => {
@@ -302,5 +303,14 @@ suite("project regex REGRESSIONS", () => {
       );
     assert.isNotNull(matches);
     assert.lengthOf(matches as RegExpMatchArray, 1);
+  });
+
+  test("should match regression messages", () => {
+    for (const regression of RegressionsFromProduction) {
+      const ProjectRegex = new RegExp(ProjectRegexString, "mig");
+      const matches = regression.match(ProjectRegex);
+      assert.isNotNull(matches);
+      assert.lengthOf(matches as RegExpMatchArray, 1);
+    }
   });
 });
