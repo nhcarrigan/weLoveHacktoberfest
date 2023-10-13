@@ -115,5 +115,10 @@ export const tags: Tag[] = [
     answer:
       "To quote <@!465650873650118659>:\n> Look y'all, we don't have the time to sit here and play 'is this eligible or not'.\n\nHere's some guidelines:\n- Pick an actual project. If it's designed to help you find quick and easy PRs just to 'win' hacktoberfest, move on.\n- If you PR to a project that isn't eligible, who cares? That just means it won't count toward your 4 PRs. As long as your **PR itself** isn't labelled spam, there's no issue.",
     question: "Is this specific project eligible?"
+  },
+  {
+    answer:
+      "GitHub caches images aggressively. You can purge the CDN cache following the official GitHub documentation: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-anonymized-urls#removing-an-image-from-camos-cache",
+    question: "My holopin board on GitHub is not updating"
   }
 ];
