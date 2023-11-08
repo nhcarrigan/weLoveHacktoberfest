@@ -44,7 +44,7 @@
     "@types/chai": "4.3.10",
     "@types/mocha": "10.0.4",
     "@types/node": "20.8.10",
-    "@types/string-similarity": "4.0.1",
+    "@types/string-similarity": "4.0.2",
     "axios": "1.6.0",
     "chai": "4.3.10",
     "discordjs-testing": "0.2.0",
