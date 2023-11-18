@@ -48,7 +48,7 @@
     "axios": "1.6.2",
     "chai": "4.3.10",
     "discordjs-testing": "0.2.0",
-    "eslint": "8.53.0",
+    "eslint": "8.54.0",
     "mocha": "10.2.0",
     "nyc": "15.1.0",
     "prettier": "3.1.0",
