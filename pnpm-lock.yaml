@@ -41,8 +41,8 @@ devDependencies:
     specifier: 3.0.0
     version: 3.0.0(typescript@5.2.2)
   '@types/chai':
-    specifier: 4.3.10
-    version: 4.3.10
+    specifier: 4.3.11
+    version: 4.3.11
   '@types/mocha':
     specifier: 10.0.4
     version: 10.0.4
@@ -689,8 +689,8 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
-  /@types/chai@4.3.10:
-    resolution: {integrity: sha512-of+ICnbqjmFCiixUnqRulbylyXQrPqIGf/B3Jax1wIF3DvSheysQxAWvqHhZiW3IQrycvokcLcFQlveGp+vyNg==}
+  /@types/chai@4.3.11:
+    resolution: {integrity: sha512-qQR1dr2rGIHYlJulmr8Ioq3De0Le9E4MJ5AiaeAETJJpndT1uUNHsGFK3L/UIu+rbkQSdj8J/w2bCsBZc/Y5fQ==}
     dev: true
 
   /@types/json-schema@7.0.12:
