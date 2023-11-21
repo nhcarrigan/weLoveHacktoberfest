@@ -42,7 +42,7 @@
     "@nhcarrigan/prettier-config": "3.2.0",
     "@nhcarrigan/typescript-config": "3.0.0",
     "@types/chai": "4.3.11",
-    "@types/mocha": "10.0.4",
+    "@types/mocha": "10.0.5",
     "@types/node": "20.9.2",
     "@types/string-similarity": "4.0.2",
     "axios": "1.6.2",
