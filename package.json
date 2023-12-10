@@ -31,7 +31,7 @@
     "@prisma/client": "5.7.0",
     "@sentry/integrations": "7.86.0",
     "@sentry/node": "7.86.0",
-    "discord.js": "14.13.0",
+    "discord.js": "14.14.1",
     "dotenv": "16.3.1",
     "string-similarity": "4.0.4",
     "typescript": "5.3.3",
