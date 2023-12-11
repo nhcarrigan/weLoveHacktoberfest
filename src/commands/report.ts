@@ -47,7 +47,7 @@ export const report: Command = {
       return;
     }
 
-    const response = await fetch(
+    const response = (await fetch(
       "https://hackathon-tracker.digitalocean.com/events/5/excluded_repositories",
       {
         method: "POST",
@@ -59,7 +59,7 @@ export const report: Command = {
       }
     )
       .then(async (res) => await res.json())
-      .catch((err) => err);
+      .catch((err) => err)) as { code: string };
 
     if (response.code === "InvalidContent") {
       await interaction.editReply("You have already reported this repository.");
