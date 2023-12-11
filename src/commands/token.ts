@@ -19,7 +19,7 @@ export const token: Command = {
 
     const user = interaction.user.id;
 
-    const response = await fetch(
+    const response = (await fetch(
       "https://hackathon-tracker.digitalocean.com/users/%40me",
       {
         method: "GET",
@@ -30,7 +30,7 @@ export const token: Command = {
       }
     )
       .then(async (res) => await res.json())
-      .catch((err) => err);
+      .catch((err) => err)) as { code?: string; name?: string };
 
     if (response.code === "InvalidCredentials") {
       await interaction.editReply("Your token is invalid.");
