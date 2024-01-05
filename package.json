@@ -46,7 +46,7 @@
     "@types/node": "20.10.6",
     "@types/string-similarity": "4.0.2",
     "axios": "1.6.4",
-    "chai": "4.3.10",
+    "chai": "4.4.0",
     "discordjs-testing": "0.2.0",
     "eslint": "8.56.0",
     "mocha": "10.2.0",
