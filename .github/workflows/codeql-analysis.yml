@@ -31,8 +31,8 @@ jobs:
       - name: Build files
         run: pnpm run build
       - name: Setup CodeQL
-        uses: github/codeql-action/init@1500a131381b66de0c52ac28abb13cd79f4b7ecc # v2
+        uses: github/codeql-action/init@8b7fcbfac2aae0e6c24d9f9ebd5830b1290b18e4 # v2
         with:
           languages: ${{ matrix.language }}
       - name: Perform Analysis
-        uses: github/codeql-action/analyze@1500a131381b66de0c52ac28abb13cd79f4b7ecc # v2
+        uses: github/codeql-action/analyze@8b7fcbfac2aae0e6c24d9f9ebd5830b1290b18e4 # v2
