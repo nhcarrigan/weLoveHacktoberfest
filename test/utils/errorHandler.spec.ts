@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { ExtendedClient } from "../../src/interfaces/ExtendedClient";
+import { Bot } from "../../src/interfaces/Bot";
 import { errorHandler } from "../../src/utils/errorHandler";
 
 const fakeClient = {
@@ -17,7 +17,7 @@ const error = new Error("test");
 
 suite("errorHandler", () => {
   test("sends a message to the webhook", async () => {
-    const typeCastClient = fakeClient as unknown as ExtendedClient;
+    const typeCastClient = fakeClient as unknown as Bot;
     await errorHandler(typeCastClient, "test", error);
     assert.lengthOf(fakeClient.env.debugHook.messages, 1);
   });
