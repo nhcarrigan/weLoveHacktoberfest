@@ -27,5 +27,11 @@ export const errorHandler = async (
       value: err.message || "No message available."
     }
   ]);
-  await bot.debugHook.send({ embeds: [embed] });
+  await bot.debugHook.send({
+    embeds: [embed],
+    username: bot.user?.username ?? "Hacktoberfest",
+    avatarURL:
+      bot.user?.displayAvatarURL() ??
+      "https://cdn.nhcarrigan.com/avatars/nhcarrigan.png"
+  });
 };

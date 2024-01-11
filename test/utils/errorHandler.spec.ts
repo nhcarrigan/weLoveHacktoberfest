@@ -22,6 +22,7 @@ suite("errorHandler", () => {
   test("sends the correct embed data", () => {
     assert.deepEqual(fakeClient.debugHook.messages, [
       {
+        avatarURL: "https://cdn.nhcarrigan.com/avatars/nhcarrigan.png",
         embeds: [
           {
             data: {
@@ -35,7 +36,8 @@ suite("errorHandler", () => {
               ]
             }
           }
-        ]
+        ],
+        username: "Hacktoberfest"
       }
     ]);
   });
@@ -44,6 +46,7 @@ suite("errorHandler", () => {
     await errorHandler(fakeClient as never, "test", "test");
     assert.lengthOf(fakeClient.debugHook.messages, 2);
     assert.deepEqual(fakeClient.debugHook.messages[1], {
+      avatarURL: "https://cdn.nhcarrigan.com/avatars/nhcarrigan.png",
       embeds: [
         {
           data: {
@@ -57,7 +60,8 @@ suite("errorHandler", () => {
             ]
           }
         }
-      ]
+      ],
+      username: "Hacktoberfest"
     });
   });
 });
