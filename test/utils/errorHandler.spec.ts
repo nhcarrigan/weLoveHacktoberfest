@@ -1,12 +1,15 @@
 import { assert } from "chai";
 
-import { Bot } from "../../src/interfaces/Bot";
+import { ExtendedClient } from "../../src/interfaces/ExtendedClient";
 import { errorHandler } from "../../src/utils/errorHandler";
 
 const fakeClient = {
-  debugHook: {
-    messages: [] as unknown[],
-    send: (message: unknown) => fakeClient.debugHook.messages.push(message)
+  env: {
+    debugHook: {
+      messages: [] as unknown[],
+      send: (message: unknown) =>
+        fakeClient.env.debugHook.messages.push(message)
+    }
   }
 };
 
@@ -14,14 +17,15 @@ const error = new Error("test");
 
 suite("errorHandler", () => {
   test("sends a message to the webhook", async () => {
-    const typeCastClient = fakeClient as unknown as Bot;
+    const typeCastClient = fakeClient as unknown as ExtendedClient;
     await errorHandler(typeCastClient, "test", error);
-    assert.lengthOf(fakeClient.debugHook.messages, 1);
+    assert.lengthOf(fakeClient.env.debugHook.messages, 1);
   });
 
   test("sends the correct embed data", () => {
-    assert.deepEqual(fakeClient.debugHook.messages, [
+    assert.deepEqual(fakeClient.env.debugHook.messages, [
       {
+        avatarURL: "https://cdn.nhcarrigan.com/avatars/nhcarrigan.png",
         embeds: [
           {
             data: {
@@ -35,15 +39,17 @@ suite("errorHandler", () => {
               ]
             }
           }
-        ]
+        ],
+        username: "Hacktoberfest"
       }
     ]);
   });
 
   test("handles a string error", async () => {
     await errorHandler(fakeClient as never, "test", "test");
-    assert.lengthOf(fakeClient.debugHook.messages, 2);
-    assert.deepEqual(fakeClient.debugHook.messages[1], {
+    assert.lengthOf(fakeClient.env.debugHook.messages, 2);
+    assert.deepEqual(fakeClient.env.debugHook.messages[1], {
+      avatarURL: "https://cdn.nhcarrigan.com/avatars/nhcarrigan.png",
       embeds: [
         {
           data: {
@@ -57,7 +63,8 @@ suite("errorHandler", () => {
             ]
           }
         }
-      ]
+      ],
+      username: "Hacktoberfest"
     });
   });
 });
