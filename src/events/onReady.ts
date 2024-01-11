@@ -6,9 +6,9 @@ import { registerCommands } from "../utils/registerCommands";
 /**
  * Handles the ready event (when the bot connects to Discord).
  *
- * @param {Bot} client The client object.
+ * @param {Bot} bot The bot object.
  */
-export const onReady = async (client: Bot): Promise<void> => {
+export const onReady = async (bot: Bot): Promise<void> => {
   try {
     logHandler.log("debug", "Discord is ready!");
 
@@ -24,13 +24,19 @@ export const onReady = async (client: Bot): Promise<void> => {
 
     logHandler.log(
       "debug",
-      `Cooldown is set to ${client.cooldown / 1000} seconds.`
+      `Cooldown is set to ${bot.cooldown / 1000} seconds.`
     );
 
-    await registerCommands(client);
+    await registerCommands(bot);
 
-    await client.debugHook.send("Hacktoberfest bot online!");
+    await bot.debugHook.send({
+      content: "Hacktoberfest bot online!",
+      username: bot.user?.username ?? "Hacktoberfest",
+      avatarURL:
+        bot.user?.displayAvatarURL() ??
+        "https://cdn.nhcarrigan.com/avatars/nhcarrigan.png"
+    });
   } catch (err) {
-    await errorHandler(client, "ready event", err);
+    await errorHandler(bot, "ready event", err);
   }
 };
