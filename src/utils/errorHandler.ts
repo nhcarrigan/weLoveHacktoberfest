@@ -29,9 +29,9 @@ export const errorHandler = async (
   ]);
   await bot.debugHook.send({
     embeds: [embed],
-    username: Becca.user?.username ?? "Hacktoberfest",
+    username: bot.user?.username ?? "Hacktoberfest",
     avatarURL:
-      Becca.user?.displayAvatarURL() ??
+      bot.user?.displayAvatarURL() ??
       "https://cdn.nhcarrigan.com/avatars/nhcarrigan.png"
   });
 };
