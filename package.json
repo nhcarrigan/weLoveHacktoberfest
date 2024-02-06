@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "@prisma/client": "5.9.1",
-    "@sentry/integrations": "7.99.0",
-    "@sentry/node": "7.99.0",
+    "@sentry/integrations": "7.100.0",
+    "@sentry/node": "7.100.0",
     "discord.js": "14.14.1",
     "dotenv": "16.4.1",
     "string-similarity": "4.0.4",
